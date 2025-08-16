@@ -1,0 +1,44 @@
+name: Build Manuscript
+
+on:
+  push:
+    branches: [ main, dev ]
+  pull_request:
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install pandoc
+        uses: r-lib/actions/setup-pandoc@v2
+        with:
+          pandoc-version: '3.1.11'
+      - name: Install TeX Live (full)
+        run: sudo apt-get update && sudo apt-get install -y texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
+      - name: Build Manuscript
+        run: bash build/build.sh
+      - name: Upload PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: manuscript-pdf
+          path: build/out/manuscript.pdf
+      - name: Upload TEX
+        uses: actions/upload-artifact@v4
+        with:
+          name: manuscript-tex
+          path: build/out/manuscript.tex
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: preprint-latest
+          name: Latest Preprint Release
+          body: |
+            Automated preprint PDF and TeX produced from the main branch.
+          files: |
+            build/out/manuscript.pdf
+            build/out/manuscript.tex
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

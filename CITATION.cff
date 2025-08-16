@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it using the metadata below."
+title: "Decoherence as First Principle: A Framework for Emergent Forces, Dark Matter, and Cosmological Structure"
+abstract: >
+  This manuscript proposes a novel, first-principles interpretation of cosmological evolution based on ontological quantum decoherence, offering new perspectives on the emergence of classical forces, the nature of dark matter, and cosmic structure formation.
+authors:
+  - family-names: Evanshine
+    given-names: Robert J.
+    orcid: "0009-0005-3173-3148"
+    affiliation: Independent Researcher
+date-released: 2025-08-15
+version: 0.1.0
+doi: "" # add if/when you assign a DOI (e.g., Zenodo, arXiv)
+license: "CC-BY-4.0" # or correct license for your manuscript/repo
+url: "https://github.com/revanshine/decoherence-thesis-repo"
+keywords:
+  - cosmology
+  - quantum decoherence
+  - dark matter
+  - theoretical physics
+  - emergent forces

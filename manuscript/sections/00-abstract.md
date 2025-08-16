@@ -1,0 +1,8 @@
+# Abstract
+
+We propose a novel interpretation of cosmological evolution grounded in the concept of decoherence as the primary physical mechanism underlying the emergence of classical reality [@zurek2009]. In this view, the Big Bang is reinterpreted not as an explosion from a singularity, but as a Boltzmann-like fluctuation [@boltzmann1896; @carroll2008] that initiated a sustainable decoherence cascade—what we term a *decoherence bootstrap*. This bootstrap sets the conditions under which forces, particles, and spacetime structures emerge as stable pointer states of a quantum system undergoing localized decoherence [@gellmann1990].
+
+We argue that gravity represents the earliest and most fundamental decoherence channel [@diosi1987; @penrose1996], while other forces—particularly electromagnetism—emerge only after sufficient decoherence chain length has stabilized their respective interaction bases. In this model, dark matter is naturally reinterpreted as mass-energy that decohered gravitationally prior to the stabilization of the electromagnetic pointer basis. This provides an explanatory framework that accounts for dark matter’s gravitational effects without requiring interaction with the electromagnetic sector [@bertone2018].
+
+We conclude by exploring the implications of this framework for black holes [@danielson2023], quantum aliasing, and conservation principles in cosmology.
+\newpage
