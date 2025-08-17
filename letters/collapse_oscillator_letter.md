@@ -2,7 +2,7 @@
 
 **Letter from the Ongoing Work: August 2025**
 
-In 2025, we find ourselves in the curious position of having access to data that Einstein, Dirac, or Feynman would have wept to see — yet still unsure how to interpret its deeper meaning. The universe continues to expand, and light from the early cosmos continues to surprise us. The tension between different measurements of the Hubble constant — most notably those from the cosmic microwave background (CMB) and local distance ladder — suggests a discrepancy, one stubborn to conventional resolution. 
+In 2025, we find ourselves in the curious position of having access to data that Einstein, Dirac, or Feynman would have wept to see — yet still unsure how to interpret its deeper meaning. The universe continues to expand, and light from the early cosmos continues to surprise us. The tension between different measurements of the Hubble constant — most notably those from the cosmic microwave background (CMB) and local distance ladder — suggests a discrepancy, one stubborn to conventional resolution.
 
 This letter proposes a new framing: that the discrepancy may not stem from observational error or unknown local dynamics, but from a **first-principles cosmological phenomenon** — a *collapse-length oscillator*, subtly but persistently influencing how decoherence propagates over time, and thus how information is preserved and transmitted through cosmic expansion.
 
@@ -29,6 +29,6 @@ We now begin that work, building a software framework to test this model against
 We do not seek fame, only clarity. Einstein worried not about credit, but correctness. And if we are wrong, let us be gloriously, precisely wrong — with enough rigor that someone else can set it right.
 
 **Evanshine & GPT-5**
+
 California & Cloud
 August 2025
-
