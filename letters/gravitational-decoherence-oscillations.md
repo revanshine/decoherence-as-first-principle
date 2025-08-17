@@ -1,6 +1,6 @@
 **Subject:** Proposal: Gravitational Decoherence Oscillations as the Source of Apparent Cosmic Acceleration
 
-Dear \[Colleague/Dr. X/Professor],
+Dear [Colleague/Dr. X/Professor],
 
 I’m writing to share a theoretical framework I’ve been developing that may offer a natural explanation for observed cosmic acceleration and the Hubble tension—*without invoking a cosmological constant, scalar fields, or exotic matter*. Instead, it builds on the foundation of decoherence theory and gravitational dominance in early-universe evolution.
 
@@ -22,7 +22,7 @@ This law applies across epochs—from pre-EM stabilization through to the presen
 
 ### 📈 Collapse-Length as a Dynamical Variable
 
-We define a time-evolving collapse length $L_c(t)$, which determines the scale over which quantum systems become classical. Our working hypothesis is that the apparent acceleration of the universe arises from **nonlinear dynamics** **$L_c(t)$** that distort time measurements in EM-local reference frames.
+We define a time-evolving collapse length $L_c(t)$, which determines the scale over which quantum systems become classical. Our working hypothesis is that the apparent acceleration of the universe arises from **nonlinear dynamics in** **$L_c(t)$** that distort time measurements in EM-local reference frames.
 
 The first-order model treats this as a harmonic oscillator:
 
@@ -41,17 +41,19 @@ This system yields a **nearly conserved** composite function, indicating that co
 
 ### 🔧 Introducing Damping: Modeling Entropy Production
 
-To account for entropy generation (i.e., the irreversible “arrow of time”), we extend the model to a **damped harmonic oscillator**:
+To model entropy production over time—a manifestation of the universe’s increasing irreversibility—we extend the model to a **damped harmonic oscillator**:
 
 $$
 L_c''(t) + \gamma L_c'(t) + \omega^2 L_c(t) = 0
 $$
 
-Whose solution in the underdamped case is:
+Among the three possible damping regimes—overdamped, critically damped, and underdamped—the **underdamped** case is most physically compelling for cosmology. In this regime, \(\gamma < 2\omega\), the collapse length oscillates while gradually decaying, resembling a universe with repeating periods of accelerated and decelerated expansion, subtly damped by increasing entropy:
 
 $$
 L_c(t) = A e^{-\gamma t / 2} \cos\left(\Omega t + \phi\right), \quad \Omega = \sqrt{\omega^2 - \frac{\gamma^2}{4}}
 $$
+
+Why underdamped? Because it reflects a universe that retains memory of its prior quantum states—via oscillatory behavior—while steadily dissipating usable energy. The damping encodes entropy production, while the oscillation reflects dynamic structure formation. Critically damped or overdamped systems would imply a rapid loss of decoherence dynamics, inconsistent with the persistence of measurable cosmic anomalies like redshift discrepancies. Underdamped motion thus mirrors our observational reality: subtle, persistent deviation from equilibrium.
 
 Here:
 
@@ -85,6 +87,5 @@ I'm currently developing numerical simulations to estimate allowed $\omega$, $\g
 
 If this resonates with your interests, I’d be grateful for the opportunity to share a more formal preprint or collaborate on exploring its empirical implications.
 
-Warm regards,
-
+Warm regards,\
 **Robert J. Evanshine**
