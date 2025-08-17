@@ -47,7 +47,7 @@ $$
 L_c''(t) + \gamma L_c'(t) + \omega^2 L_c(t) = 0
 $$
 
-Among the three possible damping regimes—overdamped, critically damped, and underdamped—the **underdamped** case is most physically compelling for cosmology. In this regime, \(\gamma < 2\omega\), the collapse length oscillates while gradually decaying, resembling a universe with repeating periods of accelerated and decelerated expansion, subtly damped by increasing entropy:
+Among the three possible damping regimes—overdamped, critically damped, and underdamped—the **underdamped** case is most physically compelling for cosmology. In this regime, $\gamma < 2\omega$, the collapse length oscillates while gradually decaying, resembling a universe with repeating periods of accelerated and decelerated expansion, subtly damped by increasing entropy:
 
 $$
 L_c(t) = A e^{-\gamma t / 2} \cos\left(\Omega t + \phi\right), \quad \Omega = \sqrt{\omega^2 - \frac{\gamma^2}{4}}
