@@ -1,4 +1,6 @@
-Dear Colleague,
+**Blackhole Galaxy Letter**
+
+**Letter from the Ongoing Work: August 2025**
 
 I hope this letter finds you well. I am writing to share a line of thought that extends from my recent work on the *Decoherence as First Principle* framework, with a focus on the long-standing puzzle of the relationship between supermassive black holes (SMBHs) and their host galaxies.
 
@@ -41,3 +43,4 @@ With best regards,
 
 R. Evanshine
 
+\newpage

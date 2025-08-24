@@ -1,4 +1,4 @@
-**Collapse-Length Oscillation and Conservation-Driven Cosmological Expansion: A Proposal**
+**Collapse-Length Oscillation and Conservation-Driven Cosmological Expansion**
 
 **Letter from the Ongoing Work: August 2025**
 
@@ -6,19 +6,19 @@ In 2025, we find ourselves in the curious position of having access to data that
 
 This letter proposes a new framing: that the discrepancy may not stem from observational error or unknown local dynamics, but from a **first-principles cosmological phenomenon** — a *collapse-length oscillator*, subtly but persistently influencing how decoherence propagates over time, and thus how information is preserved and transmitted through cosmic expansion.
 
-We hypothesize that the decoherence framework introduced in "Decoherence as First Principle" admits a natural dynamical structure: an underdamped harmonic oscillator governing the collapse length, ℓ(t), constrained by a conservation law:
+We hypothesize that the decoherence framework introduced in "Decoherence as First Principle" admits a natural dynamical structure: an underdamped harmonic oscillator governing the collapse length, $\ell(t)$, constrained by a conservation law:
 
-> The **total classical energy** stored in pointer states **plus** a scaled entropy term remains constant in time:
->
-> **d/dt [ E_classical(t) + k ⋅ S(t) ] = 0**
+The **total classical energy** stored in pointer states **plus** a scaled entropy term remains constant in time:
+
+> **$\frac{d}{dt} \left[ E_{\text{class}}(t) + k \cdot S(t) \right] = 0$**
 
 This constraint implies a shift of 'reality weight' from deterministic classical structure to thermodynamic uncertainty, and suggests that the very fabric of spacetime might wobble in a way that leaves a measurable fingerprint. The 'collapse length' that defines how classicality emerges from quantum systems could itself oscillate as a function of time — perhaps only once, perhaps with subtle damped cycles, governed by initial conditions at or near the Big Bang.
 
 We model this using the familiar damped harmonic oscillator:
 
-**ℓ″(t) + 2γ ℓ′(t) + ω² ℓ(t) = 0**
+> **$\ell''(t) + 2\gamma \ell'(t) + \omega^2 \ell(t) = 0$**
 
-where γ is the damping coefficient and ω the natural frequency. Our guiding intuition is that this equation, coupled to the conservation constraint above, gives rise to a time-dependent deviation from a purely geometric expansion — one that might explain the Hubble tension without invoking new particles or dark sectors.
+where $\gamma$ is the damping coefficient and $\omega$ the natural frequency. Our guiding intuition is that this equation, coupled to the conservation constraint above, gives rise to a time-dependent deviation from a purely geometric expansion — one that might explain the Hubble tension without invoking new particles or dark sectors.
 
 In this framing, light traveling through the universe accumulates its history through a lens subtly modulated by collapse length dynamics — and this modulation introduces tiny distortions in our cosmological measurements. These distortions could be interpreted as mismatches in Hubble measurements — but they may in fact be the long echo of a cosmic oscillator.
 
@@ -32,3 +32,5 @@ We do not seek fame, only clarity. Einstein worried not about credit, but correc
 
 California & Cloud
 August 2025
+
+\newpage
