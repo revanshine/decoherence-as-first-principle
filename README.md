@@ -8,7 +8,7 @@ This project presents a new theoretical framework where ontological decoherence 
 
 ## 📄 Download the Latest Preprint
 
-[⬇ Download or view the latest manuscript PDF](https://github.com/revanshine/decoherence-thesis-repo/releases/latest/download/manuscript.pdf)
+[⬇ Download or view the latest manuscript PDF](https://github.com/revanshine/decoherence-as-first-principle/releases/download/preprint-latest/manuscript.pdf)
 
 ---
 
@@ -24,7 +24,7 @@ This project presents a new theoretical framework where ontological decoherence 
 ## 🛠 How to Build
 
 > **Just want the paper?**
-> [Download the PDF above.](https://github.com/revanshine/decoherence-thesis-repo/releases/latest/download/manuscript.pdf)
+> [Download the PDF above.](https://github.com/revanshine/decoherence-as-first-principle/releases/download/preprint-latest/manuscript.pdf)
 
 To build from source:
 1. Clone this repo.
@@ -37,7 +37,7 @@ To build from source:
 
 - Please see [CITATION.cff](CITATION.cff) for citation info.
 - Cite as:
-    > Evanshine, R. *Decoherence as First Principle* (2025), GitHub: revanshine/decoherence-thesis-repo.
+    > Evanshine, R. *Decoherence as First Principle* (2025), GitHub: revanshine/decoherence-as-first-principle.
 - License: CC-BY-4.0
 
 ---
