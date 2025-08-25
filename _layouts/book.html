@@ -13,17 +13,17 @@ layout: default
           <h3>Contents</h3>
           <ul>
             <li><a href="#" data-section="abstract">Abstract</a></li>
-            <li><a href="#" data-section="introduction">Introduction</a></li>
-            <li><a href="#" data-section="decoherence-bootstrap">Decoherence Bootstrap</a></li>
-            <li><a href="#" data-section="gravity-primary-basis">Gravity as Primary Basis</a></li>
-            <li><a href="#" data-section="emergence-of-forces">Emergence of Forces</a></li>
-            <li><a href="#" data-section="dark-matter">Dark Matter</a></li>
-            <li><a href="#" data-section="black-holes-and-decoherence-limit">Black Holes</a></li>
-            <li><a href="#" data-section="quantum-aliasing">Quantum Aliasing</a></li>
-            <li><a href="#" data-section="conservation-law">Conservation Law</a></li>
-            <li><a href="#" data-section="related-work">Related Work</a></li>
-            <li><a href="#" data-section="conclusion">Conclusion</a></li>
-            <li><a href="#" data-section="appendix">Appendix</a></li>
+            <li><a href="#" data-section="introduction">1. Introduction</a></li>
+            <li><a href="#" data-section="the-decoherence-bootstrap-hypothesis">2. Decoherence Bootstrap</a></li>
+            <li><a href="#" data-section="gravity-as-the-primary-basis">3. Gravity as Primary Basis</a></li>
+            <li><a href="#" data-section="emergence-of-forces">4. Emergence of Forces</a></li>
+            <li><a href="#" data-section="dark-matter-as-decoherence-structure">5. Dark Matter</a></li>
+            <li><a href="#" data-section="black-holes-and-the-decoherence-limit">6. Black Holes</a></li>
+            <li><a href="#" data-section="quantum-aliasing-and-observational-consequences">7. Quantum Aliasing</a></li>
+            <li><a href="#" data-section="conservation-laws-and-symmetry-breaking">8. Conservation Laws</a></li>
+            <li><a href="#" data-section="related-work">9. Related Work</a></li>
+            <li><a href="#" data-section="conclusion">10. Conclusion</a></li>
+            <li><a href="#" data-section="appendix-mathematical-formalism">11. Appendix</a></li>
           </ul>
           
           <div class="manuscript-actions">
@@ -356,18 +356,39 @@ document.addEventListener('DOMContentLoaded', function() {
       // Try to scroll to section in iframe
       try {
         const iframeDoc = frame.contentDocument || frame.contentWindow.document;
-        const target = iframeDoc.getElementById(section) || 
-                      iframeDoc.querySelector(`h1:contains("${section}")`) ||
-                      iframeDoc.querySelector(`h2:contains("${section}")`);
+        
+        // Try multiple ways to find the section
+        let target = iframeDoc.getElementById(section);
+        
+        if (!target) {
+          // Try finding by heading text (case insensitive)
+          const headings = iframeDoc.querySelectorAll('h1, h2, h3, h4, h5, h6');
+          for (let heading of headings) {
+            if (heading.textContent.toLowerCase().includes(section.replace(/-/g, ' ').toLowerCase()) ||
+                heading.textContent.toLowerCase().includes(this.textContent.toLowerCase())) {
+              target = heading;
+              break;
+            }
+          }
+        }
+        
+        if (!target) {
+          // Try finding by partial ID match
+          const elements = iframeDoc.querySelectorAll('[id*="' + section.split('-')[0] + '"]');
+          if (elements.length > 0) {
+            target = elements[0];
+          }
+        }
         
         if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         } else {
-          // Fallback: scroll to top and highlight the section name
+          console.log('Could not find section:', section);
+          // Fallback: scroll to top
           frame.contentWindow.scrollTo({ top: 0, behavior: 'smooth' });
         }
       } catch (error) {
-        console.log('Could not scroll to section:', section);
+        console.log('Could not scroll to section:', section, error);
       }
     });
   });
