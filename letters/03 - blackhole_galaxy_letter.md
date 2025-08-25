@@ -1,3 +1,8 @@
+---
+layout: page
+title: Black hole–galaxy letter
+---
+
 **Blackhole Galaxy Letter**
 
 **Letter from the Ongoing Work: August 2025**

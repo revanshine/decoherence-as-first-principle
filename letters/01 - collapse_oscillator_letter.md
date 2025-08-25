@@ -1,3 +1,8 @@
+---
+layout: page
+title: Collapse-Length Oscillation Letter
+---
+
 **Collapse-Length Oscillation and Conservation-Driven Cosmological Expansion**
 
 **Letter from the Ongoing Work: August 2025**
