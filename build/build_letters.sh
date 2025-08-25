@@ -7,9 +7,9 @@ mkdir -p "$OUTDIR"
 
 # Letter files
 LETTERS=(
-  "01 - collapse_oscillator_letter.md"
+  "01 - collapse-oscillator-letter.md"
   "02 - gravitational-decoherence-oscillations.md"
-  "03 - blackhole_galaxy_letter.md"
+  "03 - blackhole-galaxy-letter.md"
 )
 
 BIB="references/references.bib"
