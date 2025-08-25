@@ -1,11 +1,9 @@
 ---
 layout: default
-title: Black hole–galaxy letter
+title: Blackhole Galaxy Letter
 nav_order: 3
 parent: Letters
 ---
-
-**Blackhole Galaxy Letter**
 
 **Letter from the Ongoing Work: August 2025**
 

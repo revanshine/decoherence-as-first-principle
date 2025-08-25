@@ -1,11 +1,9 @@
 ---
 layout: default
-title: Collapse-Length Oscillation Letter
+title: Collapse-Length Oscillation and Conservation-Driven Cosmological Expansion
 nav_order: 1
 parent: Letters
 ---
-
-**Collapse-Length Oscillation and Conservation-Driven Cosmological Expansion**
 
 **Letter from the Ongoing Work: August 2025**
 

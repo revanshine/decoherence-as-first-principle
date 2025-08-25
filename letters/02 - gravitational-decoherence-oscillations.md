@@ -1,11 +1,9 @@
 ---
 layout: default
-title: Gravitational Decoherence Oscillations Letter
+title: Gravitational Decoherence Oscillations as the Source of Apparent Cosmic Acceleration
 nav_order: 2
 parent: Letters
 ---
-
-**Gravitational Decoherence Oscillations as the Source of Apparent Cosmic Acceleration**
 
 **Letter from the Ongoing Work: August 2025**
 
