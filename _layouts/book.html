@@ -391,7 +391,7 @@ body {
               {% for tag_data in site.data.tag-cloud.tagCloud limit:20 %}
                 <span class="tag" 
                       data-weight="{{ tag_data.weight }}" 
-                      data-notes="{{ tag_data.notes | jsonify | escape }}"
+                      data-notes="{{ tag_data.notes | jsonify }}"
                       style="font-size: {{ tag_data.weight | times: 0.2 | plus: 0.8 }}em; opacity: {{ tag_data.weight | times: 0.1 | plus: 0.6 }};">
                   {{ tag_data.tag }}
                 </span>
