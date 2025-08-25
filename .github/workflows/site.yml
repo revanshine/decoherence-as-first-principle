@@ -30,16 +30,21 @@ jobs:
       - name: Build All Assets (TEX, PDF, HTML)
         run: ./make
 
-      # Build Jekyll site
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+      # Setup Ruby and Jekyll
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          source: .
-          destination: ./_site
+          ruby-version: '3.1'
+          bundler-cache: true
 
-      # Upload Pages artifact (so Pages can deploy it)
+      # Build Jekyll site manually
+      - name: Build Jekyll site
+        run: |
+          bundle exec jekyll build --destination ./_site
+        env:
+          JEKYLL_ENV: production
+
+      # Upload Pages artifact
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -59,6 +64,9 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

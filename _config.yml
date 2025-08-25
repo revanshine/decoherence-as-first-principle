@@ -4,8 +4,8 @@ description: Exploring decoherence as a first principle in physics, with applica
 url: "https://robertevanshine.com"
 baseurl: ""
 
-# Testing Just-the-Docs theme
-theme: just-the-docs
+# Use remote theme instead of gem theme for GitHub Actions compatibility
+remote_theme: just-the-docs/just-the-docs
 
 # Enable dark mode support
 color_scheme: nil  # supports "dark", "light"/nil (default), or custom
@@ -32,6 +32,7 @@ back_to_top_text: "Back to top"
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-remote-theme
 
 author:
   name: Robert Evanshine
@@ -47,7 +48,7 @@ gh_edit_repository: "https://github.com/revanshine/decoherence-as-first-principl
 gh_edit_branch: "main"
 gh_edit_view_mode: "tree"
 
-# Exclude build artifacts (maintaining your existing exclusions)
+# Exclude build artifacts
 exclude:
   - .sass-cache/
   - .jekyll-cache/
@@ -62,4 +63,3 @@ exclude:
   - build/
   - "*.pdf"
   - "*.tex"
-  - "*.html"
