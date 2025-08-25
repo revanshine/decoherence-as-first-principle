@@ -40,7 +40,7 @@ echo "   Converting manuscript markdown to HTML..."
 pandoc \
     --from=markdown+smart \
     --standalone \
-    --mathjax \
+    --mathjax=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js \
     --citeproc \
     --metadata link-citations=true \
     --bibliography="references/references.bib" \
@@ -78,7 +78,7 @@ for letter in "${LETTERS[@]}"; do
         pandoc \
             --from=markdown+smart \
             --standalone \
-            --mathjax \
+            --mathjax=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js \
             --citeproc \
             --metadata link-citations=true \
             --bibliography="references/references.bib" \
@@ -114,7 +114,7 @@ if [[ -d "research/notes" ]]; then
             basename=$(basename "$note" .md)
             pandoc "$note" -o "assets/notes/${basename}.html" \
                 --standalone \
-                --mathjax \
+                --mathjax=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js \
                 --css="/assets/css/notes.css" \
                 --metadata title="$basename" 2>/dev/null || echo "   ⚠ Failed to convert $note"
             echo "   ✓ Converted $basename.md"

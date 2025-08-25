@@ -1,0 +1,235 @@
+/* Academic Paper Styling for Manuscript */
+body {
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #333;
+  background: white;
+  font-size: 16px;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #1a1a1a;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 1.8rem;
+  text-align: center;
+  border-bottom: none;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-top: 2.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+/* Author and date */
+.author, .date {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+/* Abstract */
+.abstract {
+  margin: 2rem 0;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-left: 4px solid #007acc;
+  font-style: italic;
+}
+
+.abstract h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 1rem;
+  text-align: justify;
+  text-indent: 1.5em;
+}
+
+/* First paragraph after headings shouldn't be indented */
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+  text-indent: 0;
+}
+
+/* Lists */
+ul, ol {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Blockquotes */
+blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border-left: 4px solid #ddd;
+  background: #f9f9f9;
+  font-style: italic;
+}
+
+/* Code */
+code {
+  font-family: "Courier New", Courier, monospace;
+  background: #f5f5f5;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+pre {
+  background: #f8f8f8;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  border: 1px solid #e1e1e1;
+  margin: 1rem 0;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+  font-size: 0.9em;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+th {
+  background: #f2f2f2;
+  font-weight: bold;
+}
+
+/* Figures and captions */
+figure {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 0.9em;
+  margin-top: 0.5rem;
+  color: #666;
+}
+
+/* Links */
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Citations and references */
+.citation {
+  font-size: 0.9em;
+}
+
+.references {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 2px solid #ddd;
+}
+
+.references h2 {
+  margin-top: 0;
+}
+
+.references p {
+  text-indent: -1.5em;
+  margin-left: 1.5em;
+  margin-bottom: 0.8rem;
+}
+
+/* Math styling - MathJax will handle most of this */
+.math {
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Footnotes */
+.footnotes {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+  font-size: 0.9em;
+}
+
+.footnotes ol {
+  padding-left: 1rem;
+}
+
+/* Print styles */
+@media print {
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    margin: 0;
+    padding: 1in;
+  }
+  
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+  
+  p, li {
+    page-break-inside: avoid;
+  }
+  
+  a {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+    font-size: 14px;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+  }
+  
+  p {
+    text-indent: 1em;
+  }
+}
