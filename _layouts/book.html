@@ -607,21 +607,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Handle tag cloud interactions
   const tags = document.querySelectorAll('.tag');
+  console.log('Found', tags.length, 'tags for click handlers');
   tags.forEach(tag => {
     tag.addEventListener('click', function() {
-      const notesData = JSON.parse(this.getAttribute('data-notes'));
-      const tagName = this.textContent.trim();
+      console.log('Tag clicked:', this.textContent.trim());
+      try {
+        const notesData = JSON.parse(this.getAttribute('data-notes'));
+        const tagName = this.textContent.trim();
+        console.log('Notes data parsed successfully:', notesData.length, 'notes');
 
-      // Remove active states
-      tags.forEach(t => t.classList.remove('active'));
-      letterLinks.forEach(l => l.classList.remove('active'));
-      navLinks.forEach(l => l.classList.remove('active'));
+        // Remove active states
+        tags.forEach(t => t.classList.remove('active'));
+        letterLinks.forEach(l => l.classList.remove('active'));
+        navLinks.forEach(l => l.classList.remove('active'));
 
-      // Activate this tag
-      this.classList.add('active');
+        // Activate this tag
+        this.classList.add('active');
 
-      // Create notes list HTML
-      let notesHtml = `
+        // Create notes list HTML
+        let notesHtml = `
         <div style="padding: 2rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
           <h1>Research Notes: "${tagName}"</h1>
           <p style="color: #666; margin-bottom: 2rem;">Found ${notesData.length} notes with this tag:</p>
@@ -657,6 +661,10 @@ document.addEventListener('DOMContentLoaded', function() {
       // Show back button
       if (backBtn) {
         backBtn.style.display = 'inline-block';
+      }
+      } catch (error) {
+        console.error('Error in tag click handler:', error);
+        console.error('Raw data-notes attribute:', this.getAttribute('data-notes'));
       }
     });
   });
