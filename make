@@ -38,11 +38,11 @@ SECTIONS=(
 INPUTS=(manuscript/main.md "${SECTIONS[@]}")
 
 echo "   Converting manuscript markdown to HTML..."
-echo "   Using explicit MathJax CDN (no polyfill.io)"
+echo "   Using MathJax with post-processing to avoid polyfill.io"
 pandoc \
     --from=markdown+smart \
     --standalone \
-    --mathjax="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" \
+    --mathjax \
     --citeproc \
     --metadata link-citations=true \
     --bibliography="references/references.bib" \
@@ -52,16 +52,28 @@ pandoc \
     --css="/assets/css/paper.css" \
     "${INPUTS[@]}" \
     -o assets/paper/manuscript.html
+
+# Post-process to replace polyfill.io with reliable CDN
+if [[ -f "assets/paper/manuscript.html" ]]; then
+    echo "   Post-processing: Replacing polyfill.io with jsdelivr.net"
+    sed -i.bak 's|https://polyfill.io/v3/polyfill.min.js?features=es6|https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js|g' assets/paper/manuscript.html
+    rm -f assets/paper/manuscript.html.bak
+fi
 echo "   ✓ Generated assets/paper/manuscript.html"
 
 # Verify the HTML was generated correctly
 if [[ -f "assets/paper/manuscript.html" ]]; then
+    if grep -q "polyfill.io" assets/paper/manuscript.html; then
+        echo "   ❌ Error: polyfill.io still present in manuscript.html"
+        grep -n "polyfill.io" assets/paper/manuscript.html
+    else
+        echo "   ✓ Verified: No polyfill.io found"
+    fi
+    
     if grep -q "jsdelivr.net" assets/paper/manuscript.html; then
         echo "   ✓ Verified: Using jsdelivr.net CDN for MathJax"
     else
-        echo "   ⚠ Warning: MathJax CDN not found or incorrect"
-        echo "   Checking for polyfill.io (should not be present):"
-        grep -n "polyfill.io" assets/paper/manuscript.html || echo "   ✓ No polyfill.io found"
+        echo "   ⚠ Warning: jsdelivr.net CDN not found"
     fi
 else
     echo "   ❌ Error: manuscript.html was not generated"
@@ -93,7 +105,7 @@ for letter in "${LETTERS[@]}"; do
         pandoc \
             --from=markdown+smart \
             --standalone \
-            --mathjax=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js \
+            --mathjax \
             --citeproc \
             --metadata link-citations=true \
             --bibliography="references/references.bib" \
@@ -101,6 +113,12 @@ for letter in "${LETTERS[@]}"; do
             --css="/assets/css/paper.css" \
             "letters/$letter" \
             -o "assets/letters/$basename.html"
+        
+        # Post-process to replace polyfill.io
+        if [[ -f "assets/letters/$basename.html" ]]; then
+            sed -i.bak 's|https://polyfill.io/v3/polyfill.min.js?features=es6|https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js|g' "assets/letters/$basename.html"
+            rm -f "assets/letters/$basename.html.bak"
+        fi
         echo "   ✓ Generated assets/letters/$basename.html"
         
         # Copy corresponding PDF if it exists
@@ -129,9 +147,15 @@ if [[ -d "research/notes" ]]; then
             basename=$(basename "$note" .md)
             pandoc "$note" -o "assets/notes/${basename}.html" \
                 --standalone \
-                --mathjax=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js \
+                --mathjax \
                 --css="/assets/css/notes.css" \
                 --metadata title="$basename" 2>/dev/null || echo "   ⚠ Failed to convert $note"
+            
+            # Post-process to replace polyfill.io
+            if [[ -f "assets/notes/${basename}.html" ]]; then
+                sed -i.bak 's|https://polyfill.io/v3/polyfill.min.js?features=es6|https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js|g' "assets/notes/${basename}.html"
+                rm -f "assets/notes/${basename}.html.bak"
+            fi
             echo "   ✓ Converted $basename.md"
         fi
     done
