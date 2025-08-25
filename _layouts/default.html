@@ -35,43 +35,15 @@
     .page-content {
       margin-top: 2rem;
     }
-    
-    nav {
-      margin-bottom: 2rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid #eee;
-    }
-    
-    nav a {
-      margin-right: 1rem;
-      text-decoration: none;
-      color: #3498db;
-    }
-    
-    nav a:hover {
-      text-decoration: underline;
-    }
-    
-    nav a.current {
-      font-weight: bold;
-      color: #2c3e50;
-    }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="current"{% endif %}>Home</a>
-    <a href="{{ '/letters/' | relative_url }}"{% if page.url contains '/letters' %} class="current"{% endif %}>Letters</a>
-    <a href="{{ '/paper/' | relative_url }}"{% if page.url contains '/paper' %} class="current"{% endif %}>Paper</a>
-    <a href="https://github.com/revanshine/decoherence-as-first-principle">GitHub</a>
-  </nav>
-
   <main>
     {{ content }}
   </main>
 
   <footer style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #eee; color: #666; font-size: 0.9em;">
-    <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author | default: "Research Project" }}. All rights reserved.</p>
+    <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author.name | default: "Research Project" }}. Repository code distributed under MIT license.</p>
   </footer>
 </body>
 </html>
