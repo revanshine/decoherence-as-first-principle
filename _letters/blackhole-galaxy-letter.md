@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Blackhole Galaxy Letter
+title: On Black Holes and Galactic Structure
 nav_order: 3
 parent: Letters
 ---

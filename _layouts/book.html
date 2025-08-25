@@ -372,7 +372,8 @@ body {
 
         <div class="letters-preview">
           <h3>Research Letters</h3>
-          {% for letter in site.letters limit:3 %}
+          {% assign sorted_letters = site.letters | sort: 'nav_order' %}
+          {% for letter in sorted_letters limit:3 %}
             <div class="letter-preview">
               <a href="#" data-letter-url="/assets/letters/{{ letter.slug }}.html" class="letter-link">{{ letter.title }}</a>
             </div>
