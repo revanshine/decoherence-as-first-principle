@@ -48,7 +48,7 @@ plugins:
 # Footer content
 footer_content: 'Copyright &copy; 2025 Robert Evanshine. Repository code distributed under MIT license.'
 
-# Exclude build artifacts
+# Exclude build artifacts but allow assets
 exclude:
   - .sass-cache/
   - .jekyll-cache/
@@ -61,5 +61,6 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - build/
-  - "*.pdf"
-  - "*.tex"
+  - manuscript/
+  - README.md
+  - LICENSE

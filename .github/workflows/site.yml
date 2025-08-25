@@ -30,6 +30,13 @@ jobs:
       - name: Build All Assets (TEX, PDF, HTML)
         run: ./make
 
+      # Ensure assets are in place for Jekyll
+      - name: Verify assets were created
+        run: |
+          echo "Checking generated assets:"
+          ls -la assets/paper/ || echo "No assets/paper directory"
+          ls -la assets/letters/ || echo "No assets/letters directory"
+
       # Setup Ruby and Jekyll
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
