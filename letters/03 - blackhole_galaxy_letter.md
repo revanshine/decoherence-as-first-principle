@@ -1,6 +1,8 @@
 ---
-layout: page
+layout: default
 title: Black hole–galaxy letter
+nav_order: 3
+parent: Letters
 ---
 
 **Blackhole Galaxy Letter**

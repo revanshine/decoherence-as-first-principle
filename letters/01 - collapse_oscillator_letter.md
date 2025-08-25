@@ -1,6 +1,8 @@
 ---
-layout: page
+layout: default
 title: Collapse-Length Oscillation Letter
+nav_order: 1
+parent: Letters
 ---
 
 **Collapse-Length Oscillation and Conservation-Driven Cosmological Expansion**

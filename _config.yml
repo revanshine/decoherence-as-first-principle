@@ -4,7 +4,30 @@ description: Exploring decoherence as a first principle in physics, with applica
 url: "https://robertevanshine.com"
 baseurl: ""
 
-theme: minima
+# Testing Just-the-Docs theme
+theme: just-the-docs
+
+# Enable dark mode support
+color_scheme: nil  # supports "dark", "light"/nil (default), or custom
+
+# Search configuration
+search_enabled: true
+search:
+  heading_level: 2
+  previews: 2
+  preview_words_before: 3
+  preview_words_after: 3
+
+# Navigation
+nav_enabled: true
+nav_sort: case_sensitive
+
+# Heading anchors
+heading_anchors: true
+
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
 
 plugins:
   - jekyll-seo-tag
@@ -13,3 +36,30 @@ plugins:
 author:
   name: Robert Evanshine
   github: revanshine
+
+# Footer content
+footer_content: 'Copyright &copy; 2025 Robert Evanshine. Distributed under an <a href="https://github.com/revanshine/decoherence-as-first-principle/blob/main/LICENSE">MIT license.</a>'
+
+# GitHub edit links
+gh_edit_link: true
+gh_edit_link_text: "Edit this page on GitHub"
+gh_edit_repository: "https://github.com/revanshine/decoherence-as-first-principle"
+gh_edit_branch: "main"
+gh_edit_view_mode: "tree"
+
+# Exclude build artifacts (maintaining your existing exclusions)
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - build/
+  - "*.pdf"
+  - "*.tex"
+  - "*.html"

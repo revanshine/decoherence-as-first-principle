@@ -1,6 +1,7 @@
 ---
-layout: page
-title: The Manuscript
+layout: default
+title: Paper
+nav_order: 3
 permalink: /paper/
 ---
 

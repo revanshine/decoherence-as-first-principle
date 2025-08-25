@@ -1,6 +1,8 @@
 ---
-layout: page
+layout: default
 title: Gravitational Decoherence Oscillations Letter
+nav_order: 2
+parent: Letters
 ---
 
 **Gravitational Decoherence Oscillations as the Source of Apparent Cosmic Acceleration**

@@ -1,6 +1,8 @@
 ---
-layout: page
-title: Letters & Notes
+layout: default
+title: Letters
+nav_order: 2
+has_children: true
 permalink: /letters/
 ---
 
