@@ -53,13 +53,13 @@ pandoc \
     "${INPUTS[@]}" \
     -o assets/paper/manuscript.html
 
-# Post-process to replace polyfill.io with reliable CDN
+# Post-process to replace polyfill.io and fix MathJax conflicts
 if [[ -f "assets/paper/manuscript.html" ]]; then
-    echo "   Post-processing: Replacing polyfill.io and fixing MathJax conflicts"
-    # Replace polyfill.io with a single, working MathJax script
+    echo "   Post-processing: Removing polyfill.io and fixing MathJax conflicts"
+    # Remove polyfill.io script entirely
     sed -i.bak 's|<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>||g' assets/paper/manuscript.html
-    # Also remove any duplicate MathJax scripts that might conflict
-    sed -i.bak 's|src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"|src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"|g' assets/paper/manuscript.html
+    # Replace the problematic tex-chtml-full.js with simpler tex-chtml.js
+    sed -i.bak 's|tex-chtml-full.js|tex-chtml.js|g' assets/paper/manuscript.html
     rm -f assets/paper/manuscript.html.bak
 fi
 echo "   ✓ Generated assets/paper/manuscript.html"
@@ -73,10 +73,12 @@ if [[ -f "assets/paper/manuscript.html" ]]; then
         echo "   ✓ Verified: No polyfill.io found"
     fi
     
-    if grep -q "jsdelivr.net" assets/paper/manuscript.html; then
-        echo "   ✓ Verified: Using jsdelivr.net CDN for MathJax"
+    if grep -q "tex-chtml-full.js" assets/paper/manuscript.html; then
+        echo "   ⚠ Warning: Still using tex-chtml-full.js (may cause conflicts)"
+    elif grep -q "tex-chtml.js" assets/paper/manuscript.html; then
+        echo "   ✓ Verified: Using tex-chtml.js (should work without conflicts)"
     else
-        echo "   ⚠ Warning: jsdelivr.net CDN not found"
+        echo "   ⚠ Warning: No MathJax script found"
     fi
 else
     echo "   ❌ Error: manuscript.html was not generated"
@@ -120,7 +122,7 @@ for letter in "${LETTERS[@]}"; do
         # Post-process to fix MathJax conflicts
         if [[ -f "assets/letters/$basename.html" ]]; then
             sed -i.bak 's|<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>||g' "assets/letters/$basename.html"
-            sed -i.bak 's|src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"|src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"|g' "assets/letters/$basename.html"
+            sed -i.bak 's|tex-chtml-full.js|tex-chtml.js|g' "assets/letters/$basename.html"
             rm -f "assets/letters/$basename.html.bak"
         fi
         echo "   ✓ Generated assets/letters/$basename.html"
@@ -158,7 +160,7 @@ if [[ -d "research/notes" ]]; then
             # Post-process to fix MathJax conflicts
             if [[ -f "assets/notes/${basename}.html" ]]; then
                 sed -i.bak 's|<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>||g' "assets/notes/${basename}.html"
-                sed -i.bak 's|src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"|src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"|g' "assets/notes/${basename}.html"
+                sed -i.bak 's|tex-chtml-full.js|tex-chtml.js|g' "assets/notes/${basename}.html"
                 rm -f "assets/notes/${basename}.html.bak"
             fi
             echo "   ✓ Converted $basename.md"
