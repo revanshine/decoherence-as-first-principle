@@ -40,7 +40,7 @@ author:
   github: revanshine
 
 # Footer content
-footer_content: 'Copyright &copy; 2025 Robert Evanshine. Distributed under an <a href="https://github.com/revanshine/decoherence-as-first-principle/blob/main/LICENSE">MIT license.</a>'
+footer_content: 'Copyright &copy; 2025 Robert Evanshine. Repository code distributed under MIT license.'
 
 # GitHub edit links
 gh_edit_link: true
