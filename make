@@ -98,7 +98,31 @@ for letter in "${LETTERS[@]}"; do
     fi
 done
 
-echo "📊 Build Summary:"
+echo "🏷️  Generating research notes tag cloud..."
+if [[ -f "scripts/generate-tag-cloud.js" ]]; then
+    node scripts/generate-tag-cloud.js
+    echo "   ✓ Tag cloud generated"
+else
+    echo "   ⚠ Tag cloud script not found"
+fi
+
+echo "📝 Converting research notes to HTML..."
+mkdir -p assets/notes
+if [[ -d "research/notes" ]]; then
+    for note in research/notes/*.md; do
+        if [[ -f "$note" ]]; then
+            basename=$(basename "$note" .md)
+            pandoc "$note" -o "assets/notes/${basename}.html" \
+                --standalone \
+                --mathjax \
+                --css="/assets/css/notes.css" \
+                --metadata title="$basename" 2>/dev/null || echo "   ⚠ Failed to convert $note"
+            echo "   ✓ Converted $basename.md"
+        fi
+    done
+else
+    echo "   ⚠ No research/notes directory found"
+fi
 echo "   Source of Truth: build/out/manuscript.tex (untouched)"
 echo "   Vehicle (PDF):   assets/paper/manuscript.pdf (copied from build)"
 echo "   Salesman (HTML): assets/paper/manuscript.html (fresh from markdown)"

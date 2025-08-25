@@ -163,10 +163,42 @@ body {
   background: var(--btn-secondary-hover, #4b5563);
 }
 
-.letters-preview, .downloads, .citation-section {
+.letters-preview, .downloads, .citation-section, .research-notes {
   margin-top: 2rem;
   padding-top: 1rem;
   border-top: 1px solid var(--page-border, #e5e7eb);
+}
+
+.tag-cloud {
+  line-height: 1.8;
+  margin-top: 1rem;
+}
+
+.tag {
+  display: inline-block;
+  margin: 0.2rem 0.4rem;
+  padding: 0.2rem 0.6rem;
+  background: var(--tag-bg, #f3f4f6);
+  color: var(--tag-color, #4b5563);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  border: 1px solid transparent;
+}
+
+.tag:hover {
+  background: var(--tag-hover-bg, #e5e7eb);
+  color: var(--tag-hover-color, #1f2937);
+  border-color: var(--tag-border, #d1d5db);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tag.active {
+  background: var(--tag-active-bg, #3b82f6);
+  color: white;
+  border-color: var(--tag-active-border, #2563eb);
 }
 
 .letter-preview {
@@ -333,6 +365,24 @@ body {
           {% if letter_files.size == 0 %}
             <p><em>Letters will appear here after build completes</em></p>
           {% endif %}
+        </div>
+        
+        <div class="research-notes">
+          <h3>Research Notes</h3>
+          <div class="tag-cloud">
+            {% if site.data.tag-cloud %}
+              {% for tag_data in site.data.tag-cloud.tagCloud limit:20 %}
+                <span class="tag" 
+                      data-weight="{{ tag_data.weight }}" 
+                      data-notes="{{ tag_data.notes | jsonify | escape }}"
+                      style="font-size: {{ tag_data.weight | times: 0.2 | plus: 0.8 }}em; opacity: {{ tag_data.weight | times: 0.1 | plus: 0.6 }};">
+                  {{ tag_data.tag }}
+                </span>
+              {% endfor %}
+            {% else %}
+              <p><em>Tag cloud will appear after build completes</em></p>
+            {% endif %}
+          </div>
         </div>
         
         <div class="downloads">
@@ -514,6 +564,84 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
     });
+  });
+  
+  // Handle tag cloud interactions
+  const tags = document.querySelectorAll('.tag');
+  tags.forEach(tag => {
+    tag.addEventListener('click', function() {
+      const notesData = JSON.parse(this.getAttribute('data-notes'));
+      const tagName = this.textContent.trim();
+      
+      // Remove active states
+      tags.forEach(t => t.classList.remove('active'));
+      letterLinks.forEach(l => l.classList.remove('active'));
+      navLinks.forEach(l => l.classList.remove('active'));
+      
+      // Activate this tag
+      this.classList.add('active');
+      
+      // Create notes list HTML
+      let notesHtml = `
+        <div style="padding: 2rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+          <h1>Research Notes: "${tagName}"</h1>
+          <p style="color: #666; margin-bottom: 2rem;">Found ${notesData.length} notes with this tag:</p>
+      `;
+      
+      notesData.forEach(note => {
+        notesHtml += `
+          <div style="margin-bottom: 2rem; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 8px; background: #f9fafb;">
+            <h3 style="margin: 0 0 1rem 0; color: #1f2937;">${note.title}</h3>
+            <p style="margin: 0; color: #6b7280; font-size: 0.9em;">
+              <a href="#" onclick="window.parent.postMessage({type: 'loadNote', path: '${note.path}'}, '*')" 
+                 style="color: #3b82f6; text-decoration: none;">
+                📄 Open Note
+              </a>
+            </p>
+          </div>
+        `;
+      });
+      
+      notesHtml += `
+          <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e7eb;">
+            <button onclick="window.parent.postMessage({type: 'backToManuscript'}, '*')" 
+                    style="padding: 0.5rem 1rem; background: #6b7280; color: white; border: none; border-radius: 4px; cursor: pointer;">
+              ← Back to Manuscript
+            </button>
+          </div>
+        </div>
+      `;
+      
+      // Load notes list in iframe
+      frame.srcdoc = notesHtml;
+      
+      // Show back button
+      if (backBtn) {
+        backBtn.style.display = 'inline-block';
+      }
+    });
+  });
+  
+  // Handle messages from iframe (for note loading)
+  window.addEventListener('message', function(event) {
+    if (event.data.type === 'loadNote') {
+      // Convert markdown path to HTML path for display
+      const htmlPath = event.data.path.replace('research/notes/', 'assets/notes/').replace('.md', '.html');
+      frame.src = htmlPath;
+    } else if (event.data.type === 'backToManuscript') {
+      // Restore original manuscript
+      frame.src = originalManuscriptUrl;
+      
+      // Remove active states
+      tags.forEach(t => t.classList.remove('active'));
+      letterLinks.forEach(l => l.classList.remove('active'));
+      navLinks.forEach(l => l.classList.remove('active'));
+      
+      // Hide back button
+      if (backBtn) {
+        backBtn.style.display = 'none';
+      }
+    }
   });
   
   // Handle Back to Manuscript button

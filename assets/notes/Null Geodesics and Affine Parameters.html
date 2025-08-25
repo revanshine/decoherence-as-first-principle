@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Null Geodesics and Affine Parameters</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="/assets/css/notes.css" />
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Null Geodesics and Affine Parameters</h1>
+</header>
+<h1 id="null-geodesics-and-affine-parameters">Null Geodesics and Affine
+Parameters</h1>
+<h2 id="the-problem-with-proper-time-for-photons">The Problem with
+Proper Time for Photons</h2>
+<p>For <strong>null trajectories</strong> (such as those of photons) in
+general relativity, you cannot use <em>proper time</em> (<span
+class="math inline">\(\tau\)</span>) as a parameter along the geodesic.
+This is because, for light-like (null) paths, the spacetime interval is
+exactly zero (<span class="math inline">\(ds^2 = 0\)</span>), meaning
+proper time does not advance for the photon.</p>
+<h2 id="affine-parameters">Affine Parameters</h2>
+<p>Instead, you use an <strong>affine parameter</strong> (commonly
+denoted <span class="math inline">\(\lambda\)</span>) to parametrize the
+path of a photon along its geodesic. The geodesic equation for a
+trajectory <span class="math inline">\(x^\mu(\lambda)\)</span> is then
+written as:</p>
+<p><span class="math display">\[
+\frac{d^2 x^\mu}{d\lambda^2} + \Gamma^\mu_{\nu \rho}
+\frac{dx^\nu}{d\lambda} \frac{dx^\rho}{d\lambda} = 0
+\]</span></p>
+<p>where <span class="math inline">\(\Gamma^\mu_{\nu \rho}\)</span> are
+the Christoffel symbols.</p>
+<h2 id="parameter-types-by-geodesic-class">Parameter Types by Geodesic
+Class</h2>
+<ul>
+<li><strong>Timelike geodesics</strong> (massive particles): <span
+class="math inline">\(\lambda\)</span> can be set equal to proper time
+<span class="math inline">\(\tau\)</span></li>
+<li><strong>Null geodesics</strong> (photons): <span
+class="math inline">\(\lambda\)</span> is any parameter that “runs
+smoothly” along the trajectory, preserving the form of the geodesic
+equation above—this is called an <em>affine parametrization</em></li>
+</ul>
+<h2 id="properties-of-affine-parameters">Properties of Affine
+Parameters</h2>
+<p>An affine parameter has the property that it relates linearly to
+parallel transport and momentum along the geodesic. It has no intrinsic
+physical meaning like proper time but is mathematically required for the
+geodesic equations to work for massless particles.</p>
+<h2 id="summary">Summary</h2>
+<p>For photons (null geodesics), use an <strong>affine parameter <span
+class="math inline">\(\lambda\)</span></strong> to trace their paths
+through spacetime because proper time is not defined for light.</p>
+<hr />
+<h2 id="connection-to-decoherence-framework">Connection to Decoherence
+Framework</h2>
+<p>In the context of decoherence theory, understanding null geodesics
+becomes important when considering how information propagates through
+spacetime. The affine parameter formalism may be relevant for
+understanding how decoherence effects propagate at the speed of light,
+particularly in gravitational contexts where spacetime curvature affects
+the causal structure.</p>
+<hr />
+<p><em>Note: This appears to be foundational material for understanding
+how information and causal influences propagate in curved spacetime,
+which may be relevant to gravitational decoherence mechanisms.</em></p>
+</body>
+</html>
