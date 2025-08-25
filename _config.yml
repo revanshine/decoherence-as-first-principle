@@ -68,6 +68,5 @@ exclude:
   - vendor/ruby/
   - build/
   - manuscript/
-  - assets/notes/
   - README.md
   - LICENSE
