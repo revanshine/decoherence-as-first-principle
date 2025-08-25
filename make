@@ -125,11 +125,11 @@ if [[ -d "research/notes" ]]; then
     for note in research/notes/*.md; do
         if [[ -f "$note" ]]; then
             basename=$(basename "$note" .md)
+            # Generate iframe-friendly HTML (no full document structure)
             pandoc "$note" -o "assets/notes/${basename}.html" \
-                --standalone \
                 --mathjax \
-                --css="/assets/css/notes.css" \
-                --metadata title="$basename" 2>/dev/null || echo "   ⚠ Failed to convert $note"
+                --metadata title="$basename" \
+                2>/dev/null || echo "   ⚠ Failed to convert $note"
             echo "   ✓ Converted $basename.md"
         fi
     done
