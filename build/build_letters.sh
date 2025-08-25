@@ -30,9 +30,16 @@ echo "Building letters..."
 for letter in "${LETTERS[@]}"; do
   if [[ -f "letters/$letter" ]]; then
     basename="${letter%.md}"
-    echo "Building $basename.pdf..."
-    pandoc "${COMMON_OPTS[@]}" "letters/$letter" -o "$OUTDIR/$basename.pdf"
-    echo "✓ Generated $OUTDIR/$basename.pdf"
+    
+    if [[ -z "$GENERATE_TEX_ONLY" ]]; then
+      echo "Building $basename.pdf..."
+      pandoc "${COMMON_OPTS[@]}" "letters/$letter" -o "$OUTDIR/$basename.pdf"
+      echo "✓ Generated $OUTDIR/$basename.pdf"
+    else
+      echo "Building $basename.tex..."
+      pandoc --standalone "${COMMON_OPTS[@]}" "letters/$letter" -o "$OUTDIR/$basename.tex"
+      echo "✓ Generated $OUTDIR/$basename.tex"
+    fi
   else
     echo "⚠️  Warning: letters/$letter not found, skipping..."
   fi

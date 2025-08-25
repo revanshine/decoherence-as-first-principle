@@ -24,20 +24,41 @@ jobs:
         with:
           pandoc-version: '3.7.0.2'
 
-      # Build PDFs using TeX Live container (PDFs only)
-      - name: Build PDFs with TeX Live
+      # Generate TEX files with host pandoc
+      - name: Generate TEX files
+        run: |
+          chmod +x build/build.sh
+          # Generate TEX files only (skip PDF compilation)
+          GENERATE_TEX_ONLY=1 bash build/build.sh
+          
+          chmod +x build/build_letters.sh  
+          GENERATE_TEX_ONLY=1 bash build/build_letters.sh
+
+      # Compile PDFs using TeX Live container
+      - name: Compile PDFs with TeX Live
         uses: xu-cheng/texlive-action@v2
         with:
           scheme: full
           run: |
-            # Only build the PDFs that need TeX
-            chmod +x build/build.sh
-            cd build && ./build.sh
+            # Compile PDFs from existing TEX files
+            cd build/out
+            if [ -f manuscript.tex ]; then
+              pdflatex manuscript.tex
+              pdflatex manuscript.tex  # Run twice for references
+            fi
+            
+            # Compile letter PDFs
+            cd letters
+            for tex_file in *.tex; do
+              if [ -f "$tex_file" ]; then
+                pdflatex "$tex_file"
+                pdflatex "$tex_file"  # Run twice for references
+              fi
+            done
 
-      # Build HTML assets with host pandoc (fast, correct version)
+      # Build HTML and other assets with host pandoc
       - name: Build HTML and other assets
         run: |
-          # Generate HTML files with correct pandoc version
           chmod +x ./make
           # Skip PDF generation since it's already done
           SKIP_PDF_BUILD=1 ./make
