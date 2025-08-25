@@ -177,10 +177,15 @@ body {
 .letter-preview a, .downloads a {
   color: var(--letter-color, #6b7280);
   text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  display: block;
+  transition: all 0.2s;
 }
 
-.letter-preview a:hover, .downloads a:hover {
+.letter-preview a:hover, .downloads a:hover, .letter-preview a.active {
   color: var(--letter-hover, #374151);
+  background: var(--nav-hover, #f3f4f6);
 }
 
 .downloads ul {
@@ -312,6 +317,7 @@ body {
           
           <div class="manuscript-actions">
             <a href="{{ '/assets/paper/manuscript.html' | relative_url }}" target="_blank" class="btn-secondary">Full Page View</a>
+            <button id="back-to-manuscript" class="btn-secondary" style="display: none; margin-left: 0.5rem;">Back to Manuscript</button>
           </div>
         </nav>
         
@@ -321,7 +327,7 @@ body {
           {% for file in letter_files limit:3 %}
             {% assign basename = file.basename %}
             <div class="letter-preview">
-              <a href="{{ file.path | relative_url }}" target="_blank">{{ basename | replace: "-", " " | replace: "_", " " | capitalize }}</a>
+              <a href="#" data-letter-url="{{ file.path | relative_url }}" class="letter-link">{{ basename | replace: "-", " " | replace: "_", " " | capitalize }}</a>
             </div>
           {% endfor %}
           {% if letter_files.size == 0 %}
@@ -478,6 +484,50 @@ document.addEventListener('DOMContentLoaded', function() {
           copyBtn.classList.remove('copied');
         }, 2000);
       }
+    });
+  }
+  
+  // Handle Research Letters links
+  const letterLinks = document.querySelectorAll('.letter-link');
+  const backBtn = document.getElementById('back-to-manuscript');
+  const originalManuscriptUrl = frame.src;
+  
+  letterLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const letterUrl = this.getAttribute('data-letter-url');
+      if (letterUrl && frame) {
+        // Load the letter in the main iframe
+        frame.src = letterUrl;
+        
+        // Remove active class from navigation links
+        navLinks.forEach(l => l.classList.remove('active'));
+        
+        // Visual feedback on the letter link
+        letterLinks.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+        
+        // Show back button
+        if (backBtn) {
+          backBtn.style.display = 'inline-block';
+        }
+      }
+    });
+  });
+  
+  // Handle Back to Manuscript button
+  if (backBtn) {
+    backBtn.addEventListener('click', function() {
+      // Restore original manuscript
+      frame.src = originalManuscriptUrl;
+      
+      // Remove active states
+      letterLinks.forEach(l => l.classList.remove('active'));
+      navLinks.forEach(l => l.classList.remove('active'));
+      
+      // Hide back button
+      this.style.display = 'none';
     });
   }
 });
