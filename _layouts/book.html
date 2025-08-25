@@ -2,6 +2,296 @@
 layout: default
 ---
 
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0c0c1e 0%, #1a1a2e 25%, #16213e 50%, #0f0f23 75%, #0a0a1a 100%);
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Add subtle stars to the background */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #eee, transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.6), transparent),
+    radial-gradient(2px 2px at 160px 30px, rgba(255,255,255,0.9), transparent);
+  background-repeat: repeat;
+  background-size: 200px 100px;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.book-container {
+  display: flex;
+  max-width: 1400px;
+  margin: 2rem auto;
+  background: var(--book-bg, #f8f9fa);
+  border-radius: 12px;
+  box-shadow: 
+    0 20px 40px rgba(0,0,0,0.4),
+    0 0 0 1px rgba(255,255,255,0.1),
+    inset 0 1px 0 rgba(255,255,255,0.2);
+  overflow: hidden;
+  height: 90vh;
+  position: relative;
+}
+
+/* Add a subtle glow around the book */
+.book-container::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, rgba(100,149,237,0.3), rgba(138,43,226,0.3), rgba(30,144,255,0.3));
+  border-radius: 14px;
+  z-index: -1;
+}
+
+.book-spine {
+  width: 20px;
+  background: linear-gradient(to bottom, #8b4513, #654321, #4a2c17);
+  position: relative;
+  box-shadow: inset 2px 0 4px rgba(0,0,0,0.3);
+}
+
+.book-spine::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background: rgba(255,255,255,0.3);
+}
+
+.book-pages {
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+
+.book-page {
+  flex: 1;
+  padding: 2rem;
+  position: relative;
+  overflow-y: auto;
+}
+
+.book-page-left {
+  background: var(--left-page-bg, #ffffff);
+  border-right: 1px solid var(--page-border, #e5e7eb);
+  flex: 0 0 350px;
+  box-shadow: inset -1px 0 3px rgba(0,0,0,0.1);
+}
+
+.book-page-right {
+  background: var(--right-page-bg, #fefefe);
+  flex: 1;
+  padding: 0;
+  box-shadow: inset 1px 0 3px rgba(0,0,0,0.1);
+}
+
+.manuscript-container {
+  height: 100%;
+  position: relative;
+}
+
+.manuscript-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--text-muted, #6b7280);
+}
+
+#manuscript-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: white;
+}
+
+.book-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.book-nav li {
+  margin: 0.5rem 0;
+}
+
+.book-nav a {
+  text-decoration: none;
+  color: var(--nav-color, #374151);
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  display: block;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.book-nav a:hover, .book-nav a.active {
+  background: var(--nav-hover, #f3f4f6);
+  color: var(--nav-active, #1f2937);
+}
+
+.manuscript-actions {
+  margin: 1.5rem 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--page-border, #e5e7eb);
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--btn-secondary-bg, #6b7280);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9em;
+  transition: background-color 0.2s;
+}
+
+.btn-secondary:hover {
+  background: var(--btn-secondary-hover, #4b5563);
+}
+
+.letters-preview, .downloads, .citation-section {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--page-border, #e5e7eb);
+}
+
+.letter-preview {
+  margin: 0.5rem 0;
+  font-size: 0.9em;
+}
+
+.letter-preview a, .downloads a {
+  color: var(--letter-color, #6b7280);
+  text-decoration: none;
+}
+
+.letter-preview a:hover, .downloads a:hover {
+  color: var(--letter-hover, #374151);
+}
+
+.downloads ul {
+  list-style: none;
+  padding: 0;
+}
+
+.downloads li {
+  margin: 0.5rem 0;
+}
+
+.citation-container {
+  position: relative;
+  margin-top: 1rem;
+}
+
+#bibtex-citation {
+  background: var(--code-bg, #f8f9fa);
+  border: 1px solid var(--page-border, #e5e7eb);
+  border-radius: 4px;
+  padding: 1rem;
+  font-size: 0.8em;
+  line-height: 1.4;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0;
+  color: var(--code-text, #374151);
+}
+
+.copy-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: var(--btn-secondary-bg, #6b7280);
+  color: white;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8em;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.copy-btn:hover {
+  background: var(--btn-secondary-hover, #4b5563);
+}
+
+.copy-btn.copied {
+  background: var(--success-color, #10b981);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --book-bg: #1f2937;
+    --left-page-bg: #374151;
+    --right-page-bg: #374151;
+    --page-border: #4b5563;
+    --nav-color: #d1d5db;
+    --nav-hover: #4b5563;
+    --nav-active: #f9fafb;
+    --letter-color: #9ca3af;
+    --letter-hover: #d1d5db;
+    --text-muted: #9ca3af;
+    --btn-secondary-bg: #6b7280;
+    --btn-secondary-hover: #9ca3af;
+    --code-bg: #4b5563;
+    --code-text: #e5e7eb;
+    --success-color: #059669;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  body::before {
+    background-size: 150px 75px;
+  }
+  
+  .book-pages {
+    flex-direction: column;
+  }
+  
+  .book-page-left {
+    flex: 0 0 auto;
+    border-right: none;
+    border-bottom: 1px solid var(--page-border, #e5e7eb);
+    max-height: 40vh;
+  }
+  
+  .book-page-right {
+    flex: 1;
+  }
+  
+  .book-spine {
+    display: none;
+  }
+  
+  .book-container {
+    height: 95vh;
+    margin: 1rem;
+  }
+}
+</style>
+
 <div class="book-container">
   <div class="book-spine"></div>
   
@@ -91,252 +381,6 @@ layout: default
     </div>
   </div>
 </div>
-
-<style>
-.book-container {
-  display: flex;
-  max-width: 1400px;
-  margin: 2rem auto;
-  background: var(--book-bg, #f8f9fa);
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  overflow: hidden;
-  height: 90vh;
-}
-
-.book-spine {
-  width: 20px;
-  background: linear-gradient(to bottom, #8b4513, #654321);
-  position: relative;
-}
-
-.book-spine::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 1px;
-  height: 100%;
-  background: rgba(255,255,255,0.2);
-}
-
-.book-pages {
-  display: flex;
-  flex: 1;
-  height: 100%;
-}
-
-.book-page {
-  flex: 1;
-  padding: 2rem;
-  position: relative;
-  overflow-y: auto;
-}
-
-.book-page-left {
-  background: var(--left-page-bg, #ffffff);
-  border-right: 1px solid var(--page-border, #e5e7eb);
-  flex: 0 0 350px;
-}
-
-.book-page-right {
-  background: var(--right-page-bg, #fefefe);
-  flex: 1;
-  padding: 0;
-}
-
-.manuscript-container {
-  height: 100%;
-  position: relative;
-}
-
-.manuscript-loading {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: var(--text-muted, #6b7280);
-}
-
-#manuscript-frame {
-  width: 100%;
-  height: 100%;
-  border: none;
-  background: white;
-}
-
-.book-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-.book-nav li {
-  margin: 0.5rem 0;
-}
-
-.book-nav a {
-  text-decoration: none;
-  color: var(--nav-color, #374151);
-  padding: 0.5rem 0.75rem;
-  border-radius: 4px;
-  display: block;
-  transition: all 0.2s;
-  cursor: pointer;
-}
-
-.book-nav a:hover, .book-nav a.active {
-  background: var(--nav-hover, #f3f4f6);
-  color: var(--nav-active, #1f2937);
-}
-
-.manuscript-actions {
-  margin: 1.5rem 0;
-  padding-top: 1rem;
-  border-top: 1px solid var(--page-border, #e5e7eb);
-}
-
-.btn-secondary {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: var(--btn-secondary-bg, #6b7280);
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  font-size: 0.9em;
-  transition: background-color 0.2s;
-}
-
-.btn-secondary:hover {
-  background: var(--btn-secondary-hover, #4b5563);
-}
-
-.letters-preview, .downloads {
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--page-border, #e5e7eb);
-}
-
-.letter-preview {
-  margin: 0.5rem 0;
-  font-size: 0.9em;
-}
-
-.letter-preview a, .downloads a {
-  color: var(--letter-color, #6b7280);
-  text-decoration: none;
-}
-
-.letter-preview a:hover, .downloads a:hover {
-  color: var(--letter-hover, #374151);
-}
-
-.downloads ul {
-  list-style: none;
-  padding: 0;
-}
-
-.downloads li {
-  margin: 0.5rem 0;
-}
-
-.downloads li {
-  margin: 0.5rem 0;
-}
-
-.citation-section {
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--page-border, #e5e7eb);
-}
-
-.citation-container {
-  position: relative;
-  margin-top: 1rem;
-}
-
-#bibtex-citation {
-  background: var(--code-bg, #f8f9fa);
-  border: 1px solid var(--page-border, #e5e7eb);
-  border-radius: 4px;
-  padding: 1rem;
-  font-size: 0.8em;
-  line-height: 1.4;
-  overflow-x: auto;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  margin: 0;
-  color: var(--code-text, #374151);
-}
-
-.copy-btn {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  background: var(--btn-secondary-bg, #6b7280);
-  color: white;
-  border: none;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.8em;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.copy-btn:hover {
-  background: var(--btn-secondary-hover, #4b5563);
-}
-
-.copy-btn.copied {
-  background: var(--success-color, #10b981);
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --book-bg: #1f2937;
-    --left-page-bg: #374151;
-    --right-page-bg: #374151;
-    --page-border: #4b5563;
-    --nav-color: #d1d5db;
-    --nav-hover: #4b5563;
-    --nav-active: #f9fafb;
-    --letter-color: #9ca3af;
-    --letter-hover: #d1d5db;
-    --text-muted: #9ca3af;
-    --btn-secondary-bg: #6b7280;
-    --btn-secondary-hover: #9ca3af;
-    --code-bg: #4b5563;
-    --code-text: #e5e7eb;
-    --success-color: #059669;
-  }
-}
-
-/* Responsive design */
-@media (max-width: 1024px) {
-  .book-pages {
-    flex-direction: column;
-  }
-  
-  .book-page-left {
-    flex: 0 0 auto;
-    border-right: none;
-    border-bottom: 1px solid var(--page-border, #e5e7eb);
-    max-height: 40vh;
-  }
-  
-  .book-page-right {
-    flex: 1;
-  }
-  
-  .book-spine {
-    display: none;
-  }
-  
-  .book-container {
-    height: 95vh;
-  }
-}
-</style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
