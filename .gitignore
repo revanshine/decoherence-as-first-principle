@@ -6,3 +6,8 @@ build/out/
 *.toc
 *.pdf
 *.docx
+_site/
+.jekyll-cache/
+.sass-cache/
+.DS_Store
+assets/paper/*.pdf

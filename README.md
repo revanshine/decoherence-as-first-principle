@@ -33,6 +33,59 @@ To build from source:
 
 ---
 
+## 🧪 Testing & Development
+
+### Local Testing Options
+
+**Quick Build Test (Recommended):**
+```bash
+# Test core manuscript building
+bash build/build.sh
+# Output: build/out/manuscript.pdf and .tex
+```
+
+**GitHub Actions Workflow Testing:**
+
+The repository includes automated workflows for building and deploying:
+- `site.yml` - Builds manuscript + deploys GitHub Pages site
+- `build_letters.yml` - Builds research letters from markdown
+
+**Using `act` for Local Workflow Testing:**
+
+You can test workflows locally using [act](https://github.com/nektos/act):
+
+```bash
+# Validate workflow structure (fast)
+act --container-architecture linux/amd64 --job build --dryrun
+
+# Test individual workflow steps manually:
+# 1. Build manuscript
+bash build/build.sh
+
+# 2. Test HTML generation
+mkdir -p assets/paper
+cp build/out/manuscript.pdf assets/paper/
+cp build/out/manuscript.tex assets/paper/
+pandoc build/out/manuscript.tex --standalone --mathjax --citeproc -o assets/paper/manuscript.html
+```
+
+**Limitations of Local Testing:**
+- ✅ **Works well:** Workflow validation, core build logic, individual steps
+- ❌ **Problematic:** GitHub Pages actions (GitHub-specific), heavy TeX Live installation (~10-15 min), multi-job dependencies
+
+**Recommended Approach:**
+1. Use direct script testing for fastest feedback
+2. Test individual workflow steps manually
+3. Use `act --dryrun` for workflow validation
+4. Rely on GitHub Actions for full integration testing (Pages deployment is cloud-dependent)
+
+### Build Requirements
+- Pandoc 3.1.11+
+- TeX Live (latex-recommended, latex-extra, fonts packages)
+- For local testing: Docker (for `act`)
+
+---
+
 ## 📖 Citation & License
 
 - Please see [CITATION.cff](CITATION.cff) for citation info.

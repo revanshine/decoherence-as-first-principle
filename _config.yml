@@ -1,35 +1,15 @@
 title: Decoherence as First Principle
 description: Exploring decoherence as a first principle in physics, with applications to quantum foundations, cosmology, and the emergence of classical reality.
 
-# For a PROJECT site on GitHub Pages:
-url: "https://robertevanshine.com"        # no trailing slash
-baseurl: "/decoherence-as-first-principle" # repo name with leading slash
+url: "https://robertevanshine.com"
+baseurl: ""
 
 theme: minima
 
-permalink: /:categories/:title/
-lang: en
-timezone: America/Los_Angeles
-
-# GitHub Pages–friendly plugins
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-feed
 
 author:
   name: Robert Evanshine
-  email: admin@robertevanshine.com
   github: revanshine
-  linkedin: revanshine
-
-social:
-  name: Robert Evanshine
-  links:
-    - https://github.com/revanshine
-    - https://www.linkedin.com/in/revanshine/
-
-# Files to exclude from the build
-exclude:
-  - LICENSE
-  - CONTRIBUTING.md

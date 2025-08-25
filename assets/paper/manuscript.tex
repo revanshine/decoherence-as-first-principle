@@ -1,0 +1,1441 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Decoherence as First Principle: A Framework for Emergent Forces, Dark Matter, and Cosmological Structure},
+  pdfauthor={R. Evanshine},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Decoherence as First Principle: A Framework for Emergent Forces,
+Dark Matter, and Cosmological Structure}
+\author{R. Evanshine}
+\date{2025}
+
+\begin{document}
+\maketitle
+
+\section{Abstract}\label{abstract}
+
+We propose a novel interpretation of cosmological evolution grounded in
+the concept of decoherence as the primary physical mechanism underlying
+the emergence of classical reality (\citeproc{ref-zurek2009}{Zurek,
+2009}). In this view, the Big Bang is reinterpreted not as an explosion
+from a singularity, but as a Boltzmann-like fluctuation
+(\citeproc{ref-boltzmann1896}{Boltzmann, 1896};
+\citeproc{ref-carroll2008}{Carroll, 2010}) that initiated a sustainable
+decoherence cascade---what we term a \emph{decoherence bootstrap}. This
+bootstrap sets the conditions under which forces, particles, and
+spacetime structures emerge as stable pointer states of a quantum system
+undergoing localized decoherence (\citeproc{ref-gellmann1990}{Gell-Mann
+and Hartle, 1990}).
+
+We argue that gravity represents the earliest and most fundamental
+decoherence channel (\citeproc{ref-diosi1987}{Diósi, 1987};
+\citeproc{ref-penrose1996}{Penrose, 1996}), while other
+forces---particularly electromagnetism---emerge only after sufficient
+decoherence chain length has stabilized their respective interaction
+bases. In this model, dark matter is naturally reinterpreted as
+mass-energy that decohered gravitationally prior to the stabilization of
+the electromagnetic pointer basis. This provides an explanatory
+framework that accounts for dark matter's gravitational effects without
+requiring interaction with the electromagnetic sector
+(\citeproc{ref-bertone2018}{Bertone and Hooper, 2018}).
+
+We conclude by exploring the implications of this framework for black
+holes (\citeproc{ref-danielson2023}{Danielson, Satishchandran and Wald,
+2023}), quantum aliasing, and conservation principles in cosmology.
+\newpage
+
+\section{1. Introduction}\label{introduction}
+
+The quantum--classical boundary has long been treated as an epistemic
+artifact---a transition between microscopic indeterminacy and
+macroscopic determinism brought about by environmental measurement. In
+this work, we take a stronger stance: \textbf{decoherence is
+ontological}. The collapse of quantum superpositions is not merely a
+convenient description for observers but is instead a fundamental
+dynamical feature of reality's fabric, setting the cadence at which
+``real'' events occur.
+
+This perspective gains urgency when considered alongside two of modern
+physics' most persistent puzzles: the unification of quantum mechanics
+with general relativity, and the nature of dark matter. Both domains are
+deeply concerned with the \emph{structure of reality} at different
+scales, yet their current theoretical languages remain largely
+incompatible. We propose that treating decoherence as an ontological
+process---occurring in multiple ``pointer bases'' (e.g., gravitational,
+electromagnetic)---offers a route to reconciling these descriptions.
+
+We introduce the \textbf{Decoherence Bootstrap Hypothesis}, which posits
+that the early universe emerged from a singularity-like state through a
+self-sustaining decoherence process that progressively lengthened the
+``collapse length'' in different interaction bases. This
+sequence---gravitational → strong → electroweak →
+electromagnetic---provides a natural ordering for the emergence of
+forces without requiring ad hoc inflationary dynamics, while still
+accommodating the observed imprints in the cosmic microwave background.
+
+From this perspective, black holes represent the inverse limit of the
+bootstrap: as matter spirals toward a singularity, the collapse length
+in the gravitational basis diverges, terminating the sequence of
+decoherence events and returning localized regions of reality to
+``singularity space.''
+
+In what follows, we:
+
+\begin{itemize}
+\tightlist
+\item
+  Develop a quantitative framework linking collapse length to both
+  decoherence rate and gravitational time dilation.
+\item
+  Reinterpret dark matter as \textbf{mass decohered in the gravitational
+  basis but not in the electromagnetic basis}, explaining its purely
+  gravitational influence.
+\item
+  Show how quantum phenomena can be recast as \emph{aliasing artifacts}
+  arising from the finite sampling frequency of reality itself.
+\item
+  Connect the emergence of forces to conservation principles, proposing
+  that the ordering of their appearance reflects an optimal pathway for
+  dissipating the universe's initial energy density.
+\end{itemize}
+
+By situating decoherence as the engine of cosmic structure, we aim to
+offer both a conceptual unification of gravity and quantum mechanics and
+a falsifiable set of predictions that touch observational cosmology,
+quantum information theory, and high-energy physics.
+(\citeproc{ref-zwicky1933}{Zwicky, 1933}; \citeproc{ref-rubin1970}{Rubin
+and Ford Jr, 1970}; \citeproc{ref-zurek2003}{Zurek, 2003};
+\citeproc{ref-clowe2006}{Clowe \emph{et al.}, 2006};
+\citeproc{ref-schlosshauer2007}{Schlosshauer, 2007};
+\citeproc{ref-carroll2008}{Carroll, 2010})
+
+\section{2. The Decoherence Bootstrap
+Hypothesis}\label{the-decoherence-bootstrap-hypothesis}
+
+We propose that the Big Bang can be understood as a Boltzmann-like
+fluctuation (\citeproc{ref-boltzmann1896}{Boltzmann, 1896},
+\citeproc{ref-boltzmann1896english}{1966}) that achieved a
+\textbf{sustainable decoherence cascade} --- a self-propagating sequence
+of events in which quantum superpositions were progressively reduced to
+stable classical pointer states (\citeproc{ref-zurek2003}{Zurek, 2003};
+\citeproc{ref-schlosshauer2007}{Schlosshauer, 2007}). This process,
+which we term the \emph{decoherence bootstrap}, reframes the origin of
+the universe not as an uncontrolled explosion from a singularity, but as
+the initiation of a chain reaction in the ``Collapse Length'' of
+reality.
+
+In the earliest instants after this fluctuation, the \textbf{decoherence
+chain length} was vanishingly short: superpositions could not persist
+over any meaningful scale, and no stable physical structures or forces
+could emerge. This brevity imposed a unification of all interactions ---
+the system lacked the persistence to differentiate between bases such as
+electromagnetism, the strong and weak nuclear forces, and gravitation
+(\citeproc{ref-weinberg1974}{Weinberg, 1974};
+\citeproc{ref-guth1981}{Guth, 1981}). In this regime, the only
+physically meaningful structure was the quantum state of the whole.
+
+The bootstrap succeeded because the Collapse Length began to grow ---
+whether through an intrinsic thermodynamic instability
+(\citeproc{ref-prigogine1984}{Prigogine and Stengers, 1984}),
+amplification of quantum fluctuations
+(\citeproc{ref-mukhanov1981}{Mukhanov and Chibisov, 1981}), or a deep
+statistical bias in the space of possible microstates. As decoherence
+events chained together over longer separations, specific interaction
+bases could stabilize. Gravity, being universally coupled and
+insensitive to charge or spin (\citeproc{ref-misner1973}{Misner, Thorne
+and Wheeler, 1973}), is hypothesized to have been the first decoherence
+channel to achieve persistence. Subsequent forces emerged only once the
+decoherence chain could support their more delicate pointer states
+(\citeproc{ref-zurek2003}{Zurek, 2003}).
+
+The sustainability of this bootstrap is nontrivial. Not all fluctuations
+would have resulted in a growing Collapse Length; most would recede into
+singularity space, never establishing a classical history. The fact that
+our universe's decoherence chain lengthened, diversified, and stabilized
+interaction channels implies an underlying asymmetry --- possibly rooted
+in the low-entropy boundary conditions at the origin
+(\citeproc{ref-penrose1989}{Penrose, 1989}). This marks the Big Bang as
+the \textbf{boundary condition where Collapse Length was at its
+shortest}, in symmetry with black hole singularities as the
+\textbf{boundary condition where Collapse Length becomes infinite}.
+
+This perspective suggests that the ``laws of physics'' are not immutable
+axioms but \textbf{emergent features} of a decoherence network that
+reached a self-sustaining phase. The forces, particles, and spacetime
+fabric we observe are therefore contingent on the success of this
+bootstrap. In the absence of sustained decoherence, reality collapses
+back into the undifferentiated potential of singularity space, as is
+hypothesized to occur in black hole interiors
+(\citeproc{ref-hawking1976}{Hawking, 1976}).
+
+\section{3. Gravity as the Primary Decoherence
+Basis}\label{gravity-as-the-primary-decoherence-basis}
+
+In the decoherence bootstrap framework, gravity occupies a unique
+position as the \textbf{first and most fundamental decoherence channel}.
+This primacy arises from three key properties:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Universality of coupling} --- Unlike the other fundamental
+  interactions, gravity couples to \emph{all} forms of mass--energy
+  without exception or shielding. No matter the quantum state's
+  composition, it necessarily interacts gravitationally with the rest of
+  the universe.
+\item
+  \textbf{Geometric embodiment} --- In general relativity, gravity is
+  not a force in the gauge-field sense but the manifestation of
+  spacetime curvature itself. Any emergent classical structure must
+  therefore inherit a gravitational \emph{pointer basis} before other
+  interaction channels can stabilize.
+\item
+  \textbf{Dominance at Planck-scale densities} --- In the earliest
+  universe, energy densities approached the Planck scale, where
+  gravitational effects become overwhelming relative to other forces. At
+  these scales, spacetime curvature fluctuations dominate the
+  decoherence environment (\citeproc{ref-penrose1994}{Penrose, 1994}).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{3.1 Gravity as the First Classical
+Frame}\label{gravity-as-the-first-classical-frame}
+
+The curvature of spacetime is arguably the \textbf{first classical
+observable} to emerge. This observable defines the topology and metric
+properties of the universe, providing a \emph{stage} upon which all
+subsequent interactions play out. In this sense, the gravitational
+pointer basis is not merely a passive backdrop---it is the
+\textbf{structural skeleton} of classical reality.
+
+In the standard view, early-universe density perturbations are generated
+and amplified during inflation (\citeproc{ref-guth1981}{Guth, 1981};
+\citeproc{ref-linde1982}{Linde, 1982};
+\citeproc{ref-baumann2009}{Baumann, 2009}), then \emph{locked in} via
+gravitational decoherence before the electromagnetic pointer basis
+existed. In the decoherence bootstrap framework, this ``locking in'' can
+be explained even without inflation: \textbf{at the earliest moments the
+Collapse Length in the gravitational basis is extremely short}, i.e.,
+decoherence events occur at ultra-high frequency across the primordial,
+nonlocal pre-classical state. This rapid, quasi-simultaneous
+gravitational decoherence can establish large-scale correlations without
+a separate inflationary phase, while still yielding the observed
+uniformity and coherence of the early universe
+(\citeproc{ref-steinhardt2002}{Steinhardt and Turok, 2002};
+\citeproc{ref-brandenberger2011}{Brandenberger, 2011}).
+
+Under either picture, the seeds of cosmic structure---visible in the
+cosmic microwave background (CMB) anisotropies---reflect a
+gravitationally-set architecture established before electromagnetic
+observables existed.
+
+\emph{Boundary conditions summary:} the Big Bang corresponds to the
+\textbf{short-Collapse Length} limit (high-frequency decoherence
+initiating the chain), while black holes correspond to the
+\textbf{Collapse Length \(\to \infty\)} limit (termination of the chain
+in singularity space).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{3.2 Pre-Electromagnetic Decoherence
+Epochs}\label{pre-electromagnetic-decoherence-epochs}
+
+Before the electromagnetic basis stabilized, mass--energy could decohere
+purely in the gravitational channel. Such matter would remain
+\textbf{invisible} to any later EM-based detection, interacting only
+through its gravitational influence. This provides a natural,
+first-principles path to the dark matter reinterpretation developed in
+Section 5 (\citeproc{ref-zwicky1933}{Zwicky, 1933};
+\citeproc{ref-rubin1970}{Rubin and Ford Jr, 1970};
+\citeproc{ref-rubin1980}{Vera C. Rubin and Jr., 1980}).
+
+We define the \textbf{gravitational pointer basis} as the set of states
+whose decoherence is determined solely by spacetime curvature,
+independent of gauge interactions. In this framework, the earliest
+decohered mass--energy becomes ``dark'' not because it is exotic, but
+because it is \textbf{pre-EM classical}---its history is locked in
+before electromagnetic observables existed.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+In summary, gravity's universality, geometric nature, and dominance in
+the high-energy early universe position it as the first and most stable
+decoherence channel. The gravitational pointer basis shapes the earliest
+classical structure and predetermines the large-scale architecture of
+the universe before other forces even emerge.
+
+\section{4. Emergence of the Standard Model
+Forces}\label{emergence-of-the-standard-model-forces}
+
+In the \emph{decoherence bootstrap} framework, the emergence of the
+Standard Model forces can be understood as the sequential stabilization
+of distinct pointer bases as the Collapse Length of reality increased
+from its near-zero value at the Big Bang.
+
+At the earliest times, when the Collapse Length was vanishingly short,
+no force could meaningfully ``separate'' from the undifferentiated
+interaction network. All interactions were unified because quantum
+states could not persist over the spatial or temporal scales necessary
+to define distinct coupling channels
+(\citeproc{ref-weinberg1974}{Weinberg, 1974};
+\citeproc{ref-guth1981}{Guth, 1981}). In this regime, the universe
+behaved as a single, maximally entangled system with no meaningful
+subdivision into forces or particles.
+
+As the Collapse Length grew --- whether due to thermodynamic
+irreversibility (\citeproc{ref-prigogine1984}{Prigogine and Stengers,
+1984}), amplification of vacuum fluctuations
+(\citeproc{ref-mukhanov1981}{Mukhanov and Chibisov, 1981}), or
+statistical bias in the space of possible configurations --- the first
+interaction to stabilize was \textbf{gravitation}. Gravity's
+universality (coupling to all forms of energy-momentum) and
+insensitivity to internal quantum numbers such as charge or spin
+(\citeproc{ref-misner1973}{Misner, Thorne and Wheeler, 1973}) meant it
+could maintain coherence over the shortest scales. This gravitational
+pointer basis effectively ``froze in'' the large-scale geometry of
+spacetime, setting the stage for further differentiation.
+
+The \textbf{strong nuclear force} is hypothesized to have stabilized
+next. Confinement at low energies and asymptotic freedom at high
+energies (\citeproc{ref-gross1973}{Gross and Wilczek, 1973};
+\citeproc{ref-politzer1973}{Politzer, 1973}) imply that color charge
+could maintain a robust pointer basis once the Collapse Length exceeded
+the confinement scale, allowing hadronic matter to form without
+immediate reversion to a fully entangled state.
+
+The \textbf{electroweak force} emerged as the Collapse Length further
+expanded. Initially unified at high energies
+(\citeproc{ref-glashow1961}{Glashow, 1961};
+\citeproc{ref-weinberg1967}{Weinberg, 1967}), the electroweak
+interaction underwent spontaneous symmetry breaking via the Higgs
+mechanism (\citeproc{ref-higgs1964}{Higgs, 1964}) once decoherence
+events could persist over scales comparable to the Higgs field
+correlation length. This bifurcation produced the photon as the stable
+gauge boson of electromagnetism --- an interaction whose pointer basis
+is the most fragile and thus the last to stabilize in the early
+universe.
+
+In this view, the ``force unification epochs'' of conventional cosmology
+are reinterpreted as \textbf{decoherence-limited regimes}, each defined
+by the maximum Collapse Length achievable at that epoch. Rather than
+treating unification solely as a function of temperature or energy
+scale, the decoherence bootstrap posits that force differentiation is
+constrained by the rate at which reality can sustain independent pointer
+bases.
+
+This ordering --- gravity → strong → electroweak → electromagnetic ---
+mirrors the increasing fragility of each interaction's pointer basis. It
+also provides a natural explanation for why gravitation remains so
+resistant to unification with the other forces: its decoherence
+threshold lies at the very foundation of the bootstrap process, anchored
+in the shortest Collapse Length regime the universe has ever
+experienced.
+
+\section{5. A Natural Interpretation of Dark
+Matter}\label{a-natural-interpretation-of-dark-matter}
+
+We propose that the phenomenon currently labeled \emph{dark matter} can
+be understood not as an exotic, undiscovered particle species, but as
+\textbf{mass-energy that decohered in the gravitational pointer basis
+prior to the stabilization of the electromagnetic pointer basis}. In
+other words, it is matter that is ``classical'' with respect to gravity,
+but remains effectively quantum---unmeasured and non-interacting---in
+the electromagnetic sector.
+
+This interpretation naturally explains the observed properties of dark
+matter:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Gravitational Interaction} --- Such mass would still curve
+  spacetime and participate fully in gravitational clustering, producing
+  the galaxy rotation curves first inferred by Zwicky in galaxy clusters
+  (\citeproc{ref-zwicky1933}{Zwicky, 1933}) and refined in his later
+  work (\citeproc{ref-zwicky1937}{Zwicky, 1937}), confirmed on galactic
+  scales by Rubin and Ford (\citeproc{ref-rubin1970}{Rubin and Ford Jr,
+  1970}; \citeproc{ref-rubin1980}{Vera C. Rubin and Jr., 1980}), and
+  most strikingly demonstrated in the Bullet Cluster, where
+  gravitational lensing maps reveal a clear separation of mass from
+  luminous matter (\citeproc{ref-clowe2006}{Clowe \emph{et al.}, 2006}).
+\item
+  \textbf{Electromagnetic Invisibility} --- Without decoherence in the
+  EM basis, these structures neither emit, absorb, nor scatter photons,
+  accounting for their non-detection in optical, radio, or X-ray
+  surveys.
+\item
+  \textbf{Persistence Across Cosmic Time} --- Once decohered in gravity
+  but not in EM, this matter remains ``dark'' indefinitely, since
+  decoherence in one basis does not force decoherence in another unless
+  a cross-basis interaction occurs.
+\end{itemize}
+
+\subsubsection{Predictions and Testable
+Implications}\label{predictions-and-testable-implications}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Epoch Signatures} --- If dark matter represents a
+  pre-EM-decoherence population, its large-scale distribution should
+  preserve a subtle imprint of the gravitational potential landscape
+  that existed before electromagnetic stabilization. This could manifest
+  as anisotropies or preferred clustering modes in the cosmic web.
+\item
+  \textbf{Mass Distribution Asymmetry} --- Regions of high gravitational
+  decoherence density in the early universe would seed both dark matter
+  halos and the baryonic structures we observe, but with differing
+  mass-to-light ratios that can be mapped statistically
+  (\citeproc{ref-blumenthal1984}{Blumenthal \emph{et al.}, 1984}).
+\item
+  \textbf{No Direct Detection in EM-Based Experiments} --- Any detection
+  of dark matter through purely electromagnetic coupling would falsify
+  this interpretation, since such interaction would imply EM
+  decoherence.
+\end{enumerate}
+
+By recasting dark matter as a \emph{basis-dependent decoherence
+artifact}, we eliminate the need for speculative WIMPs, axions, or other
+beyond--Standard Model particles, while preserving all observed
+gravitational phenomena. This reframing also integrates seamlessly into
+the decoherence bootstrap model, placing the origin of dark matter in a
+specific cosmological stage---after gravitational decoherence but before
+electromagnetic decoherence.
+
+The Bullet Cluster, in this context, becomes a striking snapshot of the
+universe's ``two-step'' decoherence history. The collision shows the
+gravitationally decohered mass components---dark matter halos---passing
+through each other with minimal interaction, while the
+electromagnetically decohered baryonic matter is shock-heated and
+slowed. This clean separation is exactly what we would expect if
+gravitational decoherence occurred first in the early universe,
+establishing large-scale mass distributions, with electromagnetic
+decoherence---and thus photon-coupled interactions---emerging later. In
+the decoherence bootstrap framework, the Bullet Cluster serves not just
+as evidence for non-luminous mass, but as a fossil record of the
+temporal ordering of decoherence events that shaped the cosmos.
+
+\section{6. Black Holes and the Decoherence
+Limit}\label{black-holes-and-the-decoherence-limit}
+
+Black holes represent the terminal state of decoherence within our
+observable universe (\citeproc{ref-penrose1965}{Penrose, 1965};
+\citeproc{ref-hawking1973}{Hawking and Ellis, 1973}). As gravitational
+collapse proceeds beyond the event horizon, matter spirals inward
+through increasingly extreme regimes of classical spacetime until the
+separation between decoherence events---the \textbf{Collapse
+Length}---stretches toward infinity (\citeproc{ref-zurek2003}{Zurek,
+2003}). In this limit, no further decoherence occurs; the chain of
+classical reality frames terminates, and all that remains is
+\emph{singularity space}.
+
+This framing makes it possible to distinguish the black hole singularity
+from the Big Bang in precise terms. Both mark a transition between
+singularity space and classical reality, but in opposite directions: the
+Big Bang is the \textbf{boundary condition where Collapse Length was at
+its shortest}, launching reality; the black hole singularity is the
+\textbf{boundary condition where Collapse Length becomes infinite},
+ending it. The Big Bang corresponds to the initiation of a sustainable
+decoherence chain---a Boltzmann-like fluctuation
+(\citeproc{ref-boltzmann1896}{Boltzmann, 1896},
+\citeproc{ref-boltzmann1896english}{1966}) that successfully
+bootstrapped a self-propagating sequence of classical frames. The black
+hole singularity marks the \emph{end} of such a chain, where decoherence
+ceases because the Collapse Length has become infinite.
+
+Energy density alone does not differentiate these transitions; in the
+mathematical limit, both approach the same curvature singularity
+(\citeproc{ref-misner1973}{Misner, Thorne and Wheeler, 1973}). The
+decisive difference lies in entropy. The Big Bang began in a
+low-entropy, high-potential configuration capable of sustaining
+branching decoherence events (\citeproc{ref-penrose1989}{Penrose,
+1989}). The black hole singularity represents the exhaustion of
+entropy's gradient---an endpoint where informational degrees of freedom
+no longer evolve (\citeproc{ref-bekenstein1973}{Bekenstein, 1973};
+\citeproc{ref-hawking1976}{Hawking, 1976}).
+
+From this perspective, reality exists only where decoherence continues
+at finite Collapse Lengths. Time, locality, and measurement all derive
+from this persistence. Inside a black hole, what appears as
+gravitational collapse is in fact a topological transition from
+classical spacetime back into singularity space. The interior is not an
+informational furnace nor a chaotic hyper-decoherent zone, but a
+\textbf{coherence-starved boundary}---a terminal condition for the
+physics of reality itself.
+
+\section{7. Quantum Aliasing and Measurement
+Artefacts}\label{quantum-aliasing-and-measurement-artefacts}
+
+In the decoherence bootstrap framework, reality is not a smooth,
+continuous fabric but a sequence of discrete decoherence events,
+separated by the \emph{collapse length}. Just as a digital image can
+misrepresent a pattern when the sampling rate is too low (aliasing), our
+measurements can misinterpret physical processes when they occur near or
+beyond the resolution limit set by this collapse length. This draws a
+direct analogy to the Nyquist--Shannon sampling theorem, where
+insufficient sampling produces artefacts not present in the underlying
+signal Nyquist (\citeproc{ref-nyquist1928}{1928}).
+
+\textbf{Aliasing in quantum systems} occurs when the temporal or spatial
+resolution of decoherence is insufficient to fully track a system's
+underlying state evolution. In such cases, the ``observed'' state is a
+coarse-grained projection, and the interference patterns, tunneling
+probabilities, and entanglement correlations that we call \emph{quantum
+phenomena} may be understood as the byproducts of this undersampling.
+
+This reinterpretation suggests that:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Wave--particle duality} emerges because measurement interacts
+  with an object's decoherence sequence at irregular intervals,
+  producing results that are effectively superpositions from the
+  undersampled perspective.
+\item
+  \textbf{Quantum interference} is the observable counterpart of
+  sampling a system at phase offsets relative to its internal
+  decoherence rhythm, allowing multiple possible histories to overlap in
+  the measurement record.
+\item
+  \textbf{Entanglement} represents synchronized aliasing between
+  subsystems whose decoherence events remain correlated, so that
+  undersampling one necessarily produces correlated undersampling in the
+  other.
+\item
+  \textbf{Quantum tunneling} can be reframed as a sampling artefact
+  where the system's state changes between decoherence events in a way
+  that makes intermediate classical paths unresolvable.
+\end{itemize}
+
+From this perspective, the apparent ``nonlocality'' of quantum mechanics
+does not imply that information travels instantaneously, but rather that
+our observational frame rate is too low to capture all intermediate
+causal links. This aligns with the decoherence bootstrap's view that
+\textbf{classicality emerges only when the collapse length is short
+enough} to resolve stable pointer states; in regimes where collapse
+length approaches or exceeds the relevant dynamical scales, aliasing
+dominates and quantum effects become manifest.\footnote{Quantum
+  weirdness may be a symptom of decoherence fatigue in a universe that
+  was born classical.}
+
+Ultimately, quantum aliasing offers a unifying interpretation: the
+phenomena we call ``quantum'' are not exceptions to classicality but
+signatures of a deeper, discretized structure of reality, where the
+limits of decoherence resolution define the limits of classical
+observation Schlosshauer (\citeproc{ref-schlosshauer2007}{2007}).
+
+\section{8. Toward a Conservation Law for
+Decoherence}\label{toward-a-conservation-law-for-decoherence}
+
+We now propose a working principle: the evolution of Collapse Length is
+governed by a conservation law linking energy, entropy, and decoherence
+dynamics. In this view, the universe is not only conserving energy and
+momentum in the conventional sense---it is also conserving a
+\textbf{joint energy--entropy quantity} that determines how
+quantum-to-classical transitions proceed.
+
+In the decoherence bootstrap framework, the path from the shortest
+possible Collapse Length at the Big Bang to the infinite Collapse Length
+at a black hole singularity is not arbitrary. It follows a trajectory
+that optimally dissipates the initial ``heat'' of the singularity into
+long-lived classical structures. The ordering of force
+emergence---gravity \(\to\) strong \(\to\) electroweak \(\to\)
+electromagnetic---is then interpretable as \textbf{the optimal sequence
+for shedding coherence energy into increasingly specialized and low-loss
+channels}.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Gravity first}: universal coupling, maximal reach, sets the
+  global spacetime scaffold for further dissipation.
+\item
+  \textbf{Strong force}: locks matter into bound states, trapping most
+  rest mass-energy efficiently and stably.
+\item
+  \textbf{Electroweak}: permits massive particle decay channels and
+  fine-tunes charge and spin configurations.
+\item
+  \textbf{Electromagnetism}: final, low-energy pointer basis that
+  supports persistent information encoding and radiative dissipation.
+\end{itemize}
+
+From this standpoint, what we call ``reality'' is the byproduct of a
+maximal-efficiency cascade: a system that began in a state of shortest
+Collapse Length---high-frequency decoherence, zero persistence---has
+evolved along a path that balances energy disposal with the retention of
+coherent structures.
+
+If this conservation principle is valid, it should leave signatures in:
+
+\begin{itemize}
+\tightlist
+\item
+  The relative timescales of force decoupling as imprinted in CMB
+  anisotropies.
+\item
+  The statistical distribution of bound versus unbound matter across
+  cosmic history.
+\item
+  Deviations from \(\Lambda\)CDM predictions in early structure
+  formation, reflecting constraints imposed by collapse-length
+  conservation.
+\end{itemize}
+
+Formally, this could be expressed as:
+
+\[
+\frac{d}{dt}\!\left(E_{\text{classical}} + \alpha\, S_{\text{decoherence}}\right)=0
+\]
+
+where \(E_{\text{classical}}\) is the energy stored in persistent
+pointer states, \(S_{\text{decoherence}}\) is the entropy associated
+with collapse events, and \(\alpha\) is a scaling factor determined by
+the collapse-length dynamics.
+
+This formulation also closes the symmetry between the Big Bang and black
+holes: the former is the point of maximal decoherence frequency
+(Collapse Length \(\to 0\)), while the latter is the point of minimal
+decoherence frequency (Collapse Length \(\to \infty\)), both
+representing boundary conditions in the same conservation law.
+
+\section{9. Related Work}\label{related-work}
+
+Several established lines of research intersect with---and provide
+context for---the present framework. Below, we summarize each strand,
+note points of contact, and highlight divergences.
+
+\begin{itemize}
+\item
+  \textbf{Emergent/Entropic Gravity} --- Gravity as a thermodynamic or
+  entropic phenomenon has been explored by Jacobson
+  (\citeproc{ref-jacobson1995}{Jacobson, 1995}), Padmanabhan
+  (\citeproc{ref-padmanabhan2010}{Padmanabhan, 2010}), and Verlinde
+  (\citeproc{ref-verlinde2011}{Verlinde, 2011}). These approaches treat
+  spacetime curvature as an emergent effect of entropy gradients or
+  information flow, often grounded in holographic principles.
+  \emph{Relation}: Our framework also links gravity to fundamental
+  information processes---here, the earliest and most universal
+  decoherence basis. \emph{Difference}: We treat thermodynamic behavior
+  as \emph{derivative} of decoherence chain sustainability, rather than
+  the source of spacetime itself.
+\item
+  \textbf{Emergent Time from Quantum Information} --- Page \& Wootters
+  (\citeproc{ref-page1983}{Page and Wootters, 1983}) and Moreva et al.
+  (\citeproc{ref-moreva2014}{Moreva \emph{et al.}, 2014}) model time as
+  emerging from correlations in quantum states or growth in
+  computational complexity. \emph{Relation}: Our model likewise regards
+  time as emergent, specifically from the sequence of stable decoherence
+  events. \emph{Difference}: We tie the ``clock'' to the \emph{Collapse
+  Length} between events, allowing time to decouple from coordinate
+  duration and vanish in hyper-decoherence regimes such as black holes
+  or the Big Bang.
+\item
+  \textbf{Consistent/Decoherent Histories \& Quantum Darwinism} ---
+  Gell-Mann \& Hartle (\citeproc{ref-gellmann1990}{Gell-Mann and Hartle,
+  1990}) and Zurek (\citeproc{ref-zurek2009}{Zurek, 2009}) explain
+  classical reality as a selection of stable pointer states from quantum
+  possibilities, maintained by environment-induced decoherence.
+  \emph{Relation}: We adopt the pointer basis concept directly, with
+  gravity as the first environment to stabilize any basis at all.
+  \emph{Difference}: We frame this as a cosmological bootstrap, where
+  sequential stabilization of pointer bases defines force emergence and
+  accounts for dark matter.
+\item
+  \textbf{Gravity-Induced Collapse Models} --- Diósi
+  (\citeproc{ref-diosi1987}{Diósi, 1987}) and Penrose
+  (\citeproc{ref-penrose1996}{Penrose, 1996}) propose that gravity
+  itself triggers wavefunction collapse, setting a fundamental scale for
+  quantum/classical transition. \emph{Relation}: Our view is compatible
+  with gravity being a universal decoherence channel. \emph{Difference}:
+  We extend this to a full force-emergence chronology and interpret dark
+  matter as matter collapsed gravitationally before EM basis formation.
+\item
+  \textbf{Black-Hole--Driven Decoherence} --- Danielson, Satishchandran
+  \& Wald (\citeproc{ref-danielson2023}{Danielson, Satishchandran and
+  Wald, 2023}, \citeproc{ref-danielson2025}{2025}), Gralla
+  (\citeproc{ref-gralla2023}{Gralla, 2023}), and Biggs \& Maldacena
+  (\citeproc{ref-biggs2024}{Biggs and Maldacena, 2024}) show how
+  horizons and black holes decohere spatial superpositions through
+  horizon quanta and field correlations. \emph{Relation}: We agree that
+  black holes are extreme decoherence environments. \emph{Difference}:
+  We reinterpret them as \emph{termination points} of the decoherence
+  chain, where Collapse Length diverges and classicality fails to
+  emerge, yielding informational turbulence rather than mere information
+  loss.
+\end{itemize}
+
+\textbf{Summary of Distinction}
+
+Our framework integrates multiple research strands into a single
+ontological model centered on \textbf{Collapse Length} and the
+sustainability of the decoherence chain, yielding three defining
+distinctions:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Dual Extremes of Decoherence} --- Both the Big Bang and black
+  hole singularities represent hyper-decoherence, yet differ
+  fundamentally in origin, boundary conditions, and cosmological role.
+\item
+  \textbf{Opposite Causal Functions} --- The Big Bang's
+  hyper-decoherence launches spacetime and the sequence of emergent
+  forces; a black hole's hyper-decoherence dismantles existing coherent
+  structures.
+\item
+  \textbf{Inverted Entropy Flow} --- The Big Bang drives entropy outward
+  into the cosmos; black hole singularities draw entropy inward,
+  reversing their thermodynamic roles in cosmic evolution.
+\end{itemize}
+
+\section{10. Conclusion and Forward
+Directions}\label{conclusion-and-forward-directions}
+
+The Decoherence Bootstrap Hypothesis reframes some of the most
+persistent cosmological puzzles---not as problems requiring new sectors
+or ad-hoc fields, but as natural consequences of decoherence dynamics
+across gravitational and electromagnetic pointer bases. By treating
+``collapse length'' as the fundamental measure of reality's continuity,
+we arrive at a coherent framework that connects early-universe
+conditions, structure formation, quantum anomalies, and the role of
+black holes as terminal states of collapse.
+
+In this view, inflation is not strictly necessary to explain the
+observed isotropy and structure of the cosmos; instead, an extremely
+short gravitational collapse length in the earliest moments provides the
+rapid ``information reset'' and smoothing normally attributed to
+inflationary expansion. Likewise, dark matter is reinterpreted as mass
+decohered in the gravitational basis but not in the electromagnetic
+basis, offering an observationally anchored explanation that remains
+testable via astrophysical lensing and structure growth measurements.
+
+Looking forward, this hypothesis suggests multiple directions for theory
+and experiment:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Quantitative modeling of collapse length evolution} ---
+  Develop mathematical models for how collapse length changes with
+  energy density and entropy, connecting Planck-scale conditions to
+  late-time cosmic structure.
+\item
+  \textbf{Gravitational decoherence signatures} --- Identify
+  observational imprints of gravitational decoherence distinct from
+  standard dark matter and inflationary models, including lensing
+  profiles and CMB residuals.
+\item
+  \textbf{Laboratory analogs} --- Explore condensed-matter and
+  quantum-optics systems where pointer basis separation can be tuned,
+  enabling controlled ``collapse length'' experiments.
+\item
+  \textbf{Black hole interior regimes} --- Investigate whether the
+  increase of collapse length toward infinity inside event horizons can
+  be modeled as a time-reversed analog of the big bang's initial
+  collapse.
+\item
+  \textbf{Integration with conservation principles} --- Test whether the
+  ordering of force emergence (gravity → strong → electroweak →
+  electromagnetic) can be derived from optimal pathways for dissipating
+  initial energy density.
+\end{enumerate}
+
+The core strength of this approach is that it reduces reliance on
+speculative entities and instead builds from first principles already
+grounded in quantum mechanics and general relativity. While the
+hypothesis is bold in scope, its predictions are concrete: the next step
+is to formalize them into simulations and derive observational
+discriminants.
+
+If successful, the Decoherence Bootstrap Hypothesis could unify
+cosmology's ``dark'' problems under a single, testable
+framework---turning questions of missing matter and inflation into
+questions of how reality itself comes into being.
+
+\clearpage
+
+\section{Methodology Appendix}\label{methodology-appendix}
+
+\section{Appendix A --- Source Use \&
+Verification}\label{appendix-a-source-use-verification}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\tightlist
+\item
+  Boltzmann (1896/1897): Responses in the Zermelo debate
+\end{enumerate}
+
+Use in manuscript --- Historical grounding for the statistical
+(probabilistic) reading of the Second Law and the recurrence objection
+your Boltzmann-fluctuation framing builds on. Direct vs consensus ---
+Consensus anchor (established history of ideas). Where to cite --- Good
+secondary overviews with excerpts and context: Steckline (1983) and
+SEP/Uffink entry on Boltzmann's statistical physics.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Boltzmann (English access to Zermelo exchange)
+\end{enumerate}
+
+Use --- English-accessible documentation of the 1896--97 exchange to
+justify wording around ``Boltzmann fluctuation''. Direct vs consensus
+--- Consensus anchor. Where --- Rutgers translation notes and
+bibliographic pointers to the Zermelo paper and Brush's translations.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Nyquist (1928): Thermal agitation in conductors
+\end{enumerate}
+
+Use --- Foundational result behind noise/aliasing analogies (Nyquist
+relation) used in Sec. 7. Direct vs consensus --- Direct claim
+(classical formula \& method). Where --- Phys. Rev.~32, 110 (1928) and
+open PDF scans.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Shannon (1948/1949): Information theory \& noise
+\end{enumerate}
+
+Use --- Formal basis for sampling/communication language you use to
+frame ``quantum aliasing.'' Direct vs consensus --- Consensus anchor;
+when you mention continuous/noisy channels, the 1949 paper is apt. Where
+--- 1948 BSTJ parts I \& II; 1949 ``Communication in the Presence of
+Noise.''
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Zwicky (1933): Redshift paper (early missing-mass insight)
+\end{enumerate}
+
+Use --- Early articulation that non-luminous matter must exceed luminous
+matter; sets historical arc for ``gravitational-only'' mass. Direct vs
+consensus --- Direct claim (historical primary). Where --- English
+``Golden Oldies'' reprint/translation and original HPA record.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Zwicky (1937): On the Masses of Nebulae and of Clusters of Nebulae
+\end{enumerate}
+
+Use --- Classic Coma-cluster virial mass discrepancy; your dark-matter
+section cites this as the cluster-scale anchor. Direct vs consensus ---
+Direct claim. Where --- ApJ 86, 217--246; ADS full text.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  Rubin \& Ford (1970): Andromeda rotation curve
+\end{enumerate}
+
+Use --- Galaxy-scale evidence for dark halos (flat rotation curves)
+supporting your ``gravitationally decohered, non-EM'' mass. Direct vs
+consensus --- Direct claim. Where --- ApJ 159, 379--403; ADS full text.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  Penrose (1965): Singularity theorem (collapse → singularities)
+\end{enumerate}
+
+Use --- Theorem-level support for your black-hole boundary condition
+(collapse length \(\to \infty\) endpoint). Direct vs consensus ---
+Direct claim. Where --- PRL 14, 57--59; open PDF.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  Gell-Mann (1964): Quark model
+\end{enumerate}
+
+Use --- Establishes the strong-sector microstructure referenced when you
+sequence force emergence. Direct vs consensus --- Consensus anchor
+(historical discovery paper). Where --- Physics Letters 8, 214--215; PDF
+scan.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{9}
+\tightlist
+\item
+  Higgs (1964): Gauge boson masses via SSB
+\end{enumerate}
+
+Use --- Fixes the electroweak epoch ``energy setting'' you reference
+(Higgs mechanism as phase-transition marker). Direct vs consensus ---
+Direct claim. Where --- PRL 13, 508--509; APS page/PDF.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{10}
+\tightlist
+\item
+  Glashow (1961): Partial symmetries of weak interactions
+\end{enumerate}
+
+Use --- Pre-unification scaffold used in your narrative about
+electroweak emergence. Direct vs consensus --- Direct claim (model
+paper). Where --- Nuclear Physics 22, 579--588; ScienceDirect record /
+accessible copies.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{11}
+\tightlist
+\item
+  Weinberg (1967): A Model of Leptons
+\end{enumerate}
+
+Use --- Electroweak unification cornerstone; you cite it as the formal
+consolidation preceding Higgs discovery. Direct vs consensus --- Direct
+claim. Where --- PRL 19, 1264--1266; APS page / PDF copies.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{12}
+\tightlist
+\item
+  Gross \& Wilczek (1973): Asymptotic freedom
+\end{enumerate}
+
+Use --- Strong-interaction running (high-energy weakening) backing your
+sequencing of force stabilization. Direct vs consensus --- Direct claim.
+Where --- PRL 30, 1343--1346; APS page/PDF.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{13}
+\tightlist
+\item
+  Politzer (1973): Asymptotic freedom (independent)
+\end{enumerate}
+
+Use --- Independent derivation confirming \#13; strengthens the QCD
+pillar in Sec. 4. Direct vs consensus --- Direct claim. Where --- PRL
+30, 1346--1349; APS page/PDF.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{14}
+\tightlist
+\item
+  Weinberg (1974): Symmetry restoration at high temperature
+\end{enumerate}
+
+Use --- Thermal field-theory basis for your ``decoherence
+thresholds''/epoch sequencing (high-T restoration). Direct vs consensus
+--- Direct claim. Where --- Phys. Rev.~D 9, 3357--3378; APS/OSTI copies.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{15}
+\tightlist
+\item
+  Hawking \& Ellis (1973): The Large Scale Structure of Space-Time
+\end{enumerate}
+
+Use --- Global GR framework \& singularity/collapse chapters that your
+black-hole boundary condition leans on. Direct vs consensus ---
+Consensus anchor (graduate-level treatise). Where --- Cambridge
+monograph; see Ch. 8 ``Space-time singularities,'' Ch. 9 ``Gravitational
+collapse and black holes.''
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\emph{(Next: entries from Misner, Thorne \& Wheeler (1973) onward---)}
+
+\subsection{Appendix B --- Courses of
+Study}\label{appendix-b-courses-of-study}
+
+\subsubsection{Legend}\label{legend}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Code & Topic Area \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+01 & Thermodynamics \\
+02 & Information Theory \\
+03 & Dark Matter Foundations \\
+04 & General Relativity Foundations \\
+05 & Quantum Field Theory Foundations \\
+06 & High-Temp Symmetry Physics \\
+07 & Black Hole Thermodynamics \& Physics \\
+08 & Cosmology \& Inflation \\
+09 & Quantum Foundations \& Time \\
+10 & Complexity \& Self-Organization \\
+11 & Quantum Gravity \& Decoherence \\
+12 & Thermodynamics of Spacetime \& Emergent Gravity \\
+13 & Quantum Information \& Computation \\
+14 & Decoherence Theory \\
+15 & Time, Entropy \& Cosmology \\
+\end{longtable}
+
+\subsubsection{Mastery Tracker}\label{mastery-tracker}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.4000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1667}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Order
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Citation Key
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Year
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Code
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Notes
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1 & boltzmann1896 & 1896 & 01 & Entropy arguments, statistical mechanics
+foundations. \\
+2 & boltzmann1896english & 1966 & 01 & English translation of
+Boltzmann's reply to Zermelo. \\
+3 & nyquist1928 & 1928 & 02 & Telegraph transmission theory; precursors
+to Shannon. \\
+4 & shannon1949 & 1949 & 02 & Communication in presence of noise;
+information entropy. \\
+5 & zwicky1933 & 1933 & 03 & Galaxy cluster redshift anomalies. \\
+6 & zwicky1937 & 1937 & 03 & Masses of nebulae; further DM evidence. \\
+7 & rubin1970 & 1970 & 03 & Andromeda rotation curves. \\
+8 & penrose1965 & 1965 & 04 & Singularity theorems, cosmic
+censorship. \\
+9 & gellmann1964 & 1964 & 05 & Eightfold way; symmetry
+classification. \\
+10 & higgs1964 & 1964 & 05 & Mass generation for gauge bosons. \\
+11 & glashow1961 & 1961 & 05 & Partial symmetries of weak
+interactions. \\
+12 & weinberg1967 & 1967 & 05 & Electroweak unification. \\
+13 & gross1973 & 1973 & 05 & Asymptotic freedom in non-Abelian gauge
+theories. \\
+14 & politzer1973 & 1973 & 05 & Asymptotic freedom results. \\
+15 & weinberg1974 & 1974 & 06 & Gauge/global symmetries at high
+temperature. \\
+16 & hawking1973 & 1973 & 04 & Large scale structure of spacetime. \\
+17 & misner1973 & 1973 & 04 & Gravitation (MTW). \\
+18 & bekenstein1973 & 1973 & 07 & Black hole entropy formula. \\
+19 & hawking1976 & 1976 & 07 & Breakdown of predictability; information
+paradox. \\
+20 & unruh1976 & 1976 & 07 & Unruh effect derivation. \\
+21 & guth1981 & 1981 & 08 & Inflationary universe proposal. \\
+22 & mukhanov1981 & 1981 & 08 & Quantum fluctuations in early
+universe. \\
+23 & linde1982 & 1982 & 08 & New inflationary universe scenario. \\
+24 & page1983 & 1983 & 09 & Evolution without evolution
+(Page--Wootters). \\
+25 & blumenthal1984 & 1984 & 03 & Cold dark matter model. \\
+26 & prigogine1984 & 1984 & 10 & Order out of chaos;
+self-organization. \\
+27 & diosi1987 & 1987 & 11 & Gravitationally induced decoherence
+model. \\
+28 & penrose1989 & 1989 & 11 & The Emperor's New Mind; OR model
+beginnings. \\
+29 & gellmann-hartle1990 & 1990 & 09 & Consistent histories
+formulation. \\
+30 & gellmann1990 & 1990 & 09 & Duplicate citation for consistent
+histories. \\
+31 & penrose1994 & 1994 & 11 & Shadows of the Mind; OR model
+expanded. \\
+32 & penrose1996 & 1996 & 11 & Gravity's role in quantum state
+reduction. \\
+33 & jacobson1995 & 1995 & 12 & Einstein equation as equation of
+state. \\
+34 & lloyd2000 & 2000 & 13 & Limits to computation. \\
+35 & ng2003 & 2003 & 11 & Spacetime foam, holography, nonlocality. \\
+36 & zurek2003 & 2003 & 14 & Einselection and quantum-classical
+transition. \\
+37 & wilczek2005 & 2005 & 05 & Asymptotic freedom retrospective. \\
+38 & clowe2006 & 2006 & 03 & Bullet Cluster observations. \\
+39 & schlosshauer2007 & 2007 & 14 & Comprehensive review of decoherence
+theory. \\
+40 & carroll2008 & 2010 & 15 & From Eternity to Here. \\
+41 & padmanabhan2010 & 2010 & 12 & New insights into gravity as
+thermodynamic. \\
+42 & verlinde2011 & 2011 & 12 & Gravity as entropic force. \\
+43 & brandenberger2011 & 2011 & 08 & Alternatives to inflationary
+paradigm. \\
+44 & moreva2014 & 2014 & 09 & Time from quantum entanglement
+experiment. \\
+45 & peskin2015 & 2015 & 05 & Electroweak symmetry breaking concepts. \\
+46 & susskind2018 & 2018 & 07 & Three lectures on complexity and BHs. \\
+47 & bertone2018 & 2018 & 03 & History of dark matter research. \\
+48 & gralla2023 & 2023 & 11 & Kerr horizon decoherence. \\
+49 & danielson2023 & 2023 & 11 & Killing horizons decohere
+superpositions. \\
+50 & biggs2024 & 2024 & 11 & Comparing BH vs ordinary matter
+decoherence. \\
+51 & danielson2025 & 2025 & 11 & Local decoherence by BHs and bodies. \\
+\end{longtable}
+
+\newpage
+
+\protect\phantomsection\label{refs}
+\begin{CSLReferences}{0}{1}
+\bibitem[\citeproctext]{ref-baumann2009}
+Baumann, D. (2009) \emph{TASI lectures on inflation}. World Scientific
+(TASI 2009 lecture notes). Available at:
+\url{https://arxiv.org/abs/0907.5424}.
+
+\bibitem[\citeproctext]{ref-bekenstein1973}
+Bekenstein, J.D. (1973) {`Black holes and entropy'}, \emph{Physical
+Review D}, 7, pp. 2333--2346. Available at:
+\url{https://doi.org/10.1103/PhysRevD.7.2333}.
+
+\bibitem[\citeproctext]{ref-bertone2018}
+Bertone, G. and Hooper, D. (2018) {`History of dark matter'},
+\emph{Reviews of Modern Physics}, 90(4), p. 045002. Available at:
+\url{https://doi.org/10.1103/RevModPhys.90.045002}.
+
+\bibitem[\citeproctext]{ref-biggs2024}
+Biggs, A. and Maldacena, J. (2024) {`Comparing the decoherence effects
+due to black holes versus ordinary matter'}. Available at:
+\url{https://arxiv.org/abs/2405.02227}.
+
+\bibitem[\citeproctext]{ref-blumenthal1984}
+Blumenthal, G.R. \emph{et al.} (1984) {`Formation of galaxies and
+large-scale structure with cold dark matter'}, \emph{Nature}, 311, pp.
+517--525. Available at: \url{https://doi.org/10.1038/311517a0}.
+
+\bibitem[\citeproctext]{ref-boltzmann1896}
+Boltzmann, L. (1896) {`Entgegnung auf die w{ä}rmetheoretischen
+betrachtungen des hrn. E. zermelo'}, \emph{Annalen der Physik}, 293(3),
+pp. 773--784. Available at:
+\url{https://doi.org/10.1002/andp.18962930316}.
+
+\bibitem[\citeproctext]{ref-boltzmann1896english}
+Boltzmann, L. (1966) {`Reply to zermelo's remarks on the theory of
+heat'}, in S.G. Brush (ed.) \emph{The kinetic theory of gases: An
+anthology of classic papers with historical commentary}. Pergamon Press,
+pp. 262--270.
+
+\bibitem[\citeproctext]{ref-brandenberger2011}
+Brandenberger, R.H. (2011) {`Alternatives to the inflationary paradigm
+of structure formation'}, \emph{International Journal of Modern Physics:
+Conference Series}, 01, pp. 67--79. Available at:
+\url{https://doi.org/10.1142/S2010194511000109}.
+
+\bibitem[\citeproctext]{ref-carroll2008}
+Carroll, S. (2010) \emph{From eternity to here: The quest for the
+ultimate theory of time}. New York: Dutton.
+
+\bibitem[\citeproctext]{ref-clowe2006}
+Clowe, D. \emph{et al.} (2006) {`A direct empirical proof of the
+existence of dark matter'}, \emph{The Astrophysical Journal Letters},
+648(2), pp. L109--L113. Available at:
+\url{https://doi.org/10.1086/508162}.
+
+\bibitem[\citeproctext]{ref-danielson2023}
+Danielson, D.L., Satishchandran, G. and Wald, R.M. (2023) {`Killing
+horizons decohere quantum superpositions'}, \emph{Physical Review D},
+108(2), p. 025007. Available at:
+\url{https://doi.org/10.1103/PhysRevD.108.025007}.
+
+\bibitem[\citeproctext]{ref-danielson2025}
+Danielson, D.L., Satishchandran, G. and Wald, R.M. (2025) {`Local
+description of decoherence of quantum superpositions by black holes and
+other bodies'}, \emph{Physical Review D}, 111(2), p. 025014. Available
+at: \url{https://doi.org/10.1103/PhysRevD.111.025014}.
+
+\bibitem[\citeproctext]{ref-diosi1987}
+Diósi, L. (1987) {`A universal master equation for the gravitational
+violation of quantum mechanics'}, \emph{Physics Letters A}, 120(8), pp.
+377--381. Available at:
+\url{https://doi.org/10.1016/0375-9601(87)90681-5}.
+
+\bibitem[\citeproctext]{ref-gellmann1990}
+Gell-Mann, M. and Hartle, J.B. (1990) {`Quantum mechanics in the light
+of quantum cosmology'}, in W.H. Zurek (ed.) \emph{Complexity, entropy
+and the physics of information}. Addison-Wesley, pp. 425--458.
+
+\bibitem[\citeproctext]{ref-glashow1961}
+Glashow, S.L. (1961) {`Partial-symmetries of weak interactions'},
+\emph{Nuclear Physics}, 22(4), pp. 579--588. Available at:
+\url{https://doi.org/10.1016/0029-5582(61)90469-2}.
+
+\bibitem[\citeproctext]{ref-gralla2023}
+Gralla, S.E. (2023) {`Decoherence from horizons: General considerations
+and applications to {Kerr}'}. Available at:
+\url{https://arxiv.org/abs/2311.11461}.
+
+\bibitem[\citeproctext]{ref-gross1973}
+Gross, D.J. and Wilczek, F. (1973) {`Ultraviolet behavior of non-abelian
+gauge theories'}, \emph{Physical Review Letters}, 30(26), pp.
+1343--1346. Available at:
+\url{https://doi.org/10.1103/PhysRevLett.30.1343}.
+
+\bibitem[\citeproctext]{ref-guth1981}
+Guth, A.H. (1981) {`Inflationary universe: A possible solution to the
+horizon and flatness problems'}, \emph{Physical Review D}, 23(2), pp.
+347--356. Available at: \url{https://doi.org/10.1103/PhysRevD.23.347}.
+
+\bibitem[\citeproctext]{ref-hawking1976}
+Hawking, S.W. (1976) {`Breakdown of predictability in gravitational
+collapse'}, \emph{Physical Review D}, 14, pp. 2460--2473. Available at:
+\url{https://doi.org/10.1103/PhysRevD.14.2460}.
+
+\bibitem[\citeproctext]{ref-hawking1973}
+Hawking, S.W. and Ellis, G.F.R. (1973) \emph{The large scale structure
+of space-time}. Cambridge University Press. Available at:
+\url{https://doi.org/10.1017/CBO9780511524646}.
+
+\bibitem[\citeproctext]{ref-higgs1964}
+Higgs, P.W. (1964) {`Broken symmetries and the masses of gauge bosons'},
+\emph{Physical Review Letters}, 13(16), pp. 508--509. Available at:
+\url{https://doi.org/10.1103/PhysRevLett.13.508}.
+
+\bibitem[\citeproctext]{ref-jacobson1995}
+Jacobson, T. (1995) {`Thermodynamics of spacetime: The {Einstein}
+equation of state'}, \emph{Physical Review Letters}, 75, pp. 1260--1263.
+Available at: \url{https://doi.org/10.1103/PhysRevLett.75.1260}.
+
+\bibitem[\citeproctext]{ref-linde1982}
+Linde, A.D. (1982) {`A new inflationary universe scenario: A possible
+solution of the horizon, flatness, homogeneity, isotropy and primordial
+monopole problems'}, \emph{Physics Letters B}, 108(6), pp. 389--393.
+Available at: \url{https://doi.org/10.1016/0370-2693(82)91219-9}.
+
+\bibitem[\citeproctext]{ref-misner1973}
+Misner, C.W., Thorne, K.S. and Wheeler, J.A. (1973) \emph{Gravitation}.
+W. H. Freeman.
+
+\bibitem[\citeproctext]{ref-moreva2014}
+Moreva, E. \emph{et al.} (2014) {`Time from quantum entanglement: An
+experimental illustration'}, \emph{Physical Review A}, 89(5), p. 052122.
+Available at: \url{https://doi.org/10.1103/PhysRevA.89.052122}.
+
+\bibitem[\citeproctext]{ref-mukhanov1981}
+Mukhanov, V.F. and Chibisov, G.V. (1981) {`Quantum fluctuations and a
+nonsingular universe'}, \emph{JETP Letters}, 33, pp. 532--535. Available
+at: \url{http://www.jetpletters.ac.ru/ps/1532/article_23403.shtml}.
+
+\bibitem[\citeproctext]{ref-nyquist1928}
+Nyquist, H. (1928) {`Certain topics in telegraph transmission theory'},
+\emph{Transactions of the American Institute of Electrical Engineers},
+47(2), pp. 617--644. Available at:
+\url{https://doi.org/10.1109/T-AIEE.1928.5055024}.
+
+\bibitem[\citeproctext]{ref-padmanabhan2010}
+Padmanabhan, T. (2010) {`Thermodynamical aspects of gravity: New
+insights'}, \emph{Reports on Progress in Physics}, 73(4), p. 046901.
+Available at: \url{https://doi.org/10.1088/0034-4885/73/4/046901}.
+
+\bibitem[\citeproctext]{ref-page1983}
+Page, D.N. and Wootters, W.K. (1983) {`Evolution without evolution:
+Dynamics described by stationary observables'}, \emph{Physical Review
+D}, 27(12), pp. 2885--2892. Available at:
+\url{https://doi.org/10.1103/PhysRevD.27.2885}.
+
+\bibitem[\citeproctext]{ref-penrose1965}
+Penrose, R. (1965) {`Gravitational collapse and space-time
+singularities'}, \emph{Physical Review Letters}, 14, pp. 57--59.
+Available at: \url{https://doi.org/10.1103/PhysRevLett.14.57}.
+
+\bibitem[\citeproctext]{ref-penrose1989}
+Penrose, R. (1989) \emph{The emperor's new mind}. Oxford University
+Press.
+
+\bibitem[\citeproctext]{ref-penrose1994}
+Penrose, R. (1994) \emph{Shadows of the mind: A search for the missing
+science of consciousness}. Oxford, UK: Oxford University Press.
+
+\bibitem[\citeproctext]{ref-penrose1996}
+Penrose, R. (1996) {`On gravity's role in quantum state reduction'},
+\emph{General Relativity and Gravitation}, 28, pp. 581--600. Available
+at: \url{https://doi.org/10.1007/BF02105068}.
+
+\bibitem[\citeproctext]{ref-politzer1973}
+Politzer, H.D. (1973) {`Reliable perturbative results for strong
+interactions?'}, \emph{Physical Review Letters}, 30(26), pp. 1346--1349.
+Available at: \url{https://doi.org/10.1103/PhysRevLett.30.1346}.
+
+\bibitem[\citeproctext]{ref-prigogine1984}
+Prigogine, I. and Stengers, I. (1984) \emph{Order out of chaos: Man's
+new dialogue with nature}. Bantam Books.
+
+\bibitem[\citeproctext]{ref-rubin1970}
+Rubin, V.C. and Ford Jr, W.K. (1970) {`Rotation of the andromeda nebula
+from a spectroscopic survey of emission regions'}, \emph{The
+Astrophysical Journal}, 159, pp. 379--403. Available at:
+\url{https://doi.org/10.1086/150317}.
+
+\bibitem[\citeproctext]{ref-schlosshauer2007}
+Schlosshauer, M. (2007) \emph{Decoherence and the quantum-to-classical
+transition}. Berlin: Springer. Available at:
+\url{https://doi.org/10.1007/978-3-540-35775-9}.
+
+\bibitem[\citeproctext]{ref-shannon1949}
+Shannon, C.E. (1949) {`Communication in the presence of noise'},
+\emph{Proceedings of the IRE}, 37(1), pp. 10--21. Available at:
+\url{https://doi.org/10.1109/JRPROC.1949.232969}.
+
+\bibitem[\citeproctext]{ref-steinhardt2002}
+Steinhardt, P.J. and Turok, N. (2002) {`A cyclic model of the
+universe'}, \emph{Science}, 296(5572), pp. 1436--1439. Available at:
+\url{https://doi.org/10.1126/science.1070462}.
+
+\bibitem[\citeproctext]{ref-rubin1980}
+Vera C. Rubin, N. Thonnard and Jr., W.K.F. (1980) {`Rotational
+properties of 21 SC galaxies with a large range of luminosities and
+radii, from NGC 4605 /r = 4kpc/ to UGC 2885 /r = 122kpc/'},
+\emph{Astrophysical Journal}, 238, pp. 471--487.
+
+\bibitem[\citeproctext]{ref-verlinde2011}
+Verlinde, E. (2011) {`On the origin of gravity and the laws of
+{Newton}'}, \emph{Journal of High Energy Physics}, 2011(4), p. 29.
+Available at: \url{https://doi.org/10.1007/JHEP04(2011)029}.
+
+\bibitem[\citeproctext]{ref-weinberg1967}
+Weinberg, S. (1967) {`A model of leptons'}, \emph{Physical Review
+Letters}, 19(21), pp. 1264--1266. Available at:
+\url{https://doi.org/10.1103/PhysRevLett.19.1264}.
+
+\bibitem[\citeproctext]{ref-weinberg1974}
+Weinberg, S. (1974) {`Gauge and global symmetries at high temperature'},
+\emph{Physical Review D}, 9(12), pp. 3357--3378. Available at:
+\url{https://doi.org/10.1103/PhysRevD.9.3357}.
+
+\bibitem[\citeproctext]{ref-zurek2003}
+Zurek, W.H. (2003) {`Decoherence, einselection, and the quantum origins
+of the classical'}, \emph{Reviews of Modern Physics}, 75(3), pp.
+715--775. Available at: \url{https://doi.org/10.1103/RevModPhys.75.715}.
+
+\bibitem[\citeproctext]{ref-zurek2009}
+Zurek, W.H. (2009) {`{Quantum Darwinism}'}, \emph{Nature Physics}, 5,
+pp. 181--188. Available at: \url{https://doi.org/10.1038/nphys1202}.
+
+\bibitem[\citeproctext]{ref-zwicky1933}
+Zwicky, F. (1933) {`Die rotverschiebung von extragalaktischen nebeln'},
+\emph{Helvetica Physica Acta}, 6, pp. 110--127.
+
+\bibitem[\citeproctext]{ref-zwicky1937}
+Zwicky, F. (1937) {`On the masses of nebulae and of clusters of
+nebulae'}, \emph{The Astrophysical Journal}, 86, pp. 217--246. Available
+at: \url{https://doi.org/10.1086/143864}.
+
+\end{CSLReferences}
+
+\end{document}

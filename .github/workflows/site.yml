@@ -1,0 +1,102 @@
+name: Build Manuscript + Deploy Site
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Install pandoc + TeX
+      - name: Install pandoc
+        uses: r-lib/actions/setup-pandoc@v2
+        with:
+          pandoc-version: '3.1.11'
+      - name: Install TeX Live (full)
+        run: sudo apt-get update && sudo apt-get install -y texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
+
+      # Run your existing build script
+      - name: Build Manuscript
+        run: bash build/build.sh
+
+      - name: Move manuscript into assets (PDF + TeX)
+        run: |
+          mkdir -p assets/paper
+          cp build/out/manuscript.pdf assets/paper/
+          cp build/out/manuscript.tex assets/paper/
+
+      # Build HTML from the LaTeX using Pandoc + MathJax
+      - name: Build HTML version (Pandoc)
+        run: |
+          # adjust the bibliography path if you keep a .bib file
+          PANDOC_FLAGS="--standalone --mathjax --citeproc"
+          # include CSL if you want specific citation styling:
+          # PANDOC_FLAGS="$PANDOC_FLAGS --csl=style.csl --bibliography=refs.bib"
+          pandoc build/out/manuscript.tex $PANDOC_FLAGS -o assets/paper/manuscript.html
+
+      # Copy outputs into site assets
+      - name: Move manuscript into assets
+        run: |
+          mkdir -p assets/paper
+          cp build/out/manuscript.pdf assets/paper/
+          cp build/out/manuscript.tex assets/paper/
+
+      # Build Jekyll site
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: .
+          destination: ./_site
+
+      # Upload Pages artifact (so Pages can deploy it)
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+      # Keep outputs as artifacts too
+      - name: Upload manuscript artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: manuscript
+          path: |
+            build/out/manuscript.pdf
+            build/out/manuscript.tex
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  release:
+    if: github.event_name == 'release'
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download built manuscript
+        uses: actions/download-artifact@v4
+        with:
+          name: manuscript
+          path: dist
+      - name: Attach files to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/*.pdf
+            dist/manuscript.tex
