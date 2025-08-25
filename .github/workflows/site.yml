@@ -18,17 +18,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Install pandoc + TeX
+      # Install pandoc
       - name: Install pandoc
         uses: r-lib/actions/setup-pandoc@v2
         with:
           pandoc-version: '3.1.11'
-      - name: Install TeX Live (full)
-        run: sudo apt-get update && sudo apt-get install -y texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
 
-      # Use our comprehensive make script
+      # Build assets using TeX Live container
       - name: Build All Assets (TEX, PDF, HTML)
-        run: ./make
+        uses: xu-cheng/texlive-action@v2
+        with:
+          scheme: full
+          run: |
+            # Make script executable and run it
+            chmod +x ./make
+            ./make
 
       # Ensure assets are in place for Jekyll
       - name: Verify assets were created
