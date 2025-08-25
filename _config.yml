@@ -33,6 +33,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-remote-theme
+  - jekyll-include-cache
 
 author:
   name: Robert Evanshine
