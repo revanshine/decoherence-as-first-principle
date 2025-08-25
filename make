@@ -9,11 +9,16 @@ echo "🔨 Building all assets for Jekyll..."
 # Create assets directory structure
 mkdir -p assets/paper assets/letters
 
-echo "📄 Building main manuscript (TEX/PDF)..."
-bash build/build.sh
+# Skip PDF builds if already done (for CI efficiency)
+if [[ -z "$SKIP_PDF_BUILD" ]]; then
+    echo "📄 Building main manuscript (TEX/PDF)..."
+    bash build/build.sh
 
-echo "📝 Building research letters (PDF)..."
-bash build/build_letters.sh
+    echo "📝 Building research letters (PDF)..."
+    bash build/build_letters.sh
+else
+    echo "📄 Skipping PDF builds (already completed in TeX container)"
+fi
 
 echo "🌐 Generating HTML from markdown sources..."
 
