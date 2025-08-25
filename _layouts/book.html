@@ -6,6 +6,7 @@ layout: default
 body {
   margin: 0;
   padding: 0;
+  background-color: #000000; /* Black fallback before image loads */
   background-image: url('/assets/images/night-sky-background.jpg');
   background-size: cover;
   background-position: center;
@@ -13,11 +14,13 @@ body {
   background-repeat: no-repeat;
   min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  transition: background-image 0.5s ease-in-out; /* Smooth transition when image loads */
 }
 
 /* Use mobile-optimized background on smaller screens */
 @media (max-width: 1024px) {
   body {
+    background-color: #000000; /* Black fallback for mobile too */
     background-image: url('/assets/images/night-sky-mobile.jpg');
     background-attachment: scroll; /* Better performance on mobile */
   }
