@@ -390,7 +390,7 @@ body {
               {% for tag_data in site.data.tag-cloud.tagCloud limit:20 %}
                 <span class="tag"
                       data-weight="{{ tag_data.weight }}"
-                      data-notes="{{ tag_data.notes | jsonify }}"
+                      data-tag-name="{{ tag_data.tag }}"
                       style="font-size: {{ tag_data.weight | times: 0.2 | plus: 0.8 }}em; opacity: {{ tag_data.weight | times: 0.1 | plus: 0.6 }};">
                   {{ tag_data.tag }}
                 </span>
@@ -449,6 +449,9 @@ body {
 </div>
 
 <script>
+// Store tag cloud data in JavaScript
+const tagCloudData = {{ site.data.tag-cloud.tagCloud | jsonify }};
+
 document.addEventListener('DOMContentLoaded', function() {
   const frame = document.getElementById('manuscript-frame');
   const loading = document.querySelector('.manuscript-loading');
@@ -612,9 +615,17 @@ document.addEventListener('DOMContentLoaded', function() {
     tag.addEventListener('click', function() {
       console.log('Tag clicked:', this.textContent.trim());
       try {
-        const notesData = JSON.parse(this.getAttribute('data-notes'));
         const tagName = this.textContent.trim();
-        console.log('Notes data parsed successfully:', notesData.length, 'notes');
+        
+        // Find the tag data in our JavaScript variable
+        const tagData = tagCloudData.find(t => t.tag === tagName);
+        if (!tagData) {
+          console.error('Tag data not found for:', tagName);
+          return;
+        }
+        
+        const notesData = tagData.notes;
+        console.log('Notes data found successfully:', notesData.length, 'notes');
 
         // Remove active states
         tags.forEach(t => t.classList.remove('active'));
@@ -664,7 +675,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       } catch (error) {
         console.error('Error in tag click handler:', error);
-        console.error('Raw data-notes attribute:', this.getAttribute('data-notes'));
+        console.error('Tag name:', this.textContent.trim());
       }
     });
   });
