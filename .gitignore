@@ -16,6 +16,9 @@ _site/
 assets/paper/*.pdf
 assets/paper/*.html
 assets/paper/*.tex
+assets/notes/*.html
+assets/letters/*.html
+assets/letters/*.pdf
 
 # Jekyll development files
 Gemfile.lock
