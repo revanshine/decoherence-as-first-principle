@@ -1,10 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ site.lang | default: 'en' }}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title | default: "Decoherence as First Principle" }}</title>
-  <meta name="description" content="{{ page.description | default: site.description | default: 'Research on decoherence as a fundamental principle' }}">
+  
+  <!-- SEO Meta Tags -->
+  {% seo %}
+  
+  <!-- Additional Open Graph tags for better social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="{{ site.locale | default: 'en_US' }}">
+  {% if page.image %}
+    <meta property="og:image" content="{{ page.image | absolute_url }}">
+  {% endif %}
+  
+  <!-- LinkedIn specific meta tags -->
+  <meta property="og:site_name" content="{{ site.title }}">
+  {% if site.author.linkedin %}
+    <meta name="author" content="https://www.linkedin.com/in/{{ site.author.linkedin }}/">
+  {% endif %}
+  
+  <!-- Academic/Research specific meta tags -->
+  {% if site.author.orcid %}
+    <meta name="citation_author" content="{{ site.author.name }}">
+    <meta name="citation_author_orcid" content="{{ site.author.orcid }}">
+  {% endif %}
+  {% if page.title and page.title != site.title %}
+    <meta name="citation_title" content="{{ page.title }}">
+  {% endif %}
+  <meta name="citation_publication_date" content="{{ site.time | date: '%Y' }}">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  
+  <!-- Preconnect to external domains for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
   
   <style>
     body {
