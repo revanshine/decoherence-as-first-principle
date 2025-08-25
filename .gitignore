@@ -1,5 +1,6 @@
 # build artifacts
 build/out/
+build_output/
 *.aux
 *.log
 *.out
@@ -15,3 +16,14 @@ _site/
 assets/paper/*.pdf
 assets/paper/*.html
 assets/paper/*.tex
+
+# Jekyll development files
+Gemfile.lock
+vendor/
+.bundle/
+*.backup
+
+# Docker files (not needed for simple build)
+Dockerfile*
+docker-compose*.yml
+jekyll-cached.sh
