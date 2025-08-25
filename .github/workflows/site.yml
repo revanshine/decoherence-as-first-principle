@@ -26,31 +26,9 @@ jobs:
       - name: Install TeX Live (full)
         run: sudo apt-get update && sudo apt-get install -y texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
 
-      # Run your existing build script
-      - name: Build Manuscript
-        run: bash build/build.sh
-
-      - name: Move manuscript into assets (PDF + TeX)
-        run: |
-          mkdir -p assets/paper
-          cp build/out/manuscript.pdf assets/paper/
-          cp build/out/manuscript.tex assets/paper/
-
-      # Build HTML from the LaTeX using Pandoc + MathJax
-      - name: Build HTML version (Pandoc)
-        run: |
-          # adjust the bibliography path if you keep a .bib file
-          PANDOC_FLAGS="--standalone --mathjax --citeproc"
-          # include CSL if you want specific citation styling:
-          # PANDOC_FLAGS="$PANDOC_FLAGS --csl=style.csl --bibliography=refs.bib"
-          pandoc build/out/manuscript.tex $PANDOC_FLAGS -o assets/paper/manuscript.html
-
-      # Copy outputs into site assets
-      - name: Move manuscript into assets
-        run: |
-          mkdir -p assets/paper
-          cp build/out/manuscript.pdf assets/paper/
-          cp build/out/manuscript.tex assets/paper/
+      # Use our comprehensive make script
+      - name: Build All Assets (TEX, PDF, HTML)
+        run: ./make
 
       # Build Jekyll site
       - name: Setup Pages
@@ -75,6 +53,8 @@ jobs:
           path: |
             build/out/manuscript.pdf
             build/out/manuscript.tex
+            assets/paper/manuscript.html
+            assets/letters/*.html
 
   deploy:
     needs: build
