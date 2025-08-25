@@ -633,7 +633,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <div style="margin-bottom: 2rem; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 8px; background: #f9fafb;">
             <h3 style="margin: 0 0 1rem 0; color: #1f2937;">${note.title}</h3>
             <p style="margin: 0; color: #6b7280; font-size: 0.9em;">
-              <a href="#" onclick="loadNote('${note.path}')" 
+              <a href="#" onclick="window.parent.postMessage({type: 'loadNote', path: '${note.path.replace('research/notes/', '/assets/notes/').replace('.md', '.html')}'}, '*')" 
                  style="color: #3b82f6; text-decoration: none;">
                 📄 Open Note
               </a>
@@ -644,20 +644,11 @@ document.addEventListener('DOMContentLoaded', function() {
       
       notesHtml += `
           <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e7eb;">
-            <button onclick="backToManuscript()" 
+            <button onclick="window.parent.postMessage({type: 'backToManuscript'}, '*')" 
                     style="padding: 0.5rem 1rem; background: #6b7280; color: white; border: none; border-radius: 4px; cursor: pointer;">
               ← Back to Manuscript
             </button>
           </div>
-          <script>
-            function loadNote(path) {
-              const htmlPath = path.replace('research/notes/', '/assets/notes/').replace('.md', '.html');
-              window.parent.postMessage({type: 'loadNote', path: htmlPath}, '*');
-            }
-            function backToManuscript() {
-              window.parent.postMessage({type: 'backToManuscript'}, '*');
-            }
-          </script>
         </div>
       `;
       
