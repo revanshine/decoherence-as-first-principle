@@ -12,14 +12,23 @@ layout: default
         <nav class="book-nav">
           <h3>Contents</h3>
           <ul>
-            <li><a href="#abstract" data-page="right">Abstract</a></li>
-            <li><a href="#introduction" data-page="right">Introduction</a></li>
-            <li><a href="#decoherence-bootstrap" data-page="right">Decoherence Bootstrap</a></li>
-            <li><a href="#gravity" data-page="right">Gravity as Primary Basis</a></li>
-            <li><a href="#forces" data-page="right">Emergence of Forces</a></li>
-            <li><a href="#dark-matter" data-page="right">Dark Matter</a></li>
-            <li><a href="{{ '/assets/paper/manuscript.html' | relative_url }}" target="_blank">Full Manuscript</a></li>
+            <li><a href="#" data-section="abstract">Abstract</a></li>
+            <li><a href="#" data-section="introduction">Introduction</a></li>
+            <li><a href="#" data-section="decoherence-bootstrap">Decoherence Bootstrap</a></li>
+            <li><a href="#" data-section="gravity-primary-basis">Gravity as Primary Basis</a></li>
+            <li><a href="#" data-section="emergence-of-forces">Emergence of Forces</a></li>
+            <li><a href="#" data-section="dark-matter">Dark Matter</a></li>
+            <li><a href="#" data-section="black-holes-and-decoherence-limit">Black Holes</a></li>
+            <li><a href="#" data-section="quantum-aliasing">Quantum Aliasing</a></li>
+            <li><a href="#" data-section="conservation-law">Conservation Law</a></li>
+            <li><a href="#" data-section="related-work">Related Work</a></li>
+            <li><a href="#" data-section="conclusion">Conclusion</a></li>
+            <li><a href="#" data-section="appendix">Appendix</a></li>
           </ul>
+          
+          <div class="manuscript-actions">
+            <a href="{{ '/assets/paper/manuscript.html' | relative_url }}" target="_blank" class="btn-secondary">Full Page View</a>
+          </div>
         </nav>
         
         <div class="letters-preview">
@@ -46,39 +55,18 @@ layout: default
       </div>
     </div>
     
-    <!-- Right Page: Main Content -->
+    <!-- Right Page: Manuscript Content -->
     <div class="book-page book-page-right">
-      <div class="page-content">
-        {% if page.url == '/' %}
-          <!-- Home page content -->
-          <h1>Decoherence as First Principle</h1>
-          
-          <div class="manuscript-preview">
-            <h2 id="abstract">Abstract</h2>
-            <p><em>What if cosmic structure arises from quantum decoherence itself?</em></p>
-            <p>This project presents a new theoretical framework where ontological decoherence underlies gravity, dark matter, and the forces shaping our universe.</p>
-            
-            <h2 id="introduction">Introduction</h2>
-            <p>The fundamental question we address is whether decoherence can serve as a first principle from which classical physics, gravity, and cosmological structure emerge naturally.</p>
-            
-            <h2 id="key-concepts">Key Concepts</h2>
-            <ul>
-              <li><strong>Ontological Decoherence</strong>: Not just measurement-induced, but fundamental to reality</li>
-              <li><strong>Emergent Gravity</strong>: Gravitational effects arising from decoherence processes</li>
-              <li><strong>Dark Matter Alternative</strong>: Structure formation through decoherence mechanisms</li>
-              <li><strong>Unified Framework</strong>: Single principle explaining multiple phenomena</li>
-            </ul>
-            
-            <div class="read-more">
-              <p><strong>This is a living document that evolves as the research progresses.</strong></p>
-              <p>For the complete manuscript with full mathematical derivations and references:</p>
-              <p><a href="{{ '/assets/paper/manuscript.html' | relative_url }}" class="btn-primary">Read Full Manuscript →</a></p>
-            </div>
-          </div>
-        {% else %}
-          <!-- Other pages use their own content -->
-          {{ content }}
-        {% endif %}
+      <div class="manuscript-container">
+        <div class="manuscript-loading">
+          <p>Loading manuscript...</p>
+        </div>
+        <iframe 
+          id="manuscript-frame" 
+          src="{{ '/assets/paper/manuscript.html' | relative_url }}" 
+          style="display: none;"
+          title="Manuscript Content">
+        </iframe>
       </div>
     </div>
   </div>
@@ -87,12 +75,13 @@ layout: default
 <style>
 .book-container {
   display: flex;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 2rem auto;
   background: var(--book-bg, #f8f9fa);
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
   overflow: hidden;
+  height: 90vh;
 }
 
 .book-spine {
@@ -114,22 +103,46 @@ layout: default
 .book-pages {
   display: flex;
   flex: 1;
-  min-height: 80vh;
+  height: 100%;
 }
 
 .book-page {
   flex: 1;
   padding: 2rem;
   position: relative;
+  overflow-y: auto;
 }
 
 .book-page-left {
   background: var(--left-page-bg, #ffffff);
   border-right: 1px solid var(--page-border, #e5e7eb);
+  flex: 0 0 350px;
 }
 
 .book-page-right {
   background: var(--right-page-bg, #fefefe);
+  flex: 1;
+  padding: 0;
+}
+
+.manuscript-container {
+  height: 100%;
+  position: relative;
+}
+
+.manuscript-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--text-muted, #6b7280);
+}
+
+#manuscript-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: white;
 }
 
 .book-nav ul {
@@ -144,14 +157,37 @@ layout: default
 .book-nav a {
   text-decoration: none;
   color: var(--nav-color, #374151);
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem 0.75rem;
   border-radius: 4px;
   display: block;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.book-nav a:hover, .book-nav a.active {
+  background: var(--nav-hover, #f3f4f6);
+  color: var(--nav-active, #1f2937);
+}
+
+.manuscript-actions {
+  margin: 1.5rem 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--page-border, #e5e7eb);
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--btn-secondary-bg, #6b7280);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9em;
   transition: background-color 0.2s;
 }
 
-.book-nav a:hover {
-  background: var(--nav-hover, #f3f4f6);
+.btn-secondary:hover {
+  background: var(--btn-secondary-hover, #4b5563);
 }
 
 .letters-preview, .downloads {
@@ -183,36 +219,6 @@ layout: default
   margin: 0.5rem 0;
 }
 
-.manuscript-preview h2 {
-  color: var(--heading-color, #1f2937);
-  border-bottom: 1px solid var(--page-border, #e5e7eb);
-  padding-bottom: 0.5rem;
-  margin-top: 2rem;
-}
-
-.read-more {
-  margin-top: 3rem;
-  padding: 1.5rem;
-  background: var(--highlight-bg, #f9fafb);
-  border-radius: 8px;
-  border-left: 4px solid var(--accent-color, #3b82f6);
-}
-
-.btn-primary {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: var(--accent-color, #3b82f6);
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 500;
-  transition: background-color 0.2s;
-}
-
-.btn-primary:hover {
-  background: var(--accent-hover, #2563eb);
-}
-
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
   :root {
@@ -222,41 +228,83 @@ layout: default
     --page-border: #4b5563;
     --nav-color: #d1d5db;
     --nav-hover: #4b5563;
+    --nav-active: #f9fafb;
     --letter-color: #9ca3af;
     --letter-hover: #d1d5db;
-    --heading-color: #f9fafb;
-    --highlight-bg: #4b5563;
-    --accent-color: #60a5fa;
-    --accent-hover: #3b82f6;
+    --text-muted: #9ca3af;
+    --btn-secondary-bg: #6b7280;
+    --btn-secondary-hover: #9ca3af;
   }
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .book-pages {
     flex-direction: column;
   }
   
   .book-page-left {
+    flex: 0 0 auto;
     border-right: none;
     border-bottom: 1px solid var(--page-border, #e5e7eb);
+    max-height: 40vh;
+  }
+  
+  .book-page-right {
+    flex: 1;
   }
   
   .book-spine {
     display: none;
   }
+  
+  .book-container {
+    height: 95vh;
+  }
 }
 </style>
 
 <script>
-// Smooth scrolling for book navigation
-document.querySelectorAll('.book-nav a[data-page="right"]').forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
+document.addEventListener('DOMContentLoaded', function() {
+  const frame = document.getElementById('manuscript-frame');
+  const loading = document.querySelector('.manuscript-loading');
+  const navLinks = document.querySelectorAll('.book-nav a[data-section]');
+  
+  // Show iframe when loaded
+  frame.onload = function() {
+    loading.style.display = 'none';
+    frame.style.display = 'block';
+  };
+  
+  // Handle navigation clicks
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // Remove active class from all links
+      navLinks.forEach(l => l.classList.remove('active'));
+      // Add active class to clicked link
+      this.classList.add('active');
+      
+      const section = this.getAttribute('data-section');
+      
+      // Try to scroll to section in iframe
+      try {
+        const iframeDoc = frame.contentDocument || frame.contentWindow.document;
+        const target = iframeDoc.getElementById(section) || 
+                      iframeDoc.querySelector(`h1:contains("${section}")`) ||
+                      iframeDoc.querySelector(`h2:contains("${section}")`);
+        
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          // Fallback: scroll to top and highlight the section name
+          frame.contentWindow.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      } catch (error) {
+        console.log('Could not scroll to section:', section);
+      }
+    });
   });
 });
 </script>
