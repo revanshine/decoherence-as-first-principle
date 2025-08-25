@@ -2,7 +2,7 @@
 body {
   font-family: "Times New Roman", Times, serif;
   line-height: 1.6;
-  max-width: 800px;
+  max-width: 1200px; /* Increased from 800px for better iframe viewing */
   margin: 0 auto;
   padding: 2rem;
   color: #333;
