@@ -100,7 +100,7 @@ for letter in "${LETTERS[@]}"; do
             "_letters/$letter" \
             -o "assets/letters/$basename.html"
         echo "   ✓ Generated assets/letters/$basename.html"
-        
+
         # Copy corresponding PDF if it exists
         if [[ -f "build/out/letters/$basename.pdf" ]]; then
             cp "build/out/letters/$basename.pdf" "assets/letters/"
@@ -127,7 +127,14 @@ if [[ -d "research/notes" ]]; then
             basename=$(basename "$note" .md)
             # Generate iframe-friendly HTML (no full document structure)
             pandoc "$note" -o "assets/notes/${basename}.html" \
+                --from=markdown+smart \
+                --standalone \
                 --mathjax \
+                --citeproc \
+                --metadata link-citations=true \
+                --bibliography="references/references.bib" \
+                --csl="references/harvard-cite-them-right.csl" \
+                --css="/assets/css/paper.css" \
                 --metadata title="$basename" \
                 2>/dev/null || echo "   ⚠ Failed to convert $note"
             echo "   ✓ Converted $basename.md"

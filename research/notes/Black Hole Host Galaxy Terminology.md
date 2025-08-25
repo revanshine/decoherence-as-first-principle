@@ -14,6 +14,7 @@ In the phrase **"black hole and host"** (especially in the context of galaxies),
 ## Observable Host Properties
 
 Properties of the **host galaxy** typically include:
+
 - **Stellar mass** - Total mass in stars
 - **Bulge mass** - Mass of the central stellar bulge
 - **Luminosity** - Total light output across wavelengths
@@ -25,6 +26,7 @@ Properties of the **host galaxy** typically include:
 ## Standard Usage in Literature
 
 This terminology is standard in extragalactic astronomy, particularly when discussing relationships such as:
+
 - **Black hole mass vs. host galaxy bulge mass**
 - **Black hole mass vs. host galaxy velocity dispersion** (the M–σ relation)
 - **Black hole–host coevolution** scenarios
@@ -33,6 +35,7 @@ This terminology is standard in extragalactic astronomy, particularly when discu
 ## Relevance to Decoherence Framework
 
 In the context of *Decoherence as First Principle*, the black hole-host relationship takes on new meaning:
+
 - Both components may emerge from shared **gravitational decoherence events**
 - The **co-evolution** could reflect synchronized decoherence processes rather than causal feedback
 - **Scaling relations** might represent fundamental decoherence length and time scales

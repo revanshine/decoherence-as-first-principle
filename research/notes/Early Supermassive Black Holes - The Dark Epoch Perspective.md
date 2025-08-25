@@ -53,6 +53,7 @@ This perspective suggests that the "dark epoch" was not just a period of structu
 ## Implications for Cosmology
 
 The natural formation of early SMBHs during the dark epoch supports:
+
 - **Revised timeline**: Earlier onset of structure formation than previously thought
 - **Coupled evolution**: Intimate connection between dark matter, gas dynamics, and black hole growth
 - **Observational predictions**: Specific signatures in early universe observations
