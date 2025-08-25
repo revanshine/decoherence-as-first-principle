@@ -101,9 +101,11 @@ body {
 
 .book-page-right {
   background: var(--right-page-bg, #fefefe);
-  flex: 1;
+  flex: 1; /* Take all remaining space */
   padding: 0;
   box-shadow: inset 1px 0 3px rgba(0,0,0,0.1);
+  min-width: 0; /* Allow flex shrinking */
+  width: 100%; /* Ensure full width usage */
 }
 
 .manuscript-container {
@@ -124,6 +126,7 @@ body {
   height: 100%;
   border: none;
   background: white;
+  display: block; /* Override the style="display: none" when loaded */
 }
 
 .book-nav ul {

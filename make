@@ -55,8 +55,11 @@ pandoc \
 
 # Post-process to replace polyfill.io with reliable CDN
 if [[ -f "assets/paper/manuscript.html" ]]; then
-    echo "   Post-processing: Replacing polyfill.io with jsdelivr.net"
-    sed -i.bak 's|https://polyfill.io/v3/polyfill.min.js?features=es6|https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js|g' assets/paper/manuscript.html
+    echo "   Post-processing: Replacing polyfill.io and fixing MathJax conflicts"
+    # Replace polyfill.io with a single, working MathJax script
+    sed -i.bak 's|<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>||g' assets/paper/manuscript.html
+    # Also remove any duplicate MathJax scripts that might conflict
+    sed -i.bak 's|src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"|src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"|g' assets/paper/manuscript.html
     rm -f assets/paper/manuscript.html.bak
 fi
 echo "   ✓ Generated assets/paper/manuscript.html"
@@ -114,9 +117,10 @@ for letter in "${LETTERS[@]}"; do
             "letters/$letter" \
             -o "assets/letters/$basename.html"
         
-        # Post-process to replace polyfill.io
+        # Post-process to fix MathJax conflicts
         if [[ -f "assets/letters/$basename.html" ]]; then
-            sed -i.bak 's|https://polyfill.io/v3/polyfill.min.js?features=es6|https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js|g' "assets/letters/$basename.html"
+            sed -i.bak 's|<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>||g' "assets/letters/$basename.html"
+            sed -i.bak 's|src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"|src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"|g' "assets/letters/$basename.html"
             rm -f "assets/letters/$basename.html.bak"
         fi
         echo "   ✓ Generated assets/letters/$basename.html"
@@ -151,9 +155,10 @@ if [[ -d "research/notes" ]]; then
                 --css="/assets/css/notes.css" \
                 --metadata title="$basename" 2>/dev/null || echo "   ⚠ Failed to convert $note"
             
-            # Post-process to replace polyfill.io
+            # Post-process to fix MathJax conflicts
             if [[ -f "assets/notes/${basename}.html" ]]; then
-                sed -i.bak 's|https://polyfill.io/v3/polyfill.min.js?features=es6|https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js|g' "assets/notes/${basename}.html"
+                sed -i.bak 's|<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>||g' "assets/notes/${basename}.html"
+                sed -i.bak 's|src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"|src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"|g' "assets/notes/${basename}.html"
                 rm -f "assets/notes/${basename}.html.bak"
             fi
             echo "   ✓ Converted $basename.md"
