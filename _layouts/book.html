@@ -28,8 +28,9 @@ body {
 
 .book-container {
   display: flex;
-  max-width: 1400px;
+  max-width: 1600px; /* Wider container */
   margin: 2rem auto;
+  margin-left: 12.5%; /* Position at 1/4 from left edge */
   background: var(--book-bg, #f8f9fa);
   border-radius: 12px;
   box-shadow: 
@@ -85,10 +86,17 @@ body {
 }
 
 .book-page-left {
-  background: var(--left-page-bg, #ffffff);
-  border-right: 1px solid var(--page-border, #e5e7eb);
-  flex: 0 0 350px;
+  background: var(--left-page-bg, #2d3748); /* Darker background */
+  border-right: 1px solid var(--page-border, #4a5568);
+  flex: 0 0 380px; /* Slightly wider */
   box-shadow: inset -1px 0 3px rgba(0,0,0,0.1);
+  color: var(--left-page-text, #e2e8f0); /* Light text */
+}
+
+.book-page-left h3 {
+  color: var(--left-page-heading, #f7fafc); /* White headings */
+  margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .book-page-right {
@@ -129,7 +137,7 @@ body {
 
 .book-nav a {
   text-decoration: none;
-  color: var(--nav-color, #374151);
+  color: var(--nav-color, #cbd5e0);
   padding: 0.5rem 0.75rem;
   border-radius: 4px;
   display: block;
@@ -138,20 +146,20 @@ body {
 }
 
 .book-nav a:hover, .book-nav a.active {
-  background: var(--nav-hover, #f3f4f6);
-  color: var(--nav-active, #1f2937);
+  background: var(--nav-hover, #4a5568);
+  color: var(--nav-active, #f7fafc);
 }
 
 .manuscript-actions {
   margin: 1.5rem 0;
   padding-top: 1rem;
-  border-top: 1px solid var(--page-border, #e5e7eb);
+  border-top: 1px solid var(--page-border, #4a5568);
 }
 
 .btn-secondary {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background: var(--btn-secondary-bg, #6b7280);
+  background: var(--btn-secondary-bg, #4a5568);
   color: white;
   text-decoration: none;
   border-radius: 4px;
@@ -160,13 +168,13 @@ body {
 }
 
 .btn-secondary:hover {
-  background: var(--btn-secondary-hover, #4b5563);
+  background: var(--btn-secondary-hover, #2d3748);
 }
 
 .letters-preview, .downloads, .citation-section, .research-notes {
   margin-top: 2rem;
   padding-top: 1rem;
-  border-top: 1px solid var(--page-border, #e5e7eb);
+  border-top: 1px solid var(--page-border, #4a5568);
 }
 
 .tag-cloud {
@@ -207,7 +215,7 @@ body {
 }
 
 .letter-preview a, .downloads a {
-  color: var(--letter-color, #6b7280);
+  color: var(--letter-color, #a0aec0);
   text-decoration: none;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
@@ -216,8 +224,8 @@ body {
 }
 
 .letter-preview a:hover, .downloads a:hover, .letter-preview a.active {
-  color: var(--letter-hover, #374151);
-  background: var(--nav-hover, #f3f4f6);
+  color: var(--letter-hover, #f7fafc);
+  background: var(--nav-hover, #4a5568);
 }
 
 .downloads ul {
@@ -297,6 +305,12 @@ body {
     background-size: 150px 75px;
   }
   
+  .book-container {
+    margin-left: auto; /* Center on mobile */
+    margin-right: auto;
+    max-width: 95vw;
+  }
+  
   .book-pages {
     flex-direction: column;
   }
@@ -304,7 +318,7 @@ body {
   .book-page-left {
     flex: 0 0 auto;
     border-right: none;
-    border-bottom: 1px solid var(--page-border, #e5e7eb);
+    border-bottom: 1px solid var(--page-border, #4a5568);
     max-height: 40vh;
   }
   
@@ -318,7 +332,7 @@ body {
   
   .book-container {
     height: 95vh;
-    margin: 1rem;
+    margin: 1rem auto; /* Override the left margin on mobile */
   }
 }
 </style>
@@ -593,7 +607,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <div style="margin-bottom: 2rem; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 8px; background: #f9fafb;">
             <h3 style="margin: 0 0 1rem 0; color: #1f2937;">${note.title}</h3>
             <p style="margin: 0; color: #6b7280; font-size: 0.9em;">
-              <a href="#" onclick="window.parent.postMessage({type: 'loadNote', path: '${note.path}'}, '*')" 
+              <a href="#" onclick="loadNote('${note.path}')" 
                  style="color: #3b82f6; text-decoration: none;">
                 📄 Open Note
               </a>
@@ -604,11 +618,20 @@ document.addEventListener('DOMContentLoaded', function() {
       
       notesHtml += `
           <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e7eb;">
-            <button onclick="window.parent.postMessage({type: 'backToManuscript'}, '*')" 
+            <button onclick="backToManuscript()" 
                     style="padding: 0.5rem 1rem; background: #6b7280; color: white; border: none; border-radius: 4px; cursor: pointer;">
               ← Back to Manuscript
             </button>
           </div>
+          <script>
+            function loadNote(path) {
+              const htmlPath = path.replace('research/notes/', '/assets/notes/').replace('.md', '.html');
+              window.parent.postMessage({type: 'loadNote', path: htmlPath}, '*');
+            }
+            function backToManuscript() {
+              window.parent.postMessage({type: 'backToManuscript'}, '*');
+            }
+          </script>
         </div>
       `;
       
@@ -625,9 +648,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // Handle messages from iframe (for note loading)
   window.addEventListener('message', function(event) {
     if (event.data.type === 'loadNote') {
-      // Convert markdown path to HTML path for display
-      const htmlPath = event.data.path.replace('research/notes/', 'assets/notes/').replace('.md', '.html');
-      frame.src = htmlPath;
+      // Load the note HTML directly
+      frame.src = event.data.path;
     } else if (event.data.type === 'backToManuscript') {
       // Restore original manuscript
       frame.src = originalManuscriptUrl;
