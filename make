@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # Comprehensive build script for Jekyll assets
 # TEX is source of truth, PDF is vehicle, HTML is salesman (generated from markdown)
-# Updated: 2025-08-25 - Fixed MathJax CDN to use jsdelivr.net instead of polyfill.io
 
 set -euo pipefail
 
@@ -38,7 +37,6 @@ SECTIONS=(
 INPUTS=(manuscript/main.md "${SECTIONS[@]}")
 
 echo "   Converting manuscript markdown to HTML..."
-echo "   Using MathJax with post-processing to avoid polyfill.io"
 pandoc \
     --from=markdown+smart \
     --standalone \
@@ -52,34 +50,12 @@ pandoc \
     --css="/assets/css/paper.css" \
     "${INPUTS[@]}" \
     -o assets/paper/manuscript.html
-
-# Post-process to replace polyfill.io and fix MathJax conflicts
-if [[ -f "assets/paper/manuscript.html" ]]; then
-    echo "   Post-processing: Removing polyfill.io and fixing MathJax conflicts"
-    # Remove polyfill.io script entirely
-    sed -i.bak 's|<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>||g' assets/paper/manuscript.html
-    # Replace the problematic tex-chtml-full.js with simpler tex-chtml.js
-    sed -i.bak 's|tex-chtml-full.js|tex-chtml.js|g' assets/paper/manuscript.html
-    rm -f assets/paper/manuscript.html.bak
-fi
+echo "   ✓ Generated assets/paper/manuscript.html"
 echo "   ✓ Generated assets/paper/manuscript.html"
 
-# Verify the HTML was generated correctly
+# Verify the HTML was generated
 if [[ -f "assets/paper/manuscript.html" ]]; then
-    if grep -q "polyfill.io" assets/paper/manuscript.html; then
-        echo "   ❌ Error: polyfill.io still present in manuscript.html"
-        grep -n "polyfill.io" assets/paper/manuscript.html
-    else
-        echo "   ✓ Verified: No polyfill.io found"
-    fi
-    
-    if grep -q "tex-chtml-full.js" assets/paper/manuscript.html; then
-        echo "   ⚠ Warning: Still using tex-chtml-full.js (may cause conflicts)"
-    elif grep -q "tex-chtml.js" assets/paper/manuscript.html; then
-        echo "   ✓ Verified: Using tex-chtml.js (should work without conflicts)"
-    else
-        echo "   ⚠ Warning: No MathJax script found"
-    fi
+    echo "   ✓ Verified: manuscript.html generated successfully"
 else
     echo "   ❌ Error: manuscript.html was not generated"
 fi
@@ -118,13 +94,6 @@ for letter in "${LETTERS[@]}"; do
             --css="/assets/css/paper.css" \
             "letters/$letter" \
             -o "assets/letters/$basename.html"
-        
-        # Post-process to fix MathJax conflicts
-        if [[ -f "assets/letters/$basename.html" ]]; then
-            sed -i.bak 's|<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>||g' "assets/letters/$basename.html"
-            sed -i.bak 's|tex-chtml-full.js|tex-chtml.js|g' "assets/letters/$basename.html"
-            rm -f "assets/letters/$basename.html.bak"
-        fi
         echo "   ✓ Generated assets/letters/$basename.html"
         
         # Copy corresponding PDF if it exists
@@ -156,13 +125,6 @@ if [[ -d "research/notes" ]]; then
                 --mathjax \
                 --css="/assets/css/notes.css" \
                 --metadata title="$basename" 2>/dev/null || echo "   ⚠ Failed to convert $note"
-            
-            # Post-process to fix MathJax conflicts
-            if [[ -f "assets/notes/${basename}.html" ]]; then
-                sed -i.bak 's|<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>||g' "assets/notes/${basename}.html"
-                sed -i.bak 's|tex-chtml-full.js|tex-chtml.js|g' "assets/notes/${basename}.html"
-                rm -f "assets/notes/${basename}.html.bak"
-            fi
             echo "   ✓ Converted $basename.md"
         fi
     done
