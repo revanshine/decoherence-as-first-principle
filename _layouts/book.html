@@ -683,8 +683,27 @@ document.addEventListener('DOMContentLoaded', function() {
   // Handle messages from iframe (for note loading)
   window.addEventListener('message', function(event) {
     if (event.data.type === 'loadNote') {
-      // Load the note HTML directly
-      frame.src = event.data.path;
+      // Fetch the note HTML content and load it via srcdoc
+      fetch(event.data.path)
+        .then(response => response.text())
+        .then(html => {
+          // Wrap the content with basic styling for iframe display
+          const styledContent = `
+            <div style="max-width: 1200px; margin: 0 auto; padding: 2rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6;">
+              ${html}
+            </div>
+          `;
+          frame.srcdoc = styledContent;
+        })
+        .catch(error => {
+          console.error('Error loading note:', error);
+          frame.srcdoc = `
+            <div style="padding: 2rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+              <h2>Error Loading Note</h2>
+              <p>Could not load the requested note. Please try again.</p>
+            </div>
+          `;
+        });
     } else if (event.data.type === 'backToManuscript') {
       // Restore original manuscript
       frame.src = originalManuscriptUrl;
