@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Comprehensive build script for Jekyll assets
 # TEX is source of truth, PDF is vehicle, HTML is salesman (generated from markdown)
+# Updated: 2025-08-25 - Fixed MathJax CDN to use jsdelivr.net instead of polyfill.io
 
 set -euo pipefail
 
@@ -37,10 +38,11 @@ SECTIONS=(
 INPUTS=(manuscript/main.md "${SECTIONS[@]}")
 
 echo "   Converting manuscript markdown to HTML..."
+echo "   Using explicit MathJax CDN (no polyfill.io)"
 pandoc \
     --from=markdown+smart \
     --standalone \
-    --mathjax=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js \
+    --mathjax="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" \
     --citeproc \
     --metadata link-citations=true \
     --bibliography="references/references.bib" \
@@ -51,6 +53,19 @@ pandoc \
     "${INPUTS[@]}" \
     -o assets/paper/manuscript.html
 echo "   ✓ Generated assets/paper/manuscript.html"
+
+# Verify the HTML was generated correctly
+if [[ -f "assets/paper/manuscript.html" ]]; then
+    if grep -q "jsdelivr.net" assets/paper/manuscript.html; then
+        echo "   ✓ Verified: Using jsdelivr.net CDN for MathJax"
+    else
+        echo "   ⚠ Warning: MathJax CDN not found or incorrect"
+        echo "   Checking for polyfill.io (should not be present):"
+        grep -n "polyfill.io" assets/paper/manuscript.html || echo "   ✓ No polyfill.io found"
+    fi
+else
+    echo "   ❌ Error: manuscript.html was not generated"
+fi
 
 # Copy the good TEX/PDF (source of truth & vehicle)
 if [[ -f "build/out/manuscript.pdf" ]]; then
