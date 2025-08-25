@@ -31,7 +31,7 @@ for letter in "${LETTERS[@]}"; do
   if [[ -f "letters/$letter" ]]; then
     basename="${letter%.md}"
     
-    if [[ -z "$GENERATE_TEX_ONLY" ]]; then
+    if [[ -z "${GENERATE_TEX_ONLY:-}" ]]; then
       echo "Building $basename.pdf..."
       pandoc "${COMMON_OPTS[@]}" "letters/$letter" -o "$OUTDIR/$basename.pdf"
       echo "✓ Generated $OUTDIR/$basename.pdf"

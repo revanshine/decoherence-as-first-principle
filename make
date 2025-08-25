@@ -10,7 +10,7 @@ echo "🔨 Building all assets for Jekyll..."
 mkdir -p assets/paper assets/letters
 
 # Skip PDF builds if already done (for CI efficiency)
-if [[ -z "$SKIP_PDF_BUILD" ]]; then
+if [[ -z "${SKIP_PDF_BUILD:-}" ]]; then
     echo "📄 Building main manuscript (TEX/PDF)..."
     bash build/build.sh
 

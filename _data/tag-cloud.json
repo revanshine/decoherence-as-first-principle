@@ -1,11 +1,11 @@
 {
-  "generated": "2025-08-25T16:37:38.308Z",
+  "generated": "2025-08-25T17:46:37.680Z",
   "totalNotes": 6,
   "totalTags": 54,
   "tagCloud": [
     {
       "tag": "decoherence",
-      "weight": 7,
+      "weight": 8.5,
       "count": 6,
       "notes": [
         {
@@ -14,15 +14,150 @@
           "path": "research/notes/Black Hole Host Galaxy Terminology.md"
         },
         {
-          "title": "Early Supermassive Black Holes  The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes_ The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes_ The Dark Epoch Perspective.md"
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
         },
         {
           "title": "Lindblad master equation",
           "filename": "Lindblad master equation.md",
           "path": "research/notes/Lindblad master equation.md"
         },
+        {
+          "title": "Null Geodesics and Affine Parameters",
+          "filename": "Null Geodesics and Affine Parameters.md",
+          "path": "research/notes/Null Geodesics and Affine Parameters.md"
+        },
+        {
+          "title": "The M–σ Relation in Galaxy Formation",
+          "filename": "The M–σ Relation in Galaxy Formation.md",
+          "path": "research/notes/The M–σ Relation in Galaxy Formation.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        }
+      ]
+    },
+    {
+      "tag": "model",
+      "weight": 3.7,
+      "count": 4,
+      "notes": [
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        },
+        {
+          "title": "The M–σ Relation in Galaxy Formation",
+          "filename": "The M–σ Relation in Galaxy Formation.md",
+          "path": "research/notes/The M–σ Relation in Galaxy Formation.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        }
+      ]
+    },
+    {
+      "tag": "black hole",
+      "weight": 3,
+      "count": 4,
+      "notes": [
+        {
+          "title": "Black Hole Host Galaxy Terminology",
+          "filename": "Black Hole Host Galaxy Terminology.md",
+          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
+        },
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "The M–σ Relation in Galaxy Formation",
+          "filename": "The M–σ Relation in Galaxy Formation.md",
+          "path": "research/notes/The M–σ Relation in Galaxy Formation.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        }
+      ]
+    },
+    {
+      "tag": "coherence",
+      "weight": 3,
+      "count": 6,
+      "notes": [
+        {
+          "title": "Black Hole Host Galaxy Terminology",
+          "filename": "Black Hole Host Galaxy Terminology.md",
+          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
+        },
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        },
+        {
+          "title": "Null Geodesics and Affine Parameters",
+          "filename": "Null Geodesics and Affine Parameters.md",
+          "path": "research/notes/Null Geodesics and Affine Parameters.md"
+        },
+        {
+          "title": "The M–σ Relation in Galaxy Formation",
+          "filename": "The M–σ Relation in Galaxy Formation.md",
+          "path": "research/notes/The M–σ Relation in Galaxy Formation.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        }
+      ]
+    },
+    {
+      "tag": "cosmology",
+      "weight": 2.8,
+      "count": 3,
+      "notes": [
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "The M–σ Relation in Galaxy Formation",
+          "filename": "The M–σ Relation in Galaxy Formation.md",
+          "path": "research/notes/The M–σ Relation in Galaxy Formation.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        }
+      ]
+    },
+    {
+      "tag": "theory",
+      "weight": 2.8,
+      "count": 3,
+      "notes": [
         {
           "title": "Null Geodesics and Affine Parameters",
           "filename": "Null Geodesics and Affine Parameters.md",
@@ -42,7 +177,7 @@
     },
     {
       "tag": "standard",
-      "weight": 4.8,
+      "weight": 2.7,
       "count": 5,
       "notes": [
         {
@@ -51,9 +186,9 @@
           "path": "research/notes/Black Hole Host Galaxy Terminology.md"
         },
         {
-          "title": "Early Supermassive Black Holes  The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes_ The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes_ The Dark Epoch Perspective.md"
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
         },
         {
           "title": "Lindblad master equation",
@@ -73,72 +208,8 @@
       ]
     },
     {
-      "tag": "coherence",
-      "weight": 4.5,
-      "count": 6,
-      "notes": [
-        {
-          "title": "Black Hole Host Galaxy Terminology",
-          "filename": "Black Hole Host Galaxy Terminology.md",
-          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
-        },
-        {
-          "title": "Early Supermassive Black Holes  The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes_ The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes_ The Dark Epoch Perspective.md"
-        },
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        },
-        {
-          "title": "Null Geodesics and Affine Parameters",
-          "filename": "Null Geodesics and Affine Parameters.md",
-          "path": "research/notes/Null Geodesics and Affine Parameters.md"
-        },
-        {
-          "title": "The M–σ Relation in Galaxy Formation",
-          "filename": "The M–σ Relation in Galaxy Formation.md",
-          "path": "research/notes/The M–σ Relation in Galaxy Formation.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "black hole",
-      "weight": 4.4,
-      "count": 4,
-      "notes": [
-        {
-          "title": "Black Hole Host Galaxy Terminology",
-          "filename": "Black Hole Host Galaxy Terminology.md",
-          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
-        },
-        {
-          "title": "Early Supermassive Black Holes  The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes_ The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes_ The Dark Epoch Perspective.md"
-        },
-        {
-          "title": "The M–σ Relation in Galaxy Formation",
-          "filename": "The M–σ Relation in Galaxy Formation.md",
-          "path": "research/notes/The M–σ Relation in Galaxy Formation.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "fundamental",
-      "weight": 3.4,
+      "tag": "evolution",
+      "weight": 2.7,
       "count": 5,
       "notes": [
         {
@@ -147,9 +218,9 @@
           "path": "research/notes/Black Hole Host Galaxy Terminology.md"
         },
         {
-          "title": "Early Supermassive Black Holes  The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes_ The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes_ The Dark Epoch Perspective.md"
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
         },
         {
           "title": "Lindblad master equation",
@@ -170,7 +241,7 @@
     },
     {
       "tag": "mass",
-      "weight": 3.1,
+      "weight": 2.6,
       "count": 4,
       "notes": [
         {
@@ -179,9 +250,9 @@
           "path": "research/notes/Black Hole Host Galaxy Terminology.md"
         },
         {
-          "title": "Early Supermassive Black Holes  The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes_ The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes_ The Dark Epoch Perspective.md"
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
         },
         {
           "title": "Null Geodesics and Affine Parameters",
@@ -196,14 +267,24 @@
       ]
     },
     {
-      "tag": "cosmology",
-      "weight": 3.1,
-      "count": 3,
+      "tag": "fundamental",
+      "weight": 2.6,
+      "count": 5,
       "notes": [
         {
-          "title": "Early Supermassive Black Holes  The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes_ The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes_ The Dark Epoch Perspective.md"
+          "title": "Black Hole Host Galaxy Terminology",
+          "filename": "Black Hole Host Galaxy Terminology.md",
+          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
+        },
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
         },
         {
           "title": "The M–σ Relation in Galaxy Formation",
@@ -218,29 +299,19 @@
       ]
     },
     {
-      "tag": "evolution",
-      "weight": 3,
-      "count": 5,
+      "tag": "interaction",
+      "weight": 2.5,
+      "count": 3,
       "notes": [
         {
-          "title": "Black Hole Host Galaxy Terminology",
-          "filename": "Black Hole Host Galaxy Terminology.md",
-          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
-        },
-        {
-          "title": "Early Supermassive Black Holes  The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes_ The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes_ The Dark Epoch Perspective.md"
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
         },
         {
           "title": "Lindblad master equation",
           "filename": "Lindblad master equation.md",
           "path": "research/notes/Lindblad master equation.md"
-        },
-        {
-          "title": "The M–σ Relation in Galaxy Formation",
-          "filename": "The M–σ Relation in Galaxy Formation.md",
-          "path": "research/notes/The M–σ Relation in Galaxy Formation.md"
         },
         {
           "title": "The Universe Learning Its Physical Laws",
@@ -251,7 +322,7 @@
     },
     {
       "tag": "observation",
-      "weight": 3,
+      "weight": 2.4,
       "count": 4,
       "notes": [
         {
@@ -260,97 +331,14 @@
           "path": "research/notes/Black Hole Host Galaxy Terminology.md"
         },
         {
-          "title": "Early Supermassive Black Holes  The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes_ The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes_ The Dark Epoch Perspective.md"
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
         },
         {
           "title": "The M–σ Relation in Galaxy Formation",
           "filename": "The M–σ Relation in Galaxy Formation.md",
           "path": "research/notes/The M–σ Relation in Galaxy Formation.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "theory",
-      "weight": 3,
-      "count": 3,
-      "notes": [
-        {
-          "title": "Null Geodesics and Affine Parameters",
-          "filename": "Null Geodesics and Affine Parameters.md",
-          "path": "research/notes/Null Geodesics and Affine Parameters.md"
-        },
-        {
-          "title": "The M–σ Relation in Galaxy Formation",
-          "filename": "The M–σ Relation in Galaxy Formation.md",
-          "path": "research/notes/The M–σ Relation in Galaxy Formation.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "quantum",
-      "weight": 2.8,
-      "count": 2,
-      "notes": [
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "information",
-      "weight": 2.7,
-      "count": 3,
-      "notes": [
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        },
-        {
-          "title": "Null Geodesics and Affine Parameters",
-          "filename": "Null Geodesics and Affine Parameters.md",
-          "path": "research/notes/Null Geodesics and Affine Parameters.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "action",
-      "weight": 2.6,
-      "count": 3,
-      "notes": [
-        {
-          "title": "Early Supermassive Black Holes  The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes_ The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes_ The Dark Epoch Perspective.md"
-        },
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
         },
         {
           "title": "The Universe Learning Its Physical Laws",
@@ -361,7 +349,7 @@
     },
     {
       "tag": "stellar",
-      "weight": 2.5,
+      "weight": 2.4,
       "count": 3,
       "notes": [
         {
@@ -370,9 +358,9 @@
           "path": "research/notes/Black Hole Host Galaxy Terminology.md"
         },
         {
-          "title": "Early Supermassive Black Holes  The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes_ The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes_ The Dark Epoch Perspective.md"
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
         },
         {
           "title": "The M–σ Relation in Galaxy Formation",
@@ -382,14 +370,14 @@
       ]
     },
     {
-      "tag": "interaction",
-      "weight": 2.5,
+      "tag": "action",
+      "weight": 2.4,
       "count": 3,
       "notes": [
         {
-          "title": "Early Supermassive Black Holes  The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes_ The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes_ The Dark Epoch Perspective.md"
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
         },
         {
           "title": "Lindblad master equation",
@@ -404,24 +392,36 @@
       ]
     },
     {
-      "tag": "model",
-      "weight": 2.5,
-      "count": 4,
+      "tag": "mathematics",
+      "weight": 2.4,
+      "count": 3,
       "notes": [
-        {
-          "title": "Early Supermassive Black Holes  The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes_ The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes_ The Dark Epoch Perspective.md"
-        },
         {
           "title": "Lindblad master equation",
           "filename": "Lindblad master equation.md",
           "path": "research/notes/Lindblad master equation.md"
         },
         {
+          "title": "Null Geodesics and Affine Parameters",
+          "filename": "Null Geodesics and Affine Parameters.md",
+          "path": "research/notes/Null Geodesics and Affine Parameters.md"
+        },
+        {
           "title": "The M–σ Relation in Galaxy Formation",
           "filename": "The M–σ Relation in Galaxy Formation.md",
           "path": "research/notes/The M–σ Relation in Galaxy Formation.md"
+        }
+      ]
+    },
+    {
+      "tag": "quantum",
+      "weight": 2.1,
+      "count": 2,
+      "notes": [
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
         },
         {
           "title": "The Universe Learning Its Physical Laws",
@@ -432,7 +432,7 @@
     },
     {
       "tag": "galaxy",
-      "weight": 2.1,
+      "weight": 2,
       "count": 3,
       "notes": [
         {
@@ -441,161 +441,20 @@
           "path": "research/notes/Black Hole Host Galaxy Terminology.md"
         },
         {
-          "title": "Early Supermassive Black Holes  The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes_ The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes_ The Dark Epoch Perspective.md"
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
         },
         {
           "title": "The M–σ Relation in Galaxy Formation",
           "filename": "The M–σ Relation in Galaxy Formation.md",
           "path": "research/notes/The M–σ Relation in Galaxy Formation.md"
-        }
-      ]
-    },
-    {
-      "tag": "mathematics",
-      "weight": 2.1,
-      "count": 3,
-      "notes": [
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        },
-        {
-          "title": "Null Geodesics and Affine Parameters",
-          "filename": "Null Geodesics and Affine Parameters.md",
-          "path": "research/notes/Null Geodesics and Affine Parameters.md"
-        },
-        {
-          "title": "The M–σ Relation in Galaxy Formation",
-          "filename": "The M–σ Relation in Galaxy Formation.md",
-          "path": "research/notes/The M–σ Relation in Galaxy Formation.md"
-        }
-      ]
-    },
-    {
-      "tag": "dark",
-      "weight": 2,
-      "count": 2,
-      "notes": [
-        {
-          "title": "Black Hole Host Galaxy Terminology",
-          "filename": "Black Hole Host Galaxy Terminology.md",
-          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
-        },
-        {
-          "title": "Early Supermassive Black Holes  The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes_ The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes_ The Dark Epoch Perspective.md"
-        }
-      ]
-    },
-    {
-      "tag": "matter",
-      "weight": 2,
-      "count": 2,
-      "notes": [
-        {
-          "title": "Black Hole Host Galaxy Terminology",
-          "filename": "Black Hole Host Galaxy Terminology.md",
-          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
-        },
-        {
-          "title": "Early Supermassive Black Holes  The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes_ The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes_ The Dark Epoch Perspective.md"
-        }
-      ]
-    },
-    {
-      "tag": "universe",
-      "weight": 1.9,
-      "count": 2,
-      "notes": [
-        {
-          "title": "Early Supermassive Black Holes  The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes_ The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes_ The Dark Epoch Perspective.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "equation",
-      "weight": 1.8,
-      "count": 2,
-      "notes": [
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        },
-        {
-          "title": "Null Geodesics and Affine Parameters",
-          "filename": "Null Geodesics and Affine Parameters.md",
-          "path": "research/notes/Null Geodesics and Affine Parameters.md"
-        }
-      ]
-    },
-    {
-      "tag": "wave",
-      "weight": 1.6,
-      "count": 2,
-      "notes": [
-        {
-          "title": "Black Hole Host Galaxy Terminology",
-          "filename": "Black Hole Host Galaxy Terminology.md",
-          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "velocity",
-      "weight": 1.6,
-      "count": 2,
-      "notes": [
-        {
-          "title": "Black Hole Host Galaxy Terminology",
-          "filename": "Black Hole Host Galaxy Terminology.md",
-          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
-        },
-        {
-          "title": "The M–σ Relation in Galaxy Formation",
-          "filename": "The M–σ Relation in Galaxy Formation.md",
-          "path": "research/notes/The M–σ Relation in Galaxy Formation.md"
-        }
-      ]
-    },
-    {
-      "tag": "collapse",
-      "weight": 1.6,
-      "count": 2,
-      "notes": [
-        {
-          "title": "Early Supermassive Black Holes  The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes_ The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes_ The Dark Epoch Perspective.md"
-        },
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
         }
       ]
     },
     {
       "tag": "spacetime",
-      "weight": 1.4,
+      "weight": 1.9,
       "count": 2,
       "notes": [
         {
@@ -611,14 +470,53 @@
       ]
     },
     {
-      "tag": "constraint",
-      "weight": 1.4,
+      "tag": "matter",
+      "weight": 1.8,
       "count": 2,
       "notes": [
         {
-          "title": "The M–σ Relation in Galaxy Formation",
-          "filename": "The M–σ Relation in Galaxy Formation.md",
-          "path": "research/notes/The M–σ Relation in Galaxy Formation.md"
+          "title": "Black Hole Host Galaxy Terminology",
+          "filename": "Black Hole Host Galaxy Terminology.md",
+          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
+        },
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        }
+      ]
+    },
+    {
+      "tag": "collapse",
+      "weight": 1.8,
+      "count": 2,
+      "notes": [
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        }
+      ]
+    },
+    {
+      "tag": "information",
+      "weight": 1.8,
+      "count": 3,
+      "notes": [
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        },
+        {
+          "title": "Null Geodesics and Affine Parameters",
+          "filename": "Null Geodesics and Affine Parameters.md",
+          "path": "research/notes/Null Geodesics and Affine Parameters.md"
         },
         {
           "title": "The Universe Learning Its Physical Laws",
@@ -629,13 +527,13 @@
     },
     {
       "tag": "dynamics",
-      "weight": 1.3,
+      "weight": 1.7,
       "count": 2,
       "notes": [
         {
-          "title": "Early Supermassive Black Holes  The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes_ The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes_ The Dark Epoch Perspective.md"
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
         },
         {
           "title": "Lindblad master equation",
@@ -645,14 +543,14 @@
       ]
     },
     {
-      "tag": "superposition",
-      "weight": 1.2,
+      "tag": "universe",
+      "weight": 1.6,
       "count": 2,
       "notes": [
         {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
         },
         {
           "title": "The Universe Learning Its Physical Laws",
@@ -662,78 +560,25 @@
       ]
     },
     {
-      "tag": "density",
-      "weight": 1.1,
+      "tag": "velocity",
+      "weight": 1.5,
       "count": 2,
-      "notes": [
-        {
-          "title": "Early Supermassive Black Holes  The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes_ The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes_ The Dark Epoch Perspective.md"
-        },
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        }
-      ]
-    },
-    {
-      "tag": "cosmic",
-      "weight": 1.1,
-      "count": 2,
-      "notes": [
-        {
-          "title": "Early Supermassive Black Holes  The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes_ The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes_ The Dark Epoch Perspective.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "wavelength",
-      "weight": 1,
-      "count": 1,
       "notes": [
         {
           "title": "Black Hole Host Galaxy Terminology",
           "filename": "Black Hole Host Galaxy Terminology.md",
           "path": "research/notes/Black Hole Host Galaxy Terminology.md"
-        }
-      ]
-    },
-    {
-      "tag": "inflation",
-      "weight": 1,
-      "count": 1,
-      "notes": [
+        },
         {
-          "title": "Early Supermassive Black Holes  The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes_ The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes_ The Dark Epoch Perspective.md"
+          "title": "The M–σ Relation in Galaxy Formation",
+          "filename": "The M–σ Relation in Galaxy Formation.md",
+          "path": "research/notes/The M–σ Relation in Galaxy Formation.md"
         }
       ]
     },
     {
-      "tag": "operator",
-      "weight": 1,
-      "count": 1,
-      "notes": [
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        }
-      ]
-    },
-    {
-      "tag": "calculus",
-      "weight": 1,
+      "tag": "equation",
+      "weight": 1.5,
       "count": 2,
       "notes": [
         {
@@ -749,7 +594,174 @@
       ]
     },
     {
-      "tag": "emergence",
+      "tag": "superposition",
+      "weight": 1.5,
+      "count": 2,
+      "notes": [
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        }
+      ]
+    },
+    {
+      "tag": "constraint",
+      "weight": 1.5,
+      "count": 2,
+      "notes": [
+        {
+          "title": "The M–σ Relation in Galaxy Formation",
+          "filename": "The M–σ Relation in Galaxy Formation.md",
+          "path": "research/notes/The M–σ Relation in Galaxy Formation.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        }
+      ]
+    },
+    {
+      "tag": "cosmic",
+      "weight": 1.4,
+      "count": 2,
+      "notes": [
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        }
+      ]
+    },
+    {
+      "tag": "calculus",
+      "weight": 1.4,
+      "count": 2,
+      "notes": [
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        },
+        {
+          "title": "Null Geodesics and Affine Parameters",
+          "filename": "Null Geodesics and Affine Parameters.md",
+          "path": "research/notes/Null Geodesics and Affine Parameters.md"
+        }
+      ]
+    },
+    {
+      "tag": "dark",
+      "weight": 1.3,
+      "count": 2,
+      "notes": [
+        {
+          "title": "Black Hole Host Galaxy Terminology",
+          "filename": "Black Hole Host Galaxy Terminology.md",
+          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
+        },
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        }
+      ]
+    },
+    {
+      "tag": "density",
+      "weight": 1.3,
+      "count": 2,
+      "notes": [
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        }
+      ]
+    },
+    {
+      "tag": "wave",
+      "weight": 1.2,
+      "count": 2,
+      "notes": [
+        {
+          "title": "Black Hole Host Galaxy Terminology",
+          "filename": "Black Hole Host Galaxy Terminology.md",
+          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        }
+      ]
+    },
+    {
+      "tag": "inflation",
+      "weight": 1,
+      "count": 1,
+      "notes": [
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        }
+      ]
+    },
+    {
+      "tag": "algebra",
+      "weight": 1,
+      "count": 1,
+      "notes": [
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        }
+      ]
+    },
+    {
+      "tag": "force",
+      "weight": 1,
+      "count": 1,
+      "notes": [
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        }
+      ]
+    },
+    {
+      "tag": "luminosity",
+      "weight": 0.9,
+      "count": 1,
+      "notes": [
+        {
+          "title": "Black Hole Host Galaxy Terminology",
+          "filename": "Black Hole Host Galaxy Terminology.md",
+          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
+        }
+      ]
+    },
+    {
+      "tag": "measurement",
       "weight": 0.9,
       "count": 1,
       "notes": [
@@ -761,7 +773,19 @@
       ]
     },
     {
-      "tag": "geodesic",
+      "tag": "hamiltonian",
+      "weight": 0.9,
+      "count": 1,
+      "notes": [
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        }
+      ]
+    },
+    {
+      "tag": "relativity",
       "weight": 0.9,
       "count": 1,
       "notes": [
@@ -774,7 +798,7 @@
     },
     {
       "tag": "curvature",
-      "weight": 0.8,
+      "weight": 0.9,
       "count": 1,
       "notes": [
         {
@@ -785,8 +809,20 @@
       ]
     },
     {
-      "tag": "alternative",
-      "weight": 0.8,
+      "tag": "momentum",
+      "weight": 0.9,
+      "count": 1,
+      "notes": [
+        {
+          "title": "Null Geodesics and Affine Parameters",
+          "filename": "Null Geodesics and Affine Parameters.md",
+          "path": "research/notes/Null Geodesics and Affine Parameters.md"
+        }
+      ]
+    },
+    {
+      "tag": "statistical",
+      "weight": 0.9,
       "count": 1,
       "notes": [
         {
@@ -798,7 +834,7 @@
     },
     {
       "tag": "pressure",
-      "weight": 0.8,
+      "weight": 0.9,
       "count": 1,
       "notes": [
         {
@@ -809,74 +845,50 @@
       ]
     },
     {
-      "tag": "luminosity",
+      "tag": "thermodynamics",
       "weight": 0.7,
+      "count": 1,
+      "notes": [
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        }
+      ]
+    },
+    {
+      "tag": "operator",
+      "weight": 0.7,
+      "count": 1,
+      "notes": [
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        }
+      ]
+    },
+    {
+      "tag": "alternative",
+      "weight": 0.7,
+      "count": 1,
+      "notes": [
+        {
+          "title": "The M–σ Relation in Galaxy Formation",
+          "filename": "The M–σ Relation in Galaxy Formation.md",
+          "path": "research/notes/The M–σ Relation in Galaxy Formation.md"
+        }
+      ]
+    },
+    {
+      "tag": "wavelength",
+      "weight": 0.6,
       "count": 1,
       "notes": [
         {
           "title": "Black Hole Host Galaxy Terminology",
           "filename": "Black Hole Host Galaxy Terminology.md",
           "path": "research/notes/Black Hole Host Galaxy Terminology.md"
-        }
-      ]
-    },
-    {
-      "tag": "hamiltonian",
-      "weight": 0.7,
-      "count": 1,
-      "notes": [
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        }
-      ]
-    },
-    {
-      "tag": "photon",
-      "weight": 0.7,
-      "count": 1,
-      "notes": [
-        {
-          "title": "Null Geodesics and Affine Parameters",
-          "filename": "Null Geodesics and Affine Parameters.md",
-          "path": "research/notes/Null Geodesics and Affine Parameters.md"
-        }
-      ]
-    },
-    {
-      "tag": "prediction",
-      "weight": 0.6,
-      "count": 1,
-      "notes": [
-        {
-          "title": "Early Supermassive Black Holes  The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes_ The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes_ The Dark Epoch Perspective.md"
-        }
-      ]
-    },
-    {
-      "tag": "thermodynamics",
-      "weight": 0.6,
-      "count": 1,
-      "notes": [
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        }
-      ]
-    },
-    {
-      "tag": "measurement",
-      "weight": 0.6,
-      "count": 1,
-      "notes": [
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
         }
       ]
     },
@@ -893,7 +905,7 @@
       ]
     },
     {
-      "tag": "algebra",
+      "tag": "emergence",
       "weight": 0.6,
       "count": 1,
       "notes": [
@@ -905,7 +917,7 @@
       ]
     },
     {
-      "tag": "relativity",
+      "tag": "geodesic",
       "weight": 0.6,
       "count": 1,
       "notes": [
@@ -913,24 +925,12 @@
           "title": "Null Geodesics and Affine Parameters",
           "filename": "Null Geodesics and Affine Parameters.md",
           "path": "research/notes/Null Geodesics and Affine Parameters.md"
-        }
-      ]
-    },
-    {
-      "tag": "statistical",
-      "weight": 0.6,
-      "count": 1,
-      "notes": [
-        {
-          "title": "The M–σ Relation in Galaxy Formation",
-          "filename": "The M–σ Relation in Galaxy Formation.md",
-          "path": "research/notes/The M–σ Relation in Galaxy Formation.md"
         }
       ]
     },
     {
       "tag": "particle",
-      "weight": 0.5,
+      "weight": 0.6,
       "count": 1,
       "notes": [
         {
@@ -941,38 +941,38 @@
       ]
     },
     {
-      "tag": "momentum",
-      "weight": 0.5,
+      "tag": "photon",
+      "weight": 0.6,
       "count": 1,
       "notes": [
         {
           "title": "Null Geodesics and Affine Parameters",
           "filename": "Null Geodesics and Affine Parameters.md",
           "path": "research/notes/Null Geodesics and Affine Parameters.md"
-        }
-      ]
-    },
-    {
-      "tag": "force",
-      "weight": 0.5,
-      "count": 1,
-      "notes": [
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
         }
       ]
     },
     {
       "tag": "symmetry",
-      "weight": 0.5,
+      "weight": 0.6,
       "count": 1,
       "notes": [
         {
           "title": "The Universe Learning Its Physical Laws",
           "filename": "The Universe Learning Its Physical Laws.md",
           "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        }
+      ]
+    },
+    {
+      "tag": "prediction",
+      "weight": 0.5,
+      "count": 1,
+      "notes": [
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
         }
       ]
     }
@@ -1002,8 +1002,8 @@
       "path": "research/notes/Black Hole Host Galaxy Terminology.md"
     },
     {
-      "filename": "Early Supermassive Black Holes_ The Dark Epoch Perspective.md",
-      "title": "Early Supermassive Black Holes  The Dark Epoch Perspective",
+      "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+      "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
       "tags": [
         "dark",
         "collapse",
@@ -1029,7 +1029,7 @@
         "cosmic",
         "inflation"
       ],
-      "path": "research/notes/Early Supermassive Black Holes_ The Dark Epoch Perspective.md"
+      "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
     },
     {
       "filename": "Lindblad master equation.md",
