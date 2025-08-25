@@ -14,3 +14,4 @@ Disallow: /node_modules/
 # Allow important research content
 Allow: /assets/paper/
 Allow: /assets/letters/
+Allow: /assets/notes/
