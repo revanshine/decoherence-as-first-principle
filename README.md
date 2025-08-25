@@ -60,8 +60,19 @@ The repository uses GitHub Actions for automated building and deployment. No loc
 ## 📖 Citation & License
 
 - Please see [CITATION.cff](CITATION.cff) for citation info.
-- Cite as:
-    > Evanshine, R. *Decoherence as First Principle* (2025), GitHub: revanshine/decoherence-as-first-principle.
+- **BibTeX format:**
+```bibtex
+@misc{evanshine2025decoherence,
+  author = {Evanshine, Robert J.},
+  title = {Decoherence as First Principle: A Framework for Emergent Forces, Dark Matter, and Cosmological Structure},
+  year = {2025},
+  note = {Version 0.1.0. Independent Researcher. License: CC-BY-4.0. If you use this work, please cite it using the metadata below.},
+  howpublished = {\url{https://github.com/revanshine/decoherence-as-first-principle}},
+  keywords = {cosmology, quantum decoherence, dark matter, theoretical physics, emergent forces},
+  abstract = {This manuscript proposes a novel, first-principles interpretation of cosmological evolution based on ontological quantum decoherence, offering new perspectives on the emergence of classical forces, the nature of dark matter, and cosmic structure formation.},
+  orcid = {0009-0005-3173-3148}
+}
+```
 - License: CC-BY-4.0
 
 ---
