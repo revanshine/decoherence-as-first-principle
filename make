@@ -79,13 +79,13 @@ fi
 # Generate HTML for letters from their markdown sources
 echo "   Converting letters markdown to HTML..."
 LETTERS=(
-  "01 - collapse-oscillator-letter.md"
-  "02 - gravitational-decoherence-oscillations.md"
-  "03 - blackhole-galaxy-letter.md"
+  "collapse-length-oscillation.md"
+  "gravitational-decoherence-oscillations.md"
+  "blackhole-galaxy-letter.md"
 )
 
 for letter in "${LETTERS[@]}"; do
-    if [[ -f "letters/$letter" ]]; then
+    if [[ -f "_letters/$letter" ]]; then
         basename="${letter%.md}"
         echo "   Converting $letter to HTML..."
         pandoc \
@@ -97,7 +97,7 @@ for letter in "${LETTERS[@]}"; do
             --bibliography="references/references.bib" \
             --csl="references/harvard-cite-them-right.csl" \
             --css="/assets/css/paper.css" \
-            "letters/$letter" \
+            "_letters/$letter" \
             -o "assets/letters/$basename.html"
         echo "   ✓ Generated assets/letters/$basename.html"
         
@@ -107,7 +107,7 @@ for letter in "${LETTERS[@]}"; do
             echo "   ✓ Copied $basename.pdf"
         fi
     else
-        echo "   ⚠️  Warning: letters/$letter not found, skipping..."
+        echo "   ⚠️  Warning: _letters/$letter not found, skipping..."
     fi
 done
 

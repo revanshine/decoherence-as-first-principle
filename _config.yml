@@ -7,6 +7,12 @@ description: >-
 url: "https://robertevanshine.com"
 baseurl: ""
 
+# Collections
+collections:
+  letters:
+    output: true
+    permalink: /letters/:name/
+
 # SEO and Social Media
 lang: en_US
 locale: en_US

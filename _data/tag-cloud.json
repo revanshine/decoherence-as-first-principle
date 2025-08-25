@@ -1,11 +1,38 @@
 {
-  "generated": "2025-08-25T19:17:10.842Z",
+  "generated": "2025-08-25T19:35:55.033Z",
   "totalNotes": 6,
   "totalTags": 54,
   "tagCloud": [
     {
+      "tag": "black hole",
+      "weight": 5.3,
+      "count": 4,
+      "notes": [
+        {
+          "title": "Black Hole Host Galaxy Terminology",
+          "filename": "Black Hole Host Galaxy Terminology.md",
+          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
+        },
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "The M sigma Relation in Galaxy Formation",
+          "filename": "The M-sigma Relation in Galaxy Formation.md",
+          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        }
+      ]
+    },
+    {
       "tag": "decoherence",
-      "weight": 7.9,
+      "weight": 5,
       "count": 6,
       "notes": [
         {
@@ -41,9 +68,9 @@
       ]
     },
     {
-      "tag": "black hole",
-      "weight": 4.8,
-      "count": 4,
+      "tag": "coherence",
+      "weight": 4.7,
+      "count": 6,
       "notes": [
         {
           "title": "Black Hole Host Galaxy Terminology",
@@ -54,6 +81,16 @@
           "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
           "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
           "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        },
+        {
+          "title": "Null Geodesics and Affine Parameters",
+          "filename": "Null Geodesics and Affine Parameters.md",
+          "path": "research/notes/Null Geodesics and Affine Parameters.md"
         },
         {
           "title": "The M sigma Relation in Galaxy Formation",
@@ -68,8 +105,67 @@
       ]
     },
     {
-      "tag": "fundamental",
-      "weight": 4.8,
+      "tag": "evolution",
+      "weight": 3.9,
+      "count": 5,
+      "notes": [
+        {
+          "title": "Black Hole Host Galaxy Terminology",
+          "filename": "Black Hole Host Galaxy Terminology.md",
+          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
+        },
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        },
+        {
+          "title": "The M sigma Relation in Galaxy Formation",
+          "filename": "The M-sigma Relation in Galaxy Formation.md",
+          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        }
+      ]
+    },
+    {
+      "tag": "model",
+      "weight": 3.7,
+      "count": 4,
+      "notes": [
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        },
+        {
+          "title": "The M sigma Relation in Galaxy Formation",
+          "filename": "The M-sigma Relation in Galaxy Formation.md",
+          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        }
+      ]
+    },
+    {
+      "tag": "standard",
+      "weight": 3.4,
       "count": 5,
       "notes": [
         {
@@ -101,77 +197,13 @@
     },
     {
       "tag": "cosmology",
-      "weight": 4.3,
+      "weight": 3.4,
       "count": 3,
       "notes": [
         {
           "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
           "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
           "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
-        },
-        {
-          "title": "The M sigma Relation in Galaxy Formation",
-          "filename": "The M-sigma Relation in Galaxy Formation.md",
-          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "observation",
-      "weight": 3.6,
-      "count": 4,
-      "notes": [
-        {
-          "title": "Black Hole Host Galaxy Terminology",
-          "filename": "Black Hole Host Galaxy Terminology.md",
-          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
-        },
-        {
-          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
-        },
-        {
-          "title": "The M sigma Relation in Galaxy Formation",
-          "filename": "The M-sigma Relation in Galaxy Formation.md",
-          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "coherence",
-      "weight": 3.5,
-      "count": 6,
-      "notes": [
-        {
-          "title": "Black Hole Host Galaxy Terminology",
-          "filename": "Black Hole Host Galaxy Terminology.md",
-          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
-        },
-        {
-          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
-        },
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        },
-        {
-          "title": "Null Geodesics and Affine Parameters",
-          "filename": "Null Geodesics and Affine Parameters.md",
-          "path": "research/notes/Null Geodesics and Affine Parameters.md"
         },
         {
           "title": "The M sigma Relation in Galaxy Formation",
@@ -187,7 +219,7 @@
     },
     {
       "tag": "mass",
-      "weight": 3.1,
+      "weight": 3.3,
       "count": 4,
       "notes": [
         {
@@ -213,30 +245,8 @@
       ]
     },
     {
-      "tag": "interaction",
-      "weight": 3,
-      "count": 3,
-      "notes": [
-        {
-          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
-        },
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "standard",
-      "weight": 2.9,
+      "tag": "fundamental",
+      "weight": 3.3,
       "count": 5,
       "notes": [
         {
@@ -267,9 +277,9 @@
       ]
     },
     {
-      "tag": "evolution",
-      "weight": 2.9,
-      "count": 5,
+      "tag": "observation",
+      "weight": 3.2,
+      "count": 4,
       "notes": [
         {
           "title": "Black Hole Host Galaxy Terminology",
@@ -280,11 +290,6 @@
           "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
           "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
           "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
-        },
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
         },
         {
           "title": "The M sigma Relation in Galaxy Formation",
@@ -300,7 +305,7 @@
     },
     {
       "tag": "galaxy",
-      "weight": 2.8,
+      "weight": 2.9,
       "count": 3,
       "notes": [
         {
@@ -322,7 +327,7 @@
     },
     {
       "tag": "stellar",
-      "weight": 2.6,
+      "weight": 2.5,
       "count": 3,
       "notes": [
         {
@@ -343,8 +348,47 @@
       ]
     },
     {
+      "tag": "interaction",
+      "weight": 2.1,
+      "count": 3,
+      "notes": [
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        }
+      ]
+    },
+    {
+      "tag": "velocity",
+      "weight": 2,
+      "count": 2,
+      "notes": [
+        {
+          "title": "Black Hole Host Galaxy Terminology",
+          "filename": "Black Hole Host Galaxy Terminology.md",
+          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
+        },
+        {
+          "title": "The M sigma Relation in Galaxy Formation",
+          "filename": "The M-sigma Relation in Galaxy Formation.md",
+          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
+        }
+      ]
+    },
+    {
       "tag": "quantum",
-      "weight": 2.5,
+      "weight": 2,
       "count": 2,
       "notes": [
         {
@@ -361,7 +405,7 @@
     },
     {
       "tag": "theory",
-      "weight": 2.5,
+      "weight": 2,
       "count": 3,
       "notes": [
         {
@@ -382,20 +426,10 @@
       ]
     },
     {
-      "tag": "model",
-      "weight": 2.3,
-      "count": 4,
+      "tag": "constraint",
+      "weight": 1.9,
+      "count": 2,
       "notes": [
-        {
-          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
-        },
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        },
         {
           "title": "The M sigma Relation in Galaxy Formation",
           "filename": "The M-sigma Relation in Galaxy Formation.md",
@@ -410,7 +444,7 @@
     },
     {
       "tag": "action",
-      "weight": 2.2,
+      "weight": 1.8,
       "count": 3,
       "notes": [
         {
@@ -418,6 +452,23 @@
           "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
           "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
         },
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        }
+      ]
+    },
+    {
+      "tag": "superposition",
+      "weight": 1.8,
+      "count": 2,
+      "notes": [
         {
           "title": "Lindblad master equation",
           "filename": "Lindblad master equation.md",
@@ -432,67 +483,6 @@
     },
     {
       "tag": "cosmic",
-      "weight": 1.8,
-      "count": 2,
-      "notes": [
-        {
-          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "information",
-      "weight": 1.8,
-      "count": 3,
-      "notes": [
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        },
-        {
-          "title": "Null Geodesics and Affine Parameters",
-          "filename": "Null Geodesics and Affine Parameters.md",
-          "path": "research/notes/Null Geodesics and Affine Parameters.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "mathematics",
-      "weight": 1.8,
-      "count": 3,
-      "notes": [
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        },
-        {
-          "title": "Null Geodesics and Affine Parameters",
-          "filename": "Null Geodesics and Affine Parameters.md",
-          "path": "research/notes/Null Geodesics and Affine Parameters.md"
-        },
-        {
-          "title": "The M sigma Relation in Galaxy Formation",
-          "filename": "The M-sigma Relation in Galaxy Formation.md",
-          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
-        }
-      ]
-    },
-    {
-      "tag": "universe",
       "weight": 1.7,
       "count": 2,
       "notes": [
@@ -509,24 +499,7 @@
       ]
     },
     {
-      "tag": "constraint",
-      "weight": 1.7,
-      "count": 2,
-      "notes": [
-        {
-          "title": "The M sigma Relation in Galaxy Formation",
-          "filename": "The M-sigma Relation in Galaxy Formation.md",
-          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "dark",
+      "tag": "matter",
       "weight": 1.6,
       "count": 2,
       "notes": [
@@ -539,6 +512,23 @@
           "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
           "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
           "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        }
+      ]
+    },
+    {
+      "tag": "collapse",
+      "weight": 1.6,
+      "count": 2,
+      "notes": [
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
         }
       ]
     },
@@ -560,9 +550,9 @@
       ]
     },
     {
-      "tag": "equation",
+      "tag": "mathematics",
       "weight": 1.6,
-      "count": 2,
+      "count": 3,
       "notes": [
         {
           "title": "Lindblad master equation",
@@ -573,46 +563,17 @@
           "title": "Null Geodesics and Affine Parameters",
           "filename": "Null Geodesics and Affine Parameters.md",
           "path": "research/notes/Null Geodesics and Affine Parameters.md"
-        }
-      ]
-    },
-    {
-      "tag": "superposition",
-      "weight": 1.5,
-      "count": 2,
-      "notes": [
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
         },
         {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "calculus",
-      "weight": 1.5,
-      "count": 2,
-      "notes": [
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        },
-        {
-          "title": "Null Geodesics and Affine Parameters",
-          "filename": "Null Geodesics and Affine Parameters.md",
-          "path": "research/notes/Null Geodesics and Affine Parameters.md"
+          "title": "The M sigma Relation in Galaxy Formation",
+          "filename": "The M-sigma Relation in Galaxy Formation.md",
+          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
         }
       ]
     },
     {
       "tag": "wave",
-      "weight": 1.4,
+      "weight": 1.5,
       "count": 2,
       "notes": [
         {
@@ -628,7 +589,46 @@
       ]
     },
     {
-      "tag": "collapse",
+      "tag": "information",
+      "weight": 1.5,
+      "count": 3,
+      "notes": [
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        },
+        {
+          "title": "Null Geodesics and Affine Parameters",
+          "filename": "Null Geodesics and Affine Parameters.md",
+          "path": "research/notes/Null Geodesics and Affine Parameters.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        }
+      ]
+    },
+    {
+      "tag": "universe",
+      "weight": 1.3,
+      "count": 2,
+      "notes": [
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        }
+      ]
+    },
+    {
+      "tag": "dynamics",
       "weight": 1.3,
       "count": 2,
       "notes": [
@@ -645,24 +645,58 @@
       ]
     },
     {
-      "tag": "velocity",
-      "weight": 1.2,
+      "tag": "equation",
+      "weight": 1.3,
       "count": 2,
       "notes": [
         {
-          "title": "Black Hole Host Galaxy Terminology",
-          "filename": "Black Hole Host Galaxy Terminology.md",
-          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
         },
         {
-          "title": "The M sigma Relation in Galaxy Formation",
-          "filename": "The M-sigma Relation in Galaxy Formation.md",
-          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
+          "title": "Null Geodesics and Affine Parameters",
+          "filename": "Null Geodesics and Affine Parameters.md",
+          "path": "research/notes/Null Geodesics and Affine Parameters.md"
         }
       ]
     },
     {
-      "tag": "matter",
+      "tag": "calculus",
+      "weight": 1.3,
+      "count": 2,
+      "notes": [
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        },
+        {
+          "title": "Null Geodesics and Affine Parameters",
+          "filename": "Null Geodesics and Affine Parameters.md",
+          "path": "research/notes/Null Geodesics and Affine Parameters.md"
+        }
+      ]
+    },
+    {
+      "tag": "spacetime",
+      "weight": 1.3,
+      "count": 2,
+      "notes": [
+        {
+          "title": "Null Geodesics and Affine Parameters",
+          "filename": "Null Geodesics and Affine Parameters.md",
+          "path": "research/notes/Null Geodesics and Affine Parameters.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        }
+      ]
+    },
+    {
+      "tag": "dark",
       "weight": 1.1,
       "count": 2,
       "notes": [
@@ -679,15 +713,22 @@
       ]
     },
     {
-      "tag": "dynamics",
-      "weight": 1.1,
-      "count": 2,
+      "tag": "wavelength",
+      "weight": 1,
+      "count": 1,
       "notes": [
         {
-          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
-        },
+          "title": "Black Hole Host Galaxy Terminology",
+          "filename": "Black Hole Host Galaxy Terminology.md",
+          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
+        }
+      ]
+    },
+    {
+      "tag": "entanglement",
+      "weight": 1,
+      "count": 1,
+      "notes": [
         {
           "title": "Lindblad master equation",
           "filename": "Lindblad master equation.md",
@@ -696,60 +737,19 @@
       ]
     },
     {
-      "tag": "spacetime",
-      "weight": 1,
-      "count": 2,
-      "notes": [
-        {
-          "title": "Null Geodesics and Affine Parameters",
-          "filename": "Null Geodesics and Affine Parameters.md",
-          "path": "research/notes/Null Geodesics and Affine Parameters.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "particle",
+      "tag": "algebra",
       "weight": 1,
       "count": 1,
       "notes": [
         {
-          "title": "Null Geodesics and Affine Parameters",
-          "filename": "Null Geodesics and Affine Parameters.md",
-          "path": "research/notes/Null Geodesics and Affine Parameters.md"
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
         }
       ]
     },
     {
-      "tag": "symmetry",
-      "weight": 1,
-      "count": 1,
-      "notes": [
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "prediction",
-      "weight": 0.9,
-      "count": 1,
-      "notes": [
-        {
-          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
-        }
-      ]
-    },
-    {
-      "tag": "measurement",
+      "tag": "operator",
       "weight": 0.9,
       "count": 1,
       "notes": [
@@ -773,19 +773,7 @@
       ]
     },
     {
-      "tag": "thermodynamics",
-      "weight": 0.8,
-      "count": 1,
-      "notes": [
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        }
-      ]
-    },
-    {
-      "tag": "geodesic",
+      "tag": "particle",
       "weight": 0.8,
       "count": 1,
       "notes": [
@@ -809,59 +797,11 @@
       ]
     },
     {
-      "tag": "pressure",
+      "tag": "momentum",
       "weight": 0.8,
       "count": 1,
       "notes": [
         {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "wavelength",
-      "weight": 0.7,
-      "count": 1,
-      "notes": [
-        {
-          "title": "Black Hole Host Galaxy Terminology",
-          "filename": "Black Hole Host Galaxy Terminology.md",
-          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
-        }
-      ]
-    },
-    {
-      "tag": "operator",
-      "weight": 0.7,
-      "count": 1,
-      "notes": [
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        }
-      ]
-    },
-    {
-      "tag": "algebra",
-      "weight": 0.7,
-      "count": 1,
-      "notes": [
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        }
-      ]
-    },
-    {
-      "tag": "relativity",
-      "weight": 0.7,
-      "count": 1,
-      "notes": [
-        {
           "title": "Null Geodesics and Affine Parameters",
           "filename": "Null Geodesics and Affine Parameters.md",
           "path": "research/notes/Null Geodesics and Affine Parameters.md"
@@ -869,44 +809,8 @@
       ]
     },
     {
-      "tag": "momentum",
+      "tag": "prediction",
       "weight": 0.7,
-      "count": 1,
-      "notes": [
-        {
-          "title": "Null Geodesics and Affine Parameters",
-          "filename": "Null Geodesics and Affine Parameters.md",
-          "path": "research/notes/Null Geodesics and Affine Parameters.md"
-        }
-      ]
-    },
-    {
-      "tag": "alternative",
-      "weight": 0.7,
-      "count": 1,
-      "notes": [
-        {
-          "title": "The M sigma Relation in Galaxy Formation",
-          "filename": "The M-sigma Relation in Galaxy Formation.md",
-          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
-        }
-      ]
-    },
-    {
-      "tag": "force",
-      "weight": 0.7,
-      "count": 1,
-      "notes": [
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "inflation",
-      "weight": 0.6,
       "count": 1,
       "notes": [
         {
@@ -917,32 +821,20 @@
       ]
     },
     {
-      "tag": "entanglement",
-      "weight": 0.6,
+      "tag": "inflation",
+      "weight": 0.7,
       "count": 1,
       "notes": [
         {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        }
-      ]
-    },
-    {
-      "tag": "hamiltonian",
-      "weight": 0.6,
-      "count": 1,
-      "notes": [
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
         }
       ]
     },
     {
       "tag": "emergence",
-      "weight": 0.5,
+      "weight": 0.7,
       "count": 1,
       "notes": [
         {
@@ -953,8 +845,20 @@
       ]
     },
     {
+      "tag": "geodesic",
+      "weight": 0.7,
+      "count": 1,
+      "notes": [
+        {
+          "title": "Null Geodesics and Affine Parameters",
+          "filename": "Null Geodesics and Affine Parameters.md",
+          "path": "research/notes/Null Geodesics and Affine Parameters.md"
+        }
+      ]
+    },
+    {
       "tag": "photon",
-      "weight": 0.5,
+      "weight": 0.7,
       "count": 1,
       "notes": [
         {
@@ -966,13 +870,109 @@
     },
     {
       "tag": "statistical",
-      "weight": 0.5,
+      "weight": 0.7,
       "count": 1,
       "notes": [
         {
           "title": "The M sigma Relation in Galaxy Formation",
           "filename": "The M-sigma Relation in Galaxy Formation.md",
           "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
+        }
+      ]
+    },
+    {
+      "tag": "symmetry",
+      "weight": 0.7,
+      "count": 1,
+      "notes": [
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        }
+      ]
+    },
+    {
+      "tag": "thermodynamics",
+      "weight": 0.6,
+      "count": 1,
+      "notes": [
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        }
+      ]
+    },
+    {
+      "tag": "measurement",
+      "weight": 0.6,
+      "count": 1,
+      "notes": [
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        }
+      ]
+    },
+    {
+      "tag": "alternative",
+      "weight": 0.6,
+      "count": 1,
+      "notes": [
+        {
+          "title": "The M sigma Relation in Galaxy Formation",
+          "filename": "The M-sigma Relation in Galaxy Formation.md",
+          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
+        }
+      ]
+    },
+    {
+      "tag": "force",
+      "weight": 0.6,
+      "count": 1,
+      "notes": [
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        }
+      ]
+    },
+    {
+      "tag": "pressure",
+      "weight": 0.6,
+      "count": 1,
+      "notes": [
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        }
+      ]
+    },
+    {
+      "tag": "hamiltonian",
+      "weight": 0.5,
+      "count": 1,
+      "notes": [
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        }
+      ]
+    },
+    {
+      "tag": "relativity",
+      "weight": 0.5,
+      "count": 1,
+      "notes": [
+        {
+          "title": "Null Geodesics and Affine Parameters",
+          "filename": "Null Geodesics and Affine Parameters.md",
+          "path": "research/notes/Null Geodesics and Affine Parameters.md"
         }
       ]
     }

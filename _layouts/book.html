@@ -372,14 +372,12 @@ body {
 
         <div class="letters-preview">
           <h3>Research Letters</h3>
-          {% assign letter_files = site.static_files | where: "extname", ".html" | where_exp: "file", "file.path contains '/assets/letters/'" %}
-          {% for file in letter_files limit:3 %}
-            {% assign basename = file.basename %}
+          {% for letter in site.letters limit:3 %}
             <div class="letter-preview">
-              <a href="#" data-letter-url="{{ file.path | relative_url }}" class="letter-link">{{ basename | replace: "-", " " | replace: "_", " " | capitalize }}</a>
+              <a href="#" data-letter-url="/assets/letters/{{ letter.slug }}.html" class="letter-link">{{ letter.title }}</a>
             </div>
           {% endfor %}
-          {% if letter_files.size == 0 %}
+          {% if site.letters.size == 0 %}
             <p><em>Letters will appear here after build completes</em></p>
           {% endif %}
         </div>
