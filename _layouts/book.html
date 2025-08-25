@@ -362,7 +362,7 @@ body {
           </ul>
           
           <div class="manuscript-actions">
-            <a href="{{ '/assets/paper/manuscript.html' | relative_url }}" target="_blank" class="btn-secondary">Full Page View</a>
+            <a href="{{ '/assets/paper/manuscript.html' | absolute_url }}" target="_blank" class="btn-secondary">Full Page View</a>
             <button id="back-to-manuscript" class="btn-secondary" style="display: none; margin-left: 0.5rem;">Back to Manuscript</button>
           </div>
         </nav>
@@ -402,8 +402,8 @@ body {
         <div class="downloads">
           <h3>Downloads</h3>
           <ul>
-            <li><a href="{{ '/assets/paper/manuscript.pdf' | relative_url }}">📄 PDF</a></li>
-            <li><a href="{{ '/assets/paper/manuscript.tex' | relative_url }}">📝 LaTeX</a></li>
+            <li><a href="{{ '/assets/paper/manuscript.pdf' | absolute_url }}">📄 PDF</a></li>
+            <li><a href="{{ '/assets/paper/manuscript.tex' | absolute_url }}">📝 LaTeX</a></li>
           </ul>
         </div>
         
@@ -437,7 +437,7 @@ body {
         </div>
         <iframe 
           id="manuscript-frame" 
-          src="{{ '/assets/paper/manuscript.html' | relative_url }}" 
+          src="{{ '/assets/paper/manuscript.html' | absolute_url }}" 
           style="display: none;"
           title="Manuscript Content">
         </iframe>
@@ -452,11 +452,31 @@ document.addEventListener('DOMContentLoaded', function() {
   const loading = document.querySelector('.manuscript-loading');
   const navLinks = document.querySelectorAll('.book-nav a[data-section]');
   
+  console.log('Frame src:', frame.src);
+  console.log('Frame element:', frame);
+  
   // Show iframe when loaded
   frame.onload = function() {
+    console.log('Iframe loaded successfully');
     loading.style.display = 'none';
     frame.style.display = 'block';
   };
+  
+  // Also handle iframe errors and force show after timeout
+  frame.onerror = function() {
+    console.log('Iframe failed to load, showing anyway');
+    loading.style.display = 'none';
+    frame.style.display = 'block';
+  };
+  
+  // Fallback: show iframe after 3 seconds regardless
+  setTimeout(() => {
+    if (loading.style.display !== 'none') {
+      console.log('Timeout reached, showing iframe');
+      loading.style.display = 'none';
+      frame.style.display = 'block';
+    }
+  }, 3000);
   
   // Handle navigation clicks
   navLinks.forEach(link => {
@@ -554,7 +574,10 @@ document.addEventListener('DOMContentLoaded', function() {
   // Handle Research Letters links
   const letterLinks = document.querySelectorAll('.letter-link');
   const backBtn = document.getElementById('back-to-manuscript');
-  const originalManuscriptUrl = frame.src;
+  const originalManuscriptUrl = '{{ "/assets/paper/manuscript.html" | absolute_url }}';
+  
+  // Set the initial iframe source to the deployed manuscript
+  frame.src = originalManuscriptUrl;
   
   letterLinks.forEach(link => {
     link.addEventListener('click', function(e) {
