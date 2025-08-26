@@ -285,8 +285,8 @@ body {
 @media (prefers-color-scheme: dark) {
   :root {
     --book-bg: #1f2937;
-    --left-page-bg: #374151;
-    --right-page-bg: #374151;
+    --left-page-bg: #142540;
+    --right-page-bg: #142540;
     --page-border: #4b5563;
     --nav-color: #d1d5db;
     --nav-hover: #4b5563;
@@ -491,7 +491,7 @@ document.addEventListener('DOMContentLoaded', function() {
       navLinks.forEach(l => l.classList.remove('active'));
       letterLinks.forEach(l => l.classList.remove('active'));
       tags.forEach(t => t.classList.remove('active'));
-      
+
       // Add active class to clicked link
       this.classList.add('active');
 
@@ -627,14 +627,14 @@ document.addEventListener('DOMContentLoaded', function() {
       console.log('Tag clicked:', this.textContent.trim());
       try {
         const tagName = this.textContent.trim();
-        
+
         // Find the tag data in our JavaScript variable
         const tagData = tagCloudData.find(t => t.tag === tagName);
         if (!tagData) {
           console.error('Tag data not found for:', tagName);
           return;
         }
-        
+
         const notesData = tagData.notes;
         console.log('Notes data found successfully:', notesData.length, 'notes');
 
