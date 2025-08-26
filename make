@@ -7,7 +7,7 @@ set -euo pipefail
 echo "🔨 Building all assets for Jekyll..."
 
 # Create assets directory structure
-mkdir -p assets/paper assets/letters
+mkdir -p assets/paper assets/letters assets/notes
 
 # Skip PDF builds if already done (for CI efficiency)
 if [[ -z "${SKIP_PDF_BUILD:-}" ]]; then
