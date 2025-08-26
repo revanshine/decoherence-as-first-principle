@@ -353,15 +353,15 @@ body {
             <li><a href="#" data-section="abstract">Abstract</a></li>
             <li><a href="#" data-section="introduction">1. Introduction</a></li>
             <li><a href="#" data-section="the-decoherence-bootstrap-hypothesis">2. The Decoherence Bootstrap Hypothesis</a></li>
-            <li><a href="#" data-section="gravity-as-the-primary-basis">3. Gravity as the Primary Decoherence Basis</a></li>
-            <li><a href="#" data-section="emergence-of-forces">4. Emergence of the Standard Model Forces</a></li>
-            <li><a href="#" data-section="dark-matter-as-decoherence-structure">5. A Natural Interpretation of Dark Matter</a></li>
+            <li><a href="#" data-section="gravity-as-the-primary-decoherence-basis">3. Gravity as the Primary Decoherence Basis</a></li>
+            <li><a href="#" data-section="emergence-of-the-standard-model-forces">4. Emergence of the Standard Model Forces</a></li>
+            <li><a href="#" data-section="a-natural-interpretation-of-dark-matter">5. A Natural Interpretation of Dark Matter</a></li>
             <li><a href="#" data-section="black-holes-and-the-decoherence-limit">6. Black Holes and the Decoherence Limit</a></li>
-            <li><a href="#" data-section="quantum-aliasing-and-observational-consequences">7. Quantum Aliasing and Measurement Artefacts</a></li>
-            <li><a href="#" data-section="conservation-laws-and-symmetry-breaking">8. Toward a Conservation Law for Decoherence</a></li>
+            <li><a href="#" data-section="quantum-aliasing-and-measurement-artefacts">7. Quantum Aliasing and Measurement Artefacts</a></li>
+            <li><a href="#" data-section="toward-a-conservation-law-for-decoherence">8. Toward a Conservation Law for Decoherence</a></li>
             <li><a href="#" data-section="related-work">9. Related Work</a></li>
-            <li><a href="#" data-section="conclusion">10. Conclusion and Forward Directions</a></li>
-            <li><a href="#" data-section="appendix-mathematical-formalism">11. Methodology Appendix</a></li>
+            <li><a href="#" data-section="conclusion-and-forward-directions">10. Conclusion and Forward Directions</a></li>
+            <li><a href="#" data-section="methodology-appendix">11. Methodology Appendix</a></li>
           </ul>
 
           <div class="manuscript-actions">
@@ -638,13 +638,12 @@ document.addEventListener('DOMContentLoaded', function() {
       notesData.forEach(note => {
         notesHtml += `
           <div style="margin-bottom: 2rem; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 8px; background: #f9fafb;">
-            <h3 style="margin: 0 0 1rem 0; color: #1f2937;">${note.title}</h3>
-            <p style="margin: 0; color: #6b7280; font-size: 0.9em;">
+            <h3 style="margin: 0; color: #1f2937;">
               <a href="#" onclick="window.parent.postMessage({type: 'loadNote', path: '${note.path.replace('research/notes/', '/assets/notes/').replace('.md', '.html')}'}, '*')"
-                 style="color: #3b82f6; text-decoration: none;">
-                📄 Open Note
+                 style="color: #3b82f6; text-decoration: none; cursor: pointer;">
+                ${note.title}
               </a>
-            </p>
+            </h3>
           </div>
         `;
       });
