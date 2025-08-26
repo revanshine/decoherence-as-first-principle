@@ -13,8 +13,7 @@ In the phrase **"black hole and host"** (especially in the context of galaxies),
 
 ## Observable Host Properties
 
-Properties of the **host galaxy** typically include:
-
+### Properties of the **host galaxy** typically include:
 - **Stellar mass** - Total mass in stars
 - **Bulge mass** - Mass of the central stellar bulge
 - **Luminosity** - Total light output across wavelengths

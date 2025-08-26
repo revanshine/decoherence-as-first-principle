@@ -125,7 +125,6 @@ if [[ -d "research/notes" ]]; then
     for note in research/notes/*.md; do
         if [[ -f "$note" ]]; then
             basename=$(basename "$note" .md)
-            # Generate iframe-friendly HTML (no full document structure)
             pandoc "$note" -o "assets/notes/${basename}.html" \
                 --from=markdown+smart \
                 --standalone \
@@ -135,7 +134,6 @@ if [[ -d "research/notes" ]]; then
                 --bibliography="references/references.bib" \
                 --csl="references/harvard-cite-them-right.csl" \
                 --css="/assets/css/paper.css" \
-                --metadata title="$basename" \
                 2>/dev/null || echo "   ⚠ Failed to convert $note"
             echo "   ✓ Converted $basename.md"
         fi
