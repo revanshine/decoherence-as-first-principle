@@ -3,341 +3,364 @@ layout: default
 ---
 
 <style>
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #000000; /* Black fallback before image loads */
-  background-image: url('/assets/images/night-sky-background.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  transition: background-image 0.5s ease-in-out; /* Smooth transition when image loads */
-}
-
-/* Use mobile-optimized background on smaller screens */
-@media (max-width: 1024px) {
   body {
-    background-color: #000000; /* Black fallback for mobile too */
-    background-image: url('/assets/images/night-sky-mobile.jpg');
-    background-attachment: scroll; /* Better performance on mobile */
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    /* Black fallback before image loads */
+    background-image: url('/assets/images/night-sky-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    transition: background-image 0.5s ease-in-out;
+    /* Smooth transition when image loads */
   }
-}
 
-.book-container {
-  display: flex;
-  max-width: 1600px; /* Wider container */
-  margin: 2rem auto;
-  margin-left: 12.5%; /* Position at 1/4 from left edge */
-  background: var(--book-bg, #f8f9fa);
-  border-radius: 12px;
-  box-shadow:
-    0 20px 40px rgba(0,0,0,0.4),
-    0 0 0 1px rgba(255,255,255,0.1),
-    inset 0 1px 0 rgba(255,255,255,0.2);
-  overflow: hidden;
-  height: 90vh;
-  position: relative;
-}
-
-/* Add a subtle glow around the book */
-.book-container::before {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(45deg, rgba(100,149,237,0.3), rgba(138,43,226,0.3), rgba(30,144,255,0.3));
-  border-radius: 14px;
-  z-index: -1;
-}
-
-.book-spine {
-  width: 20px;
-  background: linear-gradient(to bottom, #8b4513, #654321, #4a2c17);
-  position: relative;
-  box-shadow: inset 2px 0 4px rgba(0,0,0,0.3);
-}
-
-.book-spine::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 1px;
-  height: 100%;
-  background: rgba(255,255,255,0.3);
-}
-
-.book-pages {
-  display: flex;
-  flex: 1;
-  height: 100%;
-}
-
-.book-page {
-  flex: 1;
-  padding: 2rem;
-  position: relative;
-  overflow-y: auto;
-}
-
-.book-page-left {
-  background: var(--left-page-bg, #142540); /* Darker background */
-  border-right: 1px solid var(--page-border, #4a5568);
-  flex: 0 0 380px; /* Slightly wider */
-  box-shadow: inset -1px 0 3px rgba(0,0,0,0.1);
-  color: var(--left-page-text, #e2e8f0); /* Light text */
-}
-
-.book-page-left h3 {
-  color: var(--left-page-heading, #f7fafc); /* White headings */
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.book-page-right {
-  background: var(--right-page-bg, #fefefe);
-  flex: 1; /* Take all remaining space */
-  padding: 0;
-  box-shadow: inset 1px 0 3px rgba(0,0,0,0.1);
-  min-width: 0; /* Allow flex shrinking */
-  width: 100%; /* Ensure full width usage */
-}
-
-.manuscript-container {
-  height: 100%;
-  position: relative;
-}
-
-.manuscript-loading {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: var(--text-muted, #6b7280);
-}
-
-#manuscript-frame {
-  width: 100%;
-  height: 100%;
-  border: none;
-  background: white;
-  display: block; /* Override the style="display: none" when loaded */
-}
-
-.book-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-.book-nav li {
-  margin: 0.5rem 0;
-}
-
-.book-nav a {
-  text-decoration: none;
-  color: var(--nav-color, #cbd5e0);
-  padding: 0.5rem 0.75rem;
-  border-radius: 4px;
-  display: block;
-  transition: all 0.2s;
-  cursor: pointer;
-}
-
-.book-nav a:hover, .book-nav a.active {
-  background: var(--nav-hover, #4a5568);
-  color: var(--nav-active, #f7fafc);
-}
-
-.manuscript-actions {
-  margin: 1.5rem 0;
-  padding-top: 1rem;
-  border-top: 1px solid var(--page-border, #4a5568);
-}
-
-.btn-secondary {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: var(--btn-secondary-bg, #4a5568);
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  font-size: 0.9em;
-  transition: background-color 0.2s;
-}
-
-.btn-secondary:hover {
-  background: var(--btn-secondary-hover, #2d3748);
-}
-
-.letters-preview, .downloads, .citation-section, .research-notes {
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--page-border, #4a5568);
-}
-
-.tag-cloud {
-  line-height: 1.8;
-  margin-top: 1rem;
-}
-
-.tag {
-  display: inline-block;
-  margin: 0.2rem 0.4rem;
-  padding: 0.2rem 0.6rem;
-  background: var(--tag-bg, #f3f4f6);
-  color: var(--tag-color, #4b5563);
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  font-weight: 500;
-  border: 1px solid transparent;
-}
-
-.tag:hover {
-  background: var(--tag-hover-bg, #e5e7eb);
-  color: var(--tag-hover-color, #1f2937);
-  border-color: var(--tag-border, #d1d5db);
-  transform: translateY(-1px);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.tag.active {
-  background: var(--tag-active-bg, #3b82f6);
-  color: white;
-  border-color: var(--tag-active-border, #2563eb);
-}
-
-.letter-preview {
-  margin: 0.5rem 0;
-  font-size: 0.9em;
-}
-
-.letter-preview a, .downloads a {
-  color: var(--letter-color, #a0aec0);
-  text-decoration: none;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  display: block;
-  transition: all 0.2s;
-}
-
-.letter-preview a:hover, .downloads a:hover, .letter-preview a.active {
-  color: var(--letter-hover, #f7fafc);
-  background: var(--nav-hover, #4a5568);
-}
-
-.downloads ul {
-  list-style: none;
-  padding: 0;
-}
-
-.downloads li {
-  margin: 0.5rem 0;
-}
-
-.citation-container {
-  position: relative;
-  margin-top: 1rem;
-}
-
-#bibtex-citation {
-  background: var(--code-bg, #f8f9fa);
-  border: 1px solid var(--page-border, #e5e7eb);
-  border-radius: 4px;
-  padding: 1rem;
-  font-size: 0.8em;
-  line-height: 1.4;
-  overflow-x: auto;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  margin: 0;
-  color: var(--code-text, #374151);
-}
-
-.copy-btn {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  background: var(--btn-secondary-bg, #6b7280);
-  color: white;
-  border: none;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.8em;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.copy-btn:hover {
-  background: var(--btn-secondary-hover, #4b5563);
-}
-
-.copy-btn.copied {
-  background: var(--success-color, #10b981);
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --book-bg: #1f2937;
-    --left-page-bg: #142540;
-    --right-page-bg: #142540;
-    --page-border: #4b5563;
-    --nav-color: #d1d5db;
-    --nav-hover: #4b5563;
-    --nav-active: #f9fafb;
-    --letter-color: #9ca3af;
-    --letter-hover: #d1d5db;
-    --text-muted: #9ca3af;
-    --btn-secondary-bg: #6b7280;
-    --btn-secondary-hover: #9ca3af;
-    --code-bg: #4b5563;
-    --code-text: #e5e7eb;
-    --success-color: #059669;
-  }
-}
-
-/* Responsive design */
-@media (max-width: 1024px) {
-  body::before {
-    background-size: 150px 75px;
+  /* Use mobile-optimized background on smaller screens */
+  @media (max-width: 1024px) {
+    body {
+      background-color: #000000;
+      /* Black fallback for mobile too */
+      background-image: url('/assets/images/night-sky-mobile.jpg');
+      background-attachment: scroll;
+      /* Better performance on mobile */
+    }
   }
 
   .book-container {
-    margin-left: auto; /* Center on mobile */
-    margin-right: auto;
-    max-width: 95vw;
+    display: flex;
+    max-width: 1280px;
+    /* Wider container */
+    margin: 2rem auto;
+    margin-left: 12.5%;
+    /* Position at 1/4 from left edge */
+    background: var(--book-bg, #f8f9fa);
+    border-radius: 12px;
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(255, 255, 255, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    height: 90vh;
+    position: relative;
   }
 
-  .book-pages {
-    flex-direction: column;
-  }
-
-  .book-page-left {
-    flex: 0 0 auto;
-    border-right: none;
-    border-bottom: 1px solid var(--page-border, #4a5568);
-    max-height: 40vh;
-  }
-
-  .book-page-right {
-    flex: 1;
+  /* Add a subtle glow around the book */
+  .book-container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, rgba(100, 149, 237, 0.3), rgba(138, 43, 226, 0.3), rgba(30, 144, 255, 0.3));
+    border-radius: 14px;
+    z-index: -1;
   }
 
   .book-spine {
-    display: none;
+    width: 20px;
+    background: linear-gradient(to bottom, #8b4513, #654321, #4a2c17);
+    position: relative;
+    box-shadow: inset 2px 0 4px rgba(0, 0, 0, 0.3);
   }
 
-  .book-container {
-    height: 95vh;
-    margin: 1rem auto; /* Override the left margin on mobile */
+  .book-spine::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
   }
-}
+
+  .book-pages {
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .book-page {
+    flex: 1;
+    padding: 2rem;
+    position: relative;
+    overflow-y: auto;
+  }
+
+  .book-page-left {
+    background: var(--left-page-bg, #142540);
+    /* Darker background */
+    border-right: 1px solid var(--page-border, #4a5568);
+    flex: 0 0 380px;
+    /* Slightly wider */
+    box-shadow: inset -1px 0 3px rgba(0, 0, 0, 0.1);
+    color: var(--left-page-text, #e2e8f0);
+    /* Light text */
+  }
+
+  .book-page-left h3 {
+    color: var(--left-page-heading, #f7fafc);
+    /* White headings */
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .book-page-right {
+    background: var(--right-page-bg, #fefefe);
+    flex: 1;
+    /* Take all remaining space */
+    padding: 0;
+    box-shadow: inset 1px 0 3px rgba(0, 0, 0, 0.1);
+    min-width: 0;
+    /* Allow flex shrinking */
+    width: 100%;
+    /* Ensure full width usage */
+  }
+
+  .manuscript-container {
+    height: 100%;
+    position: relative;
+  }
+
+  .manuscript-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text-muted, #6b7280);
+  }
+
+  #manuscript-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: white;
+    display: block;
+    /* Override the style="display: none" when loaded */
+  }
+
+  .book-nav ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .book-nav li {
+    margin: 0.5rem 0;
+  }
+
+  .book-nav a {
+    text-decoration: none;
+    color: var(--nav-color, #cbd5e0);
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    display: block;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  .book-nav a:hover,
+  .book-nav a.active {
+    background: var(--nav-hover, #4a5568);
+    color: var(--nav-active, #f7fafc);
+  }
+
+  .manuscript-actions {
+    margin: 1.5rem 0;
+    padding-top: 1rem;
+    border-top: 1px solid var(--page-border, #4a5568);
+  }
+
+  .btn-secondary {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--btn-secondary-bg, #4a5568);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+  }
+
+  .btn-secondary:hover {
+    background: var(--btn-secondary-hover, #2d3748);
+  }
+
+  .letters-preview,
+  .downloads,
+  .citation-section,
+  .research-notes {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--page-border, #4a5568);
+  }
+
+  .tag-cloud {
+    line-height: 1.8;
+    margin-top: 1rem;
+  }
+
+  .tag {
+    display: inline-block;
+    margin: 0.2rem 0.4rem;
+    padding: 0.2rem 0.6rem;
+    background: var(--tag-bg, #f3f4f6);
+    color: var(--tag-color, #4b5563);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    border: 1px solid transparent;
+  }
+
+  .tag:hover {
+    background: var(--tag-hover-bg, #e5e7eb);
+    color: var(--tag-hover-color, #1f2937);
+    border-color: var(--tag-border, #d1d5db);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .tag.active {
+    background: var(--tag-active-bg, #3b82f6);
+    color: white;
+    border-color: var(--tag-active-border, #2563eb);
+  }
+
+  .letter-preview {
+    margin: 0.5rem 0;
+    font-size: 0.9em;
+  }
+
+  .letter-preview a,
+  .downloads a {
+    color: var(--letter-color, #a0aec0);
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    display: block;
+    transition: all 0.2s;
+  }
+
+  .letter-preview a:hover,
+  .downloads a:hover,
+  .letter-preview a.active {
+    color: var(--letter-hover, #f7fafc);
+    background: var(--nav-hover, #4a5568);
+  }
+
+  .downloads ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .downloads li {
+    margin: 0.5rem 0;
+  }
+
+  .citation-container {
+    position: relative;
+    margin-top: 1rem;
+  }
+
+  #bibtex-citation {
+    background: var(--code-bg, #f8f9fa);
+    border: 1px solid var(--page-border, #e5e7eb);
+    border-radius: 4px;
+    padding: 1rem;
+    font-size: 0.8em;
+    line-height: 1.4;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin: 0;
+    color: var(--code-text, #374151);
+  }
+
+  .copy-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: var(--btn-secondary-bg, #6b7280);
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8em;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .copy-btn:hover {
+    background: var(--btn-secondary-hover, #4b5563);
+  }
+
+  .copy-btn.copied {
+    background: var(--success-color, #10b981);
+  }
+
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --book-bg: #1f2937;
+      --left-page-bg: #142540;
+      --right-page-bg: #142540;
+      --page-border: #4b5563;
+      --nav-color: #d1d5db;
+      --nav-hover: #4b5563;
+      --nav-active: #f9fafb;
+      --letter-color: #9ca3af;
+      --letter-hover: #d1d5db;
+      --text-muted: #9ca3af;
+      --btn-secondary-bg: #6b7280;
+      --btn-secondary-hover: #9ca3af;
+      --code-bg: #4b5563;
+      --code-text: #e5e7eb;
+      --success-color: #059669;
+    }
+  }
+
+  /* Responsive design */
+  @media (max-width: 1024px) {
+    body::before {
+      background-size: 150px 75px;
+    }
+
+    .book-container {
+      margin-left: auto;
+      /* Center on mobile */
+      margin-right: auto;
+      max-width: 95vw;
+    }
+
+    .book-pages {
+      flex-direction: column;
+    }
+
+    .book-page-left {
+      flex: 0 0 auto;
+      border-right: none;
+      border-bottom: 1px solid var(--page-border, #4a5568);
+      max-height: 40vh;
+    }
+
+    .book-page-right {
+      flex: 1;
+    }
+
+    .book-spine {
+      display: none;
+    }
+
+    .book-container {
+      height: 95vh;
+      margin: 1rem auto;
+      /* Override the left margin on mobile */
+    }
+  }
 </style>
 
 <div class="book-container">
@@ -352,20 +375,29 @@ body {
           <ul>
             <li><a href="#" data-section="abstract">Abstract</a></li>
             <li><a href="#" data-section="introduction">1. Introduction</a></li>
-            <li><a href="#" data-section="the-decoherence-bootstrap-hypothesis">2. The Decoherence Bootstrap Hypothesis</a></li>
-            <li><a href="#" data-section="gravity-as-the-primary-decoherence-basis">3. Gravity as the Primary Decoherence Basis</a></li>
-            <li><a href="#" data-section="emergence-of-the-standard-model-forces">4. Emergence of the Standard Model Forces</a></li>
-            <li><a href="#" data-section="a-natural-interpretation-of-dark-matter">5. A Natural Interpretation of Dark Matter</a></li>
-            <li><a href="#" data-section="black-holes-and-the-decoherence-limit">6. Black Holes and the Decoherence Limit</a></li>
-            <li><a href="#" data-section="quantum-aliasing-and-measurement-artefacts">7. Quantum Aliasing and Measurement Artefacts</a></li>
-            <li><a href="#" data-section="toward-a-conservation-law-for-decoherence">8. Toward a Conservation Law for Decoherence</a></li>
+            <li><a href="#" data-section="the-decoherence-bootstrap-hypothesis">2. The Decoherence Bootstrap
+                Hypothesis</a></li>
+            <li><a href="#" data-section="gravity-as-the-primary-decoherence-basis">3. Gravity as the Primary
+                Decoherence Basis</a></li>
+            <li><a href="#" data-section="emergence-of-the-standard-model-forces">4. Emergence of the Standard Model
+                Forces</a></li>
+            <li><a href="#" data-section="a-natural-interpretation-of-dark-matter">5. A Natural Interpretation of Dark
+                Matter</a></li>
+            <li><a href="#" data-section="black-holes-and-the-decoherence-limit">6. Black Holes and the Decoherence
+                Limit</a></li>
+            <li><a href="#" data-section="quantum-aliasing-and-measurement-artefacts">7. Quantum Aliasing and
+                Measurement Artefacts</a></li>
+            <li><a href="#" data-section="toward-a-conservation-law-for-decoherence">8. Toward a Conservation Law for
+                Decoherence</a></li>
             <li><a href="#" data-section="related-work">9. Related Work</a></li>
-            <li><a href="#" data-section="conclusion-and-forward-directions">10. Conclusion and Forward Directions</a></li>
+            <li><a href="#" data-section="conclusion-and-forward-directions">10. Conclusion and Forward Directions</a>
+            </li>
             <li><a href="#" data-section="methodology-appendix">11. Methodology Appendix</a></li>
           </ul>
 
           <div class="manuscript-actions">
-            <a href="{{ '/assets/paper/manuscript.html' | absolute_url }}" target="_blank" class="btn-secondary">Full Page View</a>
+            <a href="{{ '/assets/paper/manuscript.html' | absolute_url }}" target="_blank" class="btn-secondary">Full
+              Page View</a>
           </div>
         </nav>
 
@@ -373,12 +405,13 @@ body {
           <h3>Research Letters</h3>
           {% assign sorted_letters = site.letters | sort: 'nav_order' %}
           {% for letter in sorted_letters limit:3 %}
-            <div class="letter-preview">
-              <a href="#" data-letter-url="/assets/letters/{{ letter.slug }}.html" class="letter-link">{{ letter.title }}</a>
-            </div>
+          <div class="letter-preview">
+            <a href="#" data-letter-url="/assets/letters/{{ letter.slug }}.html" class="letter-link">{{ letter.title
+              }}</a>
+          </div>
           {% endfor %}
           {% if site.letters.size == 0 %}
-            <p><em>Letters will appear here after build completes</em></p>
+          <p><em>Letters will appear here after build completes</em></p>
           {% endif %}
         </div>
 
@@ -386,16 +419,14 @@ body {
           <h3>Research Notes</h3>
           <div class="tag-cloud">
             {% if site.data.tag-cloud %}
-              {% for tag_data in site.data.tag-cloud.tagCloud limit:20 %}
-                <span class="tag"
-                      data-weight="{{ tag_data.weight }}"
-                      data-tag-name="{{ tag_data.tag }}"
-                      style="font-size: {{ tag_data.weight | times: 0.2 | plus: 0.8 }}em; opacity: {{ tag_data.weight | times: 0.1 | plus: 0.6 }};">
-                  {{ tag_data.tag }}
-                </span>
-              {% endfor %}
+            {% for tag_data in site.data.tag-cloud.tagCloud limit:20 %}
+            <span class="tag" data-weight="{{ tag_data.weight }}" data-tag-name="{{ tag_data.tag }}"
+              style="font-size: {{ tag_data.weight | times: 0.2 | plus: 0.8 }}em; opacity: {{ tag_data.weight | times: 0.1 | plus: 0.6 }};">
+              {{ tag_data.tag }}
+            </span>
+            {% endfor %}
             {% else %}
-              <p><em>Tag cloud will appear after build completes</em></p>
+            <p><em>Tag cloud will appear after build completes</em></p>
             {% endif %}
           </div>
         </div>
@@ -436,10 +467,7 @@ body {
         <div class="manuscript-loading">
           <p>Loading manuscript...</p>
         </div>
-        <iframe
-          id="manuscript-frame"
-          src="{{ '/assets/paper/manuscript.html' | absolute_url }}"
-          style="display: none;"
+        <iframe id="manuscript-frame" src="{{ '/assets/paper/manuscript.html' | absolute_url }}" style="display: none;"
           title="Manuscript Content">
         </iframe>
       </div>
@@ -448,213 +476,213 @@ body {
 </div>
 
 <script>
-// Store tag cloud data in JavaScript
-const tagCloudData = {{ site.data.tag-cloud.tagCloud | jsonify }};
+  // Store tag cloud data in JavaScript
+  const tagCloudData = {{ site.data.tag-cloud.tagCloud | jsonify }};
 
-document.addEventListener('DOMContentLoaded', function() {
-  const frame = document.getElementById('manuscript-frame');
-  const loading = document.querySelector('.manuscript-loading');
-  const navLinks = document.querySelectorAll('.book-nav a[data-section]');
+  document.addEventListener('DOMContentLoaded', function () {
+    const frame = document.getElementById('manuscript-frame');
+    const loading = document.querySelector('.manuscript-loading');
+    const navLinks = document.querySelectorAll('.book-nav a[data-section]');
 
-  console.log('Frame src:', frame.src);
-  console.log('Frame element:', frame);
+    console.log('Frame src:', frame.src);
+    console.log('Frame element:', frame);
 
-  // Show iframe when loaded
-  frame.onload = function() {
-    console.log('Iframe loaded successfully');
-    loading.style.display = 'none';
-    frame.style.display = 'block';
-  };
-
-  // Also handle iframe errors and force show after timeout
-  frame.onerror = function() {
-    console.log('Iframe failed to load, showing anyway');
-    loading.style.display = 'none';
-    frame.style.display = 'block';
-  };
-
-  // Fallback: show iframe after 3 seconds regardless
-  setTimeout(() => {
-    if (loading.style.display !== 'none') {
-      console.log('Timeout reached, showing iframe');
+    // Show iframe when loaded
+    frame.onload = function () {
+      console.log('Iframe loaded successfully');
       loading.style.display = 'none';
       frame.style.display = 'block';
-    }
-  }, 3000);
+    };
 
-  // Handle navigation clicks
-  navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
+    // Also handle iframe errors and force show after timeout
+    frame.onerror = function () {
+      console.log('Iframe failed to load, showing anyway');
+      loading.style.display = 'none';
+      frame.style.display = 'block';
+    };
 
-      // Remove active class from all links and tags
-      navLinks.forEach(l => l.classList.remove('active'));
-      letterLinks.forEach(l => l.classList.remove('active'));
-      tags.forEach(t => t.classList.remove('active'));
-
-      // Add active class to clicked link
-      this.classList.add('active');
-
-      const section = this.getAttribute('data-section');
-
-      // Always ensure we're showing the manuscript first
-      if (frame.src !== originalManuscriptUrl) {
-        frame.src = originalManuscriptUrl;
-        // Wait for manuscript to load, then scroll to section
-        frame.onload = function() {
-          scrollToSection(section);
-          frame.onload = null; // Remove the handler
-        };
-      } else {
-        // Already showing manuscript, just scroll
-        scrollToSection(section);
+    // Fallback: show iframe after 3 seconds regardless
+    setTimeout(() => {
+      if (loading.style.display !== 'none') {
+        console.log('Timeout reached, showing iframe');
+        loading.style.display = 'none';
+        frame.style.display = 'block';
       }
+    }, 3000);
+
+    // Handle navigation clicks
+    navLinks.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        // Remove active class from all links and tags
+        navLinks.forEach(l => l.classList.remove('active'));
+        letterLinks.forEach(l => l.classList.remove('active'));
+        tags.forEach(t => t.classList.remove('active'));
+
+        // Add active class to clicked link
+        this.classList.add('active');
+
+        const section = this.getAttribute('data-section');
+
+        // Always ensure we're showing the manuscript first
+        if (frame.src !== originalManuscriptUrl) {
+          frame.src = originalManuscriptUrl;
+          // Wait for manuscript to load, then scroll to section
+          frame.onload = function () {
+            scrollToSection(section);
+            frame.onload = null; // Remove the handler
+          };
+        } else {
+          // Already showing manuscript, just scroll
+          scrollToSection(section);
+        }
+      });
     });
-  });
 
-  // Helper function to scroll to a section in the manuscript
-  function scrollToSection(section) {
-    // Try to scroll to section in iframe
-    try {
-      const iframeDoc = frame.contentDocument || frame.contentWindow.document;
+    // Helper function to scroll to a section in the manuscript
+    function scrollToSection(section) {
+      // Try to scroll to section in iframe
+      try {
+        const iframeDoc = frame.contentDocument || frame.contentWindow.document;
 
-      // Try multiple ways to find the section
-      let target = iframeDoc.getElementById(section);
+        // Try multiple ways to find the section
+        let target = iframeDoc.getElementById(section);
 
-      if (!target) {
-        // Try finding by heading text (case insensitive)
-        const headings = iframeDoc.querySelectorAll('h1, h2, h3, h4, h5, h6');
-        for (let heading of headings) {
-          if (heading.textContent.toLowerCase().includes(section.replace(/-/g, ' ').toLowerCase())) {
-            target = heading;
-            break;
+        if (!target) {
+          // Try finding by heading text (case insensitive)
+          const headings = iframeDoc.querySelectorAll('h1, h2, h3, h4, h5, h6');
+          for (let heading of headings) {
+            if (heading.textContent.toLowerCase().includes(section.replace(/-/g, ' ').toLowerCase())) {
+              target = heading;
+              break;
+            }
           }
         }
-      }
 
-      if (!target) {
-        // Try finding by partial ID match
-        const elements = iframeDoc.querySelectorAll('[id*="' + section.split('-')[0] + '"]');
-        if (elements.length > 0) {
-          target = elements[0];
+        if (!target) {
+          // Try finding by partial ID match
+          const elements = iframeDoc.querySelectorAll('[id*="' + section.split('-')[0] + '"]');
+          if (elements.length > 0) {
+            target = elements[0];
+          }
         }
-      }
 
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      } else {
-        console.log('Could not find section:', section);
-        // Fallback: scroll to top
-        frame.contentWindow.scrollTo({ top: 0, behavior: 'smooth' });
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          console.log('Could not find section:', section);
+          // Fallback: scroll to top
+          frame.contentWindow.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      } catch (error) {
+        console.log('Could not scroll to section:', section, error);
       }
-    } catch (error) {
-      console.log('Could not scroll to section:', section, error);
     }
-  }
 
-  // Handle copy citation button
-  const copyBtn = document.getElementById('copy-citation');
-  const citationText = document.getElementById('bibtex-citation');
+    // Handle copy citation button
+    const copyBtn = document.getElementById('copy-citation');
+    const citationText = document.getElementById('bibtex-citation');
 
-  if (copyBtn && citationText) {
-    copyBtn.addEventListener('click', async function() {
-      try {
-        await navigator.clipboard.writeText(citationText.textContent);
+    if (copyBtn && citationText) {
+      copyBtn.addEventListener('click', async function () {
+        try {
+          await navigator.clipboard.writeText(citationText.textContent);
 
-        // Visual feedback
-        const originalText = copyBtn.textContent;
-        copyBtn.textContent = '✅ Copied!';
-        copyBtn.classList.add('copied');
+          // Visual feedback
+          const originalText = copyBtn.textContent;
+          copyBtn.textContent = '✅ Copied!';
+          copyBtn.classList.add('copied');
 
-        setTimeout(() => {
-          copyBtn.textContent = originalText;
-          copyBtn.classList.remove('copied');
-        }, 2000);
+          setTimeout(() => {
+            copyBtn.textContent = originalText;
+            copyBtn.classList.remove('copied');
+          }, 2000);
 
-      } catch (err) {
-        // Fallback for older browsers
-        const textArea = document.createElement('textarea');
-        textArea.value = citationText.textContent;
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
+        } catch (err) {
+          // Fallback for older browsers
+          const textArea = document.createElement('textarea');
+          textArea.value = citationText.textContent;
+          document.body.appendChild(textArea);
+          textArea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textArea);
 
-        // Visual feedback
-        const originalText = copyBtn.textContent;
-        copyBtn.textContent = '✅ Copied!';
-        copyBtn.classList.add('copied');
+          // Visual feedback
+          const originalText = copyBtn.textContent;
+          copyBtn.textContent = '✅ Copied!';
+          copyBtn.classList.add('copied');
 
-        setTimeout(() => {
-          copyBtn.textContent = originalText;
-          copyBtn.classList.remove('copied');
-        }, 2000);
-      }
-    });
-  }
-
-  // Handle Research Letters links
-  const letterLinks = document.querySelectorAll('.letter-link');
-  const originalManuscriptUrl = '{{ "/assets/paper/manuscript.html" | absolute_url }}';
-
-  // Set the initial iframe source to the deployed manuscript
-  frame.src = originalManuscriptUrl;
-
-  letterLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-
-      const letterUrl = this.getAttribute('data-letter-url');
-      if (letterUrl && frame) {
-        // Load the letter in the main iframe
-        frame.src = letterUrl;
-
-        // Remove active class from navigation links
-        navLinks.forEach(l => l.classList.remove('active'));
-
-        // Visual feedback on the letter link
-        letterLinks.forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
-      }
-    });
-  });
-
-  // Handle tag cloud interactions
-  const tags = document.querySelectorAll('.tag');
-  console.log('Found', tags.length, 'tags for click handlers');
-  tags.forEach(tag => {
-    tag.addEventListener('click', function() {
-      console.log('Tag clicked:', this.textContent.trim());
-      try {
-        const tagName = this.textContent.trim();
-
-        // Find the tag data in our JavaScript variable
-        const tagData = tagCloudData.find(t => t.tag === tagName);
-        if (!tagData) {
-          console.error('Tag data not found for:', tagName);
-          return;
+          setTimeout(() => {
+            copyBtn.textContent = originalText;
+            copyBtn.classList.remove('copied');
+          }, 2000);
         }
+      });
+    }
 
-        const notesData = tagData.notes;
-        console.log('Notes data found successfully:', notesData.length, 'notes');
+    // Handle Research Letters links
+    const letterLinks = document.querySelectorAll('.letter-link');
+    const originalManuscriptUrl = '{{ "/assets/paper/manuscript.html" | absolute_url }}';
 
-        // Remove active states
-        tags.forEach(t => t.classList.remove('active'));
-        letterLinks.forEach(l => l.classList.remove('active'));
-        navLinks.forEach(l => l.classList.remove('active'));
+    // Set the initial iframe source to the deployed manuscript
+    frame.src = originalManuscriptUrl;
 
-        // Activate this tag
-        this.classList.add('active');
+    letterLinks.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
 
-        // Create notes list HTML
-        let notesHtml = `
+        const letterUrl = this.getAttribute('data-letter-url');
+        if (letterUrl && frame) {
+          // Load the letter in the main iframe
+          frame.src = letterUrl;
+
+          // Remove active class from navigation links
+          navLinks.forEach(l => l.classList.remove('active'));
+
+          // Visual feedback on the letter link
+          letterLinks.forEach(l => l.classList.remove('active'));
+          this.classList.add('active');
+        }
+      });
+    });
+
+    // Handle tag cloud interactions
+    const tags = document.querySelectorAll('.tag');
+    console.log('Found', tags.length, 'tags for click handlers');
+    tags.forEach(tag => {
+      tag.addEventListener('click', function () {
+        console.log('Tag clicked:', this.textContent.trim());
+        try {
+          const tagName = this.textContent.trim();
+
+          // Find the tag data in our JavaScript variable
+          const tagData = tagCloudData.find(t => t.tag === tagName);
+          if (!tagData) {
+            console.error('Tag data not found for:', tagName);
+            return;
+          }
+
+          const notesData = tagData.notes;
+          console.log('Notes data found successfully:', notesData.length, 'notes');
+
+          // Remove active states
+          tags.forEach(t => t.classList.remove('active'));
+          letterLinks.forEach(l => l.classList.remove('active'));
+          navLinks.forEach(l => l.classList.remove('active'));
+
+          // Activate this tag
+          this.classList.add('active');
+
+          // Create notes list HTML
+          let notesHtml = `
         <div style="padding: 2rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
           <h1>Research Notes: "${tagName}"</h1>
           <p style="color: #666; margin-bottom: 2rem;">Found ${notesData.length} notes with this tag:</p>
       `;
 
-      notesData.forEach(note => {
-        notesHtml += `
+          notesData.forEach(note => {
+            notesHtml += `
           <div style="margin-bottom: 2rem; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 8px; background: #f9fafb;">
             <h3 style="margin: 0; color: #1f2937;">
               <a href="#" onclick="window.parent.postMessage({type: 'loadNote', path: '${note.path.replace('research/notes/', '/assets/notes/').replace('.md', '.html')}'}, '*')"
@@ -664,47 +692,47 @@ document.addEventListener('DOMContentLoaded', function() {
             </h3>
           </div>
         `;
-      });
+          });
 
-      notesHtml += `
+          notesHtml += `
         </div>
       `;
 
-      // Load notes list in iframe
-      frame.srcdoc = notesHtml;
+          // Load notes list in iframe
+          frame.srcdoc = notesHtml;
 
-      } catch (error) {
-        console.error('Error in tag click handler:', error);
-        console.error('Tag name:', this.textContent.trim());
-      }
+        } catch (error) {
+          console.error('Error in tag click handler:', error);
+          console.error('Tag name:', this.textContent.trim());
+        }
+      });
     });
-  });
 
-  // Handle messages from iframe (for note loading)
-  window.addEventListener('message', function(event) {
-    if (event.data.type === 'loadNote') {
-      // Fetch the note HTML content and load it via srcdoc
-      fetch(event.data.path)
-        .then(response => response.text())
-        .then(html => {
-          // Wrap the content with basic styling for iframe display
-          const styledContent = `
+    // Handle messages from iframe (for note loading)
+    window.addEventListener('message', function (event) {
+      if (event.data.type === 'loadNote') {
+        // Fetch the note HTML content and load it via srcdoc
+        fetch(event.data.path)
+          .then(response => response.text())
+          .then(html => {
+            // Wrap the content with basic styling for iframe display
+            const styledContent = `
             <div style="max-width: 1200px; margin: 0 auto; padding: 2rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6;">
               ${html}
             </div>
           `;
-          frame.srcdoc = styledContent;
-        })
-        .catch(error => {
-          console.error('Error loading note:', error);
-          frame.srcdoc = `
+            frame.srcdoc = styledContent;
+          })
+          .catch(error => {
+            console.error('Error loading note:', error);
+            frame.srcdoc = `
             <div style="padding: 2rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
               <h2>Error Loading Note</h2>
               <p>Could not load the requested note. Please try again.</p>
             </div>
           `;
-        });
-    }
+          });
+      }
+    });
   });
-});
 </script>

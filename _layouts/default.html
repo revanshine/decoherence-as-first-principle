@@ -1,80 +1,85 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en' }}">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- SEO Meta Tags -->
   {% seo %}
-  
+
   <!-- Additional Open Graph tags for better social sharing -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="{{ site.locale | default: 'en_US' }}">
   {% if page.image %}
-    <meta property="og:image" content="{{ page.image | absolute_url }}">
+  <meta property="og:image" content="{{ page.image | absolute_url }}">
   {% endif %}
-  
+
   <!-- LinkedIn specific meta tags -->
   <meta property="og:site_name" content="{{ site.title }}">
   {% if site.author.linkedin %}
-    <meta name="author" content="https://www.linkedin.com/in/{{ site.author.linkedin }}/">
+  <meta name="author" content="https://www.linkedin.com/in/{{ site.author.linkedin }}/">
   {% endif %}
-  
+
   <!-- Academic/Research specific meta tags -->
   {% if site.author.orcid %}
-    <meta name="citation_author" content="{{ site.author.name }}">
-    <meta name="citation_author_orcid" content="{{ site.author.orcid }}">
+  <meta name="citation_author" content="{{ site.author.name }}">
+  <meta name="citation_author_orcid" content="{{ site.author.orcid }}">
   {% endif %}
   {% if page.title and page.title != site.title %}
-    <meta name="citation_title" content="{{ page.title }}">
+  <meta name="citation_title" content="{{ page.title }}">
   {% endif %}
   <meta name="citation_publication_date" content="{{ site.time | date: '%Y' }}">
-  
+
   <!-- Canonical URL -->
   <link rel="canonical" href="{{ page.url | absolute_url }}">
-  
+
   <!-- Preconnect to external domains for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
-  
+
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       line-height: 1.6;
-      max-width: 1600px; /* Match book container width */
+      max-width: 1280px;
+      /* Match book container width */
       margin: 0 auto;
       padding: 20px;
       color: #333;
     }
-    
+
     .page-header {
       border-bottom: 1px solid #eee;
       margin-bottom: 2rem;
       padding-bottom: 1rem;
     }
-    
+
     .page-title {
       margin: 0;
       color: #2c3e50;
     }
-    
+
     .page-date {
       color: #666;
       font-size: 0.9em;
     }
-    
+
     .page-content {
       margin-top: 2rem;
     }
   </style>
 </head>
+
 <body>
   <main>
     {{ content }}
   </main>
 
   <footer style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #eee; color: #666; font-size: 0.9em;">
-    <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author.name | default: "Research Project" }}. Repository code distributed under MIT license.</p>
+    <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author.name | default: "Research Project" }}. Repository code distributed
+      under MIT license.</p>
   </footer>
 </body>
+
 </html>
