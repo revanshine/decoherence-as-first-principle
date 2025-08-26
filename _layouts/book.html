@@ -487,52 +487,70 @@ document.addEventListener('DOMContentLoaded', function() {
     link.addEventListener('click', function(e) {
       e.preventDefault();
 
-      // Remove active class from all links
+      // Remove active class from all links and tags
       navLinks.forEach(l => l.classList.remove('active'));
+      letterLinks.forEach(l => l.classList.remove('active'));
+      tags.forEach(t => t.classList.remove('active'));
+      
       // Add active class to clicked link
       this.classList.add('active');
 
       const section = this.getAttribute('data-section');
 
-      // Try to scroll to section in iframe
-      try {
-        const iframeDoc = frame.contentDocument || frame.contentWindow.document;
-
-        // Try multiple ways to find the section
-        let target = iframeDoc.getElementById(section);
-
-        if (!target) {
-          // Try finding by heading text (case insensitive)
-          const headings = iframeDoc.querySelectorAll('h1, h2, h3, h4, h5, h6');
-          for (let heading of headings) {
-            if (heading.textContent.toLowerCase().includes(section.replace(/-/g, ' ').toLowerCase()) ||
-                heading.textContent.toLowerCase().includes(this.textContent.toLowerCase())) {
-              target = heading;
-              break;
-            }
-          }
-        }
-
-        if (!target) {
-          // Try finding by partial ID match
-          const elements = iframeDoc.querySelectorAll('[id*="' + section.split('-')[0] + '"]');
-          if (elements.length > 0) {
-            target = elements[0];
-          }
-        }
-
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        } else {
-          console.log('Could not find section:', section);
-          // Fallback: scroll to top
-          frame.contentWindow.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-      } catch (error) {
-        console.log('Could not scroll to section:', section, error);
+      // Always ensure we're showing the manuscript first
+      if (frame.src !== originalManuscriptUrl) {
+        frame.src = originalManuscriptUrl;
+        // Wait for manuscript to load, then scroll to section
+        frame.onload = function() {
+          scrollToSection(section);
+          frame.onload = null; // Remove the handler
+        };
+      } else {
+        // Already showing manuscript, just scroll
+        scrollToSection(section);
       }
     });
   });
+
+  // Helper function to scroll to a section in the manuscript
+  function scrollToSection(section) {
+    // Try to scroll to section in iframe
+    try {
+      const iframeDoc = frame.contentDocument || frame.contentWindow.document;
+
+      // Try multiple ways to find the section
+      let target = iframeDoc.getElementById(section);
+
+      if (!target) {
+        // Try finding by heading text (case insensitive)
+        const headings = iframeDoc.querySelectorAll('h1, h2, h3, h4, h5, h6');
+        for (let heading of headings) {
+          if (heading.textContent.toLowerCase().includes(section.replace(/-/g, ' ').toLowerCase())) {
+            target = heading;
+            break;
+          }
+        }
+      }
+
+      if (!target) {
+        // Try finding by partial ID match
+        const elements = iframeDoc.querySelectorAll('[id*="' + section.split('-')[0] + '"]');
+        if (elements.length > 0) {
+          target = elements[0];
+        }
+      }
+
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        console.log('Could not find section:', section);
+        // Fallback: scroll to top
+        frame.contentWindow.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    } catch (error) {
+      console.log('Could not scroll to section:', section, error);
+    }
+  }
 
   // Handle copy citation button
   const copyBtn = document.getElementById('copy-citation');
