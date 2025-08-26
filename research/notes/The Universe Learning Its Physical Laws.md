@@ -12,7 +12,9 @@ The **early universe "learns" its own physical laws** through a dynamic process 
 - The fundamental parameters existed in a state of quantum superposition
 
 ### Dynamic Evolution
+
 The rapid evolution can be understood as a *self-organization or learning process*:
+
 - With each "frame" (moment in cosmic evolution), quantum-gravitational interactions "select" for configurations
 - Selection criterion: configurations that maximize the stability and persistence of classical reality
 - **Physical constants** gradually "lock in" as the universe undergoes cosmic symmetry breaking
@@ -21,6 +23,7 @@ The rapid evolution can be understood as a *self-organization or learning proces
 ## Implications for Fine-Tuning
 
 In this framework, **the apparent fine-tuning of the Standard Model and cosmological constants** is not accidental, but rather the result of:
+
 - A "learning" process via the universe's dynamic quantum informational substrate
 - Selection during the formative era for parameter sets that support persistent structure
 - Evolutionary pressure toward laws that enable stable classical branches
