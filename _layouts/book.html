@@ -491,7 +491,7 @@ layout: default
         <div class="manuscript-loading">
           <p>Loading manuscript...</p>
         </div>
-        <iframe id="manuscript-frame" src="{{ '/assets/paper/manuscript.html' | absolute_url }}" style="display: none;"
+        <iframe id="manuscript-frame" src="{{ '/assets/paper/manuscript.html' | absolute_url }}"
           title="Manuscript Content">
         </iframe>
       </div>
@@ -660,28 +660,11 @@ layout: default
       }
     });
 
-    // Show iframe when loaded
-    frame.onload = function () {
-      console.log('Iframe loaded successfully');
-      loading.style.display = 'none';
-      frame.style.display = 'block';
-    };
-
-    // Also handle iframe errors and force show after timeout
-    frame.onerror = function () {
-      console.log('Iframe failed to load, showing anyway');
-      loading.style.display = 'none';
-      frame.style.display = 'block';
-    };
-
-    // Fallback: show iframe after 3 seconds regardless
+    // Simple, reliable iframe loading
     setTimeout(() => {
-      if (loading.style.display !== 'none') {
-        console.log('Timeout reached, showing iframe');
-        loading.style.display = 'none';
-        frame.style.display = 'block';
-      }
-    }, 3000);
+      loading.style.display = 'none';
+      frame.style.display = 'block';
+    }, 1000);
 
     // Handle navigation clicks
     navLinks.forEach(link => {
