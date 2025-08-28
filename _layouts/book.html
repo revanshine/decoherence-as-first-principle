@@ -491,7 +491,7 @@ layout: default
         <div class="manuscript-loading">
           <p>Loading manuscript...</p>
         </div>
-        <iframe id="manuscript-frame" src="{{ '/assets/paper/manuscript.html' | absolute_url }}"
+        <iframe id="manuscript-frame" src="{{ '/assets/paper/manuscript.html' | absolute_url }}" style="display: none;"
           title="Manuscript Content">
         </iframe>
       </div>
@@ -511,6 +511,9 @@ layout: default
     // Track manuscript state for overlay close functionality
     let savedScrollPosition = 0;
     let frameView = 'manuscript'; // 'manuscript' or 'overlay'
+    
+    // Loading configuration
+    const LOADING_TIMEOUT = 1000; // ms
 
     // Utility function to save current manuscript scroll position
     function saveScrollPosition() {
@@ -545,6 +548,11 @@ layout: default
 
     // Utility function to inject overlay controls into srcdoc content
     function addOverlayControls(htmlContent) {
+      // Swipe gesture constants (moved outside for performance)
+      const SWIPE_DIST = 80;     // pixels
+      const SWIPE_MAX_X = 80;    // allow slight diagonal movement  
+      const SWIPE_MIN_V = 0.5;   // px/ms (velocity threshold)
+      
       const overlayScript = `
         <script>
           (function () {
@@ -599,9 +607,9 @@ layout: default
                 return doc.scrollTop || 0;
               }
 
-              const DIST = 80;     // pixels
-              const MAX_X = 80;    // allow slight diagonal movement
-              const MIN_V = 0.5;   // px/ms (velocity threshold)
+              const DIST = ${SWIPE_DIST};     // pixels
+              const MAX_X = ${SWIPE_MAX_X};    // allow slight diagonal movement
+              const MIN_V = ${SWIPE_MIN_V};   // px/ms (velocity threshold)
 
               document.addEventListener('touchstart', function (ev) {
                 const t = ev.changedTouches && ev.changedTouches[0];
@@ -657,7 +665,7 @@ layout: default
     setTimeout(() => {
       loading.style.display = 'none';
       frame.style.display = 'block';
-    }, 1000);
+    }, LOADING_TIMEOUT);
 
     // Handle Esc key in parent window (for when iframe doesn't have focus)
     document.addEventListener('keydown', function(e) {
