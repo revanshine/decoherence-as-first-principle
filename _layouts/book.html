@@ -344,7 +344,31 @@ layout: default
       flex: 0 0 auto;
       border-right: none;
       border-bottom: 1px solid var(--page-border, #4a5568);
-      max-height: 40vh;
+      max-height: 25vh;
+      overflow-y: auto;
+      padding: 1rem;
+    }
+
+    .book-page-left h3 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .book-page-left ul {
+      font-size: 0.85rem;
+    }
+
+    .book-page-left li {
+      margin: 0.25rem 0;
+    }
+
+    .book-page-left .letters-preview h3 {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .book-page-left .tag-cloud {
+      font-size: 0.8rem;
     }
 
     .book-page-right {
@@ -484,8 +508,156 @@ layout: default
     const loading = document.querySelector('.manuscript-loading');
     const navLinks = document.querySelectorAll('.book-nav a[data-section]');
 
+    // Track manuscript state for overlay close functionality
+    let savedScrollPosition = 0;
+    let frameView = 'manuscript'; // 'manuscript' or 'overlay'
+
+    // Utility function to save current manuscript scroll position
+    function saveScrollPosition() {
+      try {
+        if (frameView === 'manuscript' && frame.contentWindow) {
+          savedScrollPosition = frame.contentWindow.scrollY || 0;
+        }
+      } catch (error) {
+        console.log('Could not save scroll position:', error);
+      }
+    }
+
+    // Utility function to restore manuscript and scroll position
+    function restoreManuscript() {
+      frameView = 'manuscript';
+      frame.src = originalManuscriptUrl;
+
+      // Wait for manuscript to load, then restore scroll position
+      frame.onload = function() {
+        try {
+          if (savedScrollPosition > 0) {
+            setTimeout(() => {
+              frame.contentWindow.scrollTo({ top: savedScrollPosition, behavior: 'smooth' });
+            }, 100);
+          }
+        } catch (error) {
+          console.log('Could not restore scroll position:', error);
+        }
+        frame.onload = null; // Remove the handler
+      };
+    }
+
+    // Utility function to inject overlay controls into srcdoc content
+    function addOverlayControls(htmlContent) {
+      const overlayScript = `
+        <script>
+          (function () {
+            function closeOverlay() {
+              try {
+                parent.postMessage({ type: 'overlay:close' }, '*');
+              } catch (e) {
+                console.log('Could not send close message:', e);
+              }
+            }
+
+            // Wait for DOM to be ready
+            if (document.readyState === 'loading') {
+              document.addEventListener('DOMContentLoaded', initControls);
+            } else {
+              initControls();
+            }
+
+            function initControls() {
+              // Add close button to the page
+              const closeBtn = document.createElement('button');
+              closeBtn.innerHTML = '✖';
+              closeBtn.id = 'overlay-close';
+              closeBtn.style.cssText = 'position: fixed; top: 1rem; right: 1rem; z-index: 1000; background: #f3f4f6; border: 1px solid #d1d5db; border-radius: 50%; width: 2.5rem; height: 2.5rem; cursor: pointer; font-size: 1.2rem; color: #4b5563; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.2s;';
+              closeBtn.setAttribute('title', 'Close overlay (Esc)');
+
+              // Hover effects
+              closeBtn.addEventListener('mouseenter', function() {
+                this.style.background = '#e5e7eb';
+                this.style.color = '#1f2937';
+              });
+              closeBtn.addEventListener('mouseleave', function() {
+                this.style.background = '#f3f4f6';
+                this.style.color = '#4b5563';
+              });
+
+              closeBtn.addEventListener('click', closeOverlay);
+              document.body.appendChild(closeBtn);
+
+              // Esc key handler inside iframe
+              document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                  closeOverlay();
+                }
+              });
+
+              // Swipe-down-to-close for mobile
+              let startY = null, startX = null, startT = 0, startScroll = 0, moved = false;
+
+              function scrollTop() {
+                const doc = document.scrollingElement || document.documentElement;
+                return doc.scrollTop || 0;
+              }
+
+              const DIST = 80;     // pixels
+              const MAX_X = 80;    // allow slight diagonal movement
+              const MIN_V = 0.5;   // px/ms (velocity threshold)
+
+              document.addEventListener('touchstart', function (ev) {
+                const t = ev.changedTouches && ev.changedTouches[0];
+                if (!t) return;
+                startY = t.clientY;
+                startX = t.clientX;
+                startT = performance.now();
+                startScroll = scrollTop();
+                moved = false;
+              }, { passive: true });
+
+              document.addEventListener('touchmove', function () {
+                moved = true;
+              }, { passive: true });
+
+              document.addEventListener('touchend', function (ev) {
+                const t = ev.changedTouches && ev.changedTouches[0];
+                if (!t || startY == null) return;
+
+                const dy = t.clientY - startY; // positive = swipe down
+                const dx = Math.abs(t.clientX - (startX || 0));
+                const dt = Math.max(1, performance.now() - startT);
+                const v = Math.abs(dy) / dt; // px/ms
+
+                // Close if: started at top + swiped down enough + mostly vertical
+                if (startScroll <= 0 && moved && dy >= DIST && dx < MAX_X) {
+                  closeOverlay();
+                } else if (startScroll <= 0 && dy > 0 && v >= MIN_V && dx < MAX_X) {
+                  closeOverlay();
+                }
+
+                // Reset
+                startY = startX = null;
+                moved = false;
+              }, { passive: true });
+            }
+          })();
+        </script>
+      `;
+
+      // Insert the script just before the closing body tag, or at the end if no body tag
+      if (htmlContent.includes('</body>')) {
+        return htmlContent.replace('</body>', overlayScript + '</body>');
+      } else {
+        return htmlContent + overlayScript;
+      }
+    }
+
     console.log('Frame src:', frame.src);
     console.log('Frame element:', frame);
+
+    // Simple, reliable iframe loading
+    setTimeout(() => {
+      loading.style.display = 'none';
+      frame.style.display = 'block';
+    }, 1000);
 
     // Handle Esc key in parent window (for when iframe doesn't have focus)
     document.addEventListener('keydown', function(e) {
@@ -517,6 +689,7 @@ layout: default
 
         // Always ensure we're showing the manuscript first
         if (frame.src !== originalManuscriptUrl) {
+          frameView = 'manuscript';
           frame.src = originalManuscriptUrl;
           // Wait for manuscript to load, then scroll to section
           frame.onload = function () {
@@ -525,6 +698,7 @@ layout: default
           };
         } else {
           // Already showing manuscript, just scroll
+          frameView = 'manuscript';
           scrollToSection(section);
         }
       });
@@ -617,6 +791,7 @@ layout: default
 
     // Set the initial iframe source to the deployed manuscript
     frame.src = originalManuscriptUrl;
+    frameView = 'manuscript';
 
     letterLinks.forEach(link => {
       link.addEventListener('click', function (e) {
@@ -625,6 +800,7 @@ layout: default
         const letterUrl = this.getAttribute('data-letter-url');
         if (letterUrl && frame) {
           // Load the letter in the main iframe
+          frameView = 'manuscript'; // Letters are not overlays, they're manuscript content
           frame.src = letterUrl;
 
           // Remove active class from navigation links
@@ -645,6 +821,9 @@ layout: default
         console.log('Tag clicked:', this.textContent.trim());
         try {
           const tagName = this.textContent.trim();
+
+          // Save current manuscript position before showing overlay
+          saveScrollPosition();
 
           // Find the tag data in our JavaScript variable
           const tagData = tagCloudData.find(t => t.tag === tagName);
@@ -688,8 +867,9 @@ layout: default
         </div>
       `;
 
-          // Load notes list in iframe
-          frame.srcdoc = notesHtml;
+          // Load notes list in iframe with overlay controls
+          frameView = 'overlay';
+          frame.srcdoc = addOverlayControls(notesHtml);
 
         } catch (error) {
           console.error('Error in tag click handler:', error);
@@ -698,7 +878,7 @@ layout: default
       });
     });
 
-    // Handle messages from iframe (for note loading)
+    // Handle messages from iframe (for note loading and overlay close)
     window.addEventListener('message', function (event) {
       if (event.data.type === 'loadNote') {
         // Fetch the note HTML content and load it via srcdoc
@@ -711,17 +891,23 @@ layout: default
               ${html}
             </div>
           `;
-            frame.srcdoc = styledContent;
+            frameView = 'overlay';
+            frame.srcdoc = addOverlayControls(styledContent);
           })
           .catch(error => {
             console.error('Error loading note:', error);
-            frame.srcdoc = `
+            const errorContent = `
             <div style="padding: 2rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
               <h2>Error Loading Note</h2>
               <p>Could not load the requested note. Please try again.</p>
             </div>
           `;
+            frameView = 'overlay';
+            frame.srcdoc = addOverlayControls(errorContent);
           });
+      } else if (event.data.type === 'overlay:close') {
+        // Handle overlay close requests from iframe
+        restoreManuscript();
       }
     });
   });
