@@ -666,12 +666,6 @@ layout: default
       }
     });
 
-    // Simple, reliable iframe loading
-    setTimeout(() => {
-      loading.style.display = 'none';
-      frame.style.display = 'block';
-    }, 1000);
-
     // Handle navigation clicks
     navLinks.forEach(link => {
       link.addEventListener('click', function (e) {
