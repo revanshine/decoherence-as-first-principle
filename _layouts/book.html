@@ -548,11 +548,6 @@ layout: default
 
     // Utility function to inject overlay controls into srcdoc content
     function addOverlayControls(htmlContent) {
-      // Swipe gesture constants (moved outside for performance)
-      const SWIPE_DIST = 80;     // pixels
-      const SWIPE_MAX_X = 80;    // allow slight diagonal movement  
-      const SWIPE_MIN_V = 0.5;   // px/ms (velocity threshold)
-      
       const overlayScript = `
         <script>
           (function () {
@@ -607,9 +602,9 @@ layout: default
                 return doc.scrollTop || 0;
               }
 
-              const DIST = ${SWIPE_DIST};     // pixels
-              const MAX_X = ${SWIPE_MAX_X};    // allow slight diagonal movement
-              const MIN_V = ${SWIPE_MIN_V};   // px/ms (velocity threshold)
+              const DIST = 80;     // pixels
+              const MAX_X = 80;    // allow slight diagonal movement
+              const MIN_V = 0.5;   // px/ms (velocity threshold)
 
               document.addEventListener('touchstart', function (ev) {
                 const t = ev.changedTouches && ev.changedTouches[0];
