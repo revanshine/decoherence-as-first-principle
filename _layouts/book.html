@@ -660,7 +660,7 @@ layout: default
     setTimeout(() => {
       loading.style.display = 'none';
       frame.style.display = 'block';
-    }, LOADING_TIMEOUT);
+    }, 1000);
 
     // Handle Esc key in parent window (for when iframe doesn't have focus)
     document.addEventListener('keydown', function(e) {
