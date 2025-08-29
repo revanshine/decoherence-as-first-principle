@@ -491,7 +491,7 @@ layout: default
 
 <script>
   // Store tag cloud data in JavaScript
-  const tagCloudData = {{ site.data['tag-cloud'].tagCloud | default: '[]' | jsonify }};
+  const tagCloudData = JSON.parse(decodeURIComponent("{{ site.data['tag-cloud'].tagCloud | jsonify | uri_escape }}"));
 
   document.addEventListener('DOMContentLoaded', function () {
     const frame = document.getElementById('manuscript-frame');
