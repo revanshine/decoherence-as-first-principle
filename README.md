@@ -60,6 +60,7 @@ The repository uses GitHub Actions for automated building and deployment. No loc
 ## 📖 Citation & License
 
 - Please see [CITATION.cff](CITATION.cff) for citation info.
+
 - **BibTeX format:**
 ```bibtex
 @misc{evanshine2025decoherence,
@@ -73,6 +74,10 @@ The repository uses GitHub Actions for automated building and deployment. No loc
   orcid = {0009-0005-3173-3148}
 }
 ```
+=======
+- Cite as:
+    > Evanshine, R. *Decoherence as First Principle* (2025), GitHub: revanshine/decoherence-as-first-principle.
+
 - License: CC-BY-4.0
 
 ---
