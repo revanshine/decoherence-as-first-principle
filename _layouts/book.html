@@ -430,7 +430,7 @@ layout: default
             {% assign sorted_letters = site.letters | sort: 'nav_order' %}
             {% for letter in sorted_letters limit:3 %}
             <div class="letter-preview">
-              <a href="#" data-letter-url="/assets/letters/{{ letter.name }}.html" class="letter-link">{{ letter.title }}</a>
+              <a href="#" data-letter-url="/assets/letters/{{ letter.slug }}.html" class="letter-link">{{ letter.title }}</a>
             </div>
             {% endfor %}
           {% else %}
@@ -491,7 +491,7 @@ layout: default
 
 <script>
   // Store tag cloud data in JavaScript
-  const tagCloudData = [];
+  const tagCloudData = {{ site.data['tag-cloud'].tagCloud | default: '[]' | jsonify }};
 
   document.addEventListener('DOMContentLoaded', function () {
     const frame = document.getElementById('manuscript-frame');
@@ -787,7 +787,7 @@ layout: default
         const letterUrl = this.getAttribute('data-letter-url');
         if (letterUrl && frame) {
           // Load the letter in the main iframe
-          frameView = 'manuscript'; // Letters are not overlays, they're manuscript content
+          frameView = 'manuscript'; // Letters are considered manuscript content for frameView logic
           frame.src = letterUrl;
 
           // Remove active class from navigation links
