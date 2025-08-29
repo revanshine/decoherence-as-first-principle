@@ -190,12 +190,17 @@ layout: default
   }
 
   .letters-preview,
-  .downloads,
   .citation-section,
   .research-notes {
     margin-top: 2rem;
     padding-top: 1rem;
     border-top: 1px solid var(--page-border, #4a5568);
+  }
+
+  .downloads {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--page-border, #4a5568);
   }
 
   .tag-cloud {
@@ -457,14 +462,6 @@ layout: default
             <p><em>Tag cloud will appear after build completes</em></p>
             {% endif %}
           </div>
-        </div>
-
-        <div class="downloads">
-          <h3>Downloads</h3>
-          <ul>
-            <li><a href="{{ '/assets/paper/manuscript.pdf' | absolute_url }}">📄 PDF</a></li>
-            <li><a href="{{ '/assets/paper/manuscript.tex' | absolute_url }}">📝 LaTeX</a></li>
-          </ul>
         </div>
 
         <div class="citation-section">
