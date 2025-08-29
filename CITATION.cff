@@ -12,7 +12,7 @@ date-released: 2025-08-15
 version: 0.1.0
 doi: "" # add if/when you assign a DOI (e.g., Zenodo, arXiv)
 license: "CC-BY-4.0" # or correct license for your manuscript/repo
-url: "https://github.com/revanshine/decoherence-thesis-repo"
+url: "https://github.com/revanshine/decoherence-as-first-principle"
 keywords:
   - cosmology
   - quantum decoherence

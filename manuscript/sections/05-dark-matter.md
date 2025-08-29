@@ -6,7 +6,7 @@ This interpretation naturally explains the observed properties of dark matter:
 
 - **Gravitational Interaction** — Such mass would still curve spacetime and participate fully in gravitational clustering, producing the galaxy rotation curves first inferred by Zwicky in galaxy clusters [@zwicky1933] and refined in his later work [@zwicky1937], confirmed on galactic scales by Rubin and Ford [@rubin1970; @rubin1980], and most strikingly demonstrated in the Bullet Cluster, where gravitational lensing maps reveal a clear separation of mass from luminous matter [@clowe2006].
 - **Electromagnetic Invisibility** — Without decoherence in the EM basis, these structures neither emit, absorb, nor scatter photons, accounting for their non-detection in optical, radio, or X-ray surveys.
-- **Persistence Across Cosmic Time** — Once decohered in gravity but not in EM, this matter remains “dark” indefinitely, since decoherence in one basis does not force decoherence in another unless a cross-basis interaction occurs.
+- **Persistence Across Cosmic Time** — Once decohered in gravity but not in EM, this matter remains “dark” indefinitely, since decoherence in one basis does not force decoherence in another unless a cross-basis interaction occurs.^[Cross-basis coupling refers to processes where decoherence in one pointer basis (e.g., gravity) compels decoherence in another (e.g., electromagnetism). The simplest case is charged matter: its mass-energy curves spacetime, and when accelerated non-geodesically, it emits photons, linking gravitational and EM bases.]
 
 ### Predictions and Testable Implications
 

@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://robertevanshine.com/sitemap.xml
+
+# Block build artifacts and development files
+Disallow: /build/
+Disallow: /vendor/
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /node_modules/
+
+# Allow important research content
+Allow: /assets/paper/
+Allow: /assets/letters/
+Allow: /assets/notes/

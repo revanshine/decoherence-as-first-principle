@@ -1,0 +1,130 @@
+name: Build Manuscript + Deploy Site
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Install pandoc (same version as local development)
+      - name: Install pandoc
+        uses: r-lib/actions/setup-pandoc@v2
+        with:
+          pandoc-version: '3.7.0.2'
+
+      # Generate TEX files with host pandoc
+      - name: Generate TEX files
+        run: |
+          chmod +x build/build.sh
+          # Generate TEX files only (skip PDF compilation)
+          GENERATE_TEX_ONLY=1 bash build/build.sh
+          
+          chmod +x build/build_letters.sh  
+          GENERATE_TEX_ONLY=1 bash build/build_letters.sh
+
+      # Compile PDFs using TeX Live container
+      - name: Compile PDFs with TeX Live
+        uses: xu-cheng/texlive-action@v2
+        with:
+          scheme: full
+          run: |
+            # Compile PDFs from existing TEX files
+            cd build/out
+            if [ -f manuscript.tex ]; then
+              pdflatex manuscript.tex
+              pdflatex manuscript.tex  # Run twice for references
+            fi
+            
+            # Compile letter PDFs
+            cd letters
+            for tex_file in *.tex; do
+              if [ -f "$tex_file" ]; then
+                pdflatex "$tex_file"
+                pdflatex "$tex_file"  # Run twice for references
+              fi
+            done
+
+      # Build HTML and other assets with host pandoc
+      - name: Build HTML and other assets
+        run: |
+          chmod +x ./make
+          # Skip PDF generation since it's already done
+          SKIP_PDF_BUILD=1 ./make
+
+      # Ensure assets are in place for Jekyll
+      - name: Verify assets were created
+        run: |
+          echo "Checking generated assets:"
+          ls -la assets/paper/ || echo "No assets/paper directory"
+          ls -la assets/letters/ || echo "No assets/letters directory"
+
+      # Setup Ruby and Jekyll
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+
+      # Build Jekyll site manually
+      - name: Build Jekyll site
+        run: |
+          bundle exec jekyll build --destination ./_site
+        env:
+          JEKYLL_ENV: production
+
+      # Upload Pages artifact
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+      # Keep outputs as artifacts too
+      - name: Upload manuscript artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: manuscript
+          path: |
+            build/out/manuscript.pdf
+            build/out/manuscript.tex
+            assets/paper/manuscript.html
+            assets/letters/*.html
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  release:
+    if: github.event_name == 'release'
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download built manuscript
+        uses: actions/download-artifact@v4
+        with:
+          name: manuscript
+          path: dist
+      - name: Attach files to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/*.pdf
+            dist/manuscript.tex

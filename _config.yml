@@ -1,0 +1,72 @@
+title: Decoherence as First Principle
+description: >-
+  A theoretical framework where ontological quantum decoherence underlies gravity, 
+  dark matter, and cosmic structure formation. Research by Robert J. Evanshine exploring 
+  decoherence as a fundamental principle in physics and cosmology.
+
+url: "https://robertevanshine.com"
+baseurl: ""
+
+# Collections
+collections:
+  letters:
+    output: true
+    permalink: /letters/:name/
+
+# SEO and Social Media
+lang: en_US
+locale: en_US
+
+# Author information for SEO
+author:
+  name: Robert J. Evanshine
+  github: revanshine
+  linkedin: revanshine
+  orcid: "0009-0005-3173-3148"
+  affiliation: "Independent Researcher"
+
+# Social media and Open Graph
+social:
+  name: Robert J. Evanshine
+  links:
+    - https://github.com/revanshine
+    - https://orcid.org/0009-0005-3173-3148
+    - https://www.linkedin.com/in/revanshine/
+
+# SEO tags
+tagline: "Exploring quantum decoherence as a fundamental principle in cosmology"
+keywords: 
+  - quantum decoherence
+  - theoretical physics
+  - cosmology
+  - dark matter
+  - emergent gravity
+  - quantum foundations
+  - physics research
+
+# Google Analytics (add your tracking ID when ready)
+# google_analytics: G-XXXXXXXXXX
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Footer content
+footer_content: 'Copyright &copy; 2025 Robert Evanshine. Repository code distributed under MIT license.'
+
+# Exclude build artifacts but allow assets
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - build/
+  - manuscript/
+  - README.md
+  - LICENSE

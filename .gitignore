@@ -1,9 +1,32 @@
 # build artifacts
 build/out/
+build_output/
 *.aux
 *.log
 *.out
 *.toc
 *.pdf
 *.docx
-*.html
+_site/
+.jekyll-cache/
+.sass-cache/
+.DS_Store
+
+# generated assets (should be created by CI/CD)
+assets/paper/*.pdf
+assets/paper/*.html
+assets/paper/*.tex
+assets/notes/*.html
+assets/letters/*.html
+assets/letters/*.pdf
+
+# Jekyll development files
+Gemfile.lock
+vendor/
+.bundle/
+*.backup
+
+# Docker files (not needed for simple build)
+Dockerfile*
+docker-compose*.yml
+jekyll-cached.sh

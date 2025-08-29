@@ -38,5 +38,9 @@ COMMON_OPTS=(
 # Build manuscript.tex (for arXiv upload)
 pandoc --standalone "${COMMON_OPTS[@]}" "${INPUTS[@]}" -o "$OUTDIR/manuscript.tex"
 
-# Build PDF (for preview/sharing)
-pandoc "${COMMON_OPTS[@]}" "${INPUTS[@]}" -o "$OUTDIR/manuscript.pdf"
+# Build PDF (for preview/sharing) - skip if TEX-only mode
+if [[ -z "${GENERATE_TEX_ONLY:-}" ]]; then
+    pandoc "${COMMON_OPTS[@]}" "${INPUTS[@]}" -o "$OUTDIR/manuscript.pdf"
+else
+    echo "Skipping PDF generation (TEX-only mode)"
+fi

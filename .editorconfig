@@ -1,0 +1,32 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{md,markdown}]
+trim_trailing_whitespace = false
+
+# Jekyll layouts with Liquid templates - prevent auto-formatting
+[_layouts/*.html]
+indent_style = space
+indent_size = 2
+max_line_length = off
+# Prevent formatters from breaking Liquid templates across lines
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Other HTML files
+[*.html]
+indent_style = space
+indent_size = 2
+
+[*.{js,json}]
+indent_style = space
+indent_size = 2
+
+[*.{yml,yaml}]
+indent_style = space
+indent_size = 2
