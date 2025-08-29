@@ -76,9 +76,13 @@
     {{ content }}
   </main>
 
-  <footer style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #eee; color: #666; font-size: 0.9em;">
-    <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author.name | default: "Research Project" }}. Repository code distributed
-      under MIT license.</p>
+  <footer style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #eee; font-size: 0.9em;">
+    <p style="color: #d4a574; background: linear-gradient(135deg, #2d1810, #1a0f08); padding: 1rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(212, 165, 116, 0.2);">
+      <span style="color: #f4d03f; font-size: 1.2em;">©</span> 
+      <span style="color: #e8c547;">{{ 'now' | date: "%Y" }}</span> 
+      <span style="color: #d4a574; font-weight: 500;">{{ site.author.name | default: "Research Project" }}</span>. 
+      <span style="color: #c19a6b;">Repository code distributed under MIT license.</span>
+    </p>
   </footer>
 </body>
 
