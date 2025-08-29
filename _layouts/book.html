@@ -19,17 +19,6 @@ layout: default
     /* Smooth transition when image loads */
   }
 
-  /* Use mobile-optimized background on smaller screens */
-  @media (max-width: 1024px) {
-    body {
-      background-color: #000000;
-      /* Black fallback for mobile too */
-      background-image: url('/assets/images/night-sky-mobile.jpg');
-      background-attachment: scroll;
-      /* Better performance on mobile */
-    }
-  }
-
   body {
     margin: 0;
     padding: 0;
@@ -332,69 +321,6 @@ layout: default
       --code-bg: #4b5563;
       --code-text: #e5e7eb;
       --success-color: #059669;
-    }
-  }
-
-  /* Responsive design */
-  @media (max-width: 1024px) {
-    body::before {
-      background-size: 150px 75px;
-    }
-
-    .book-container {
-      margin-left: auto;
-      /* Center on mobile */
-      margin-right: auto;
-      max-width: 95vw;
-    }
-
-    .book-pages {
-      flex-direction: column;
-    }
-
-    .book-page-left {
-      flex: 0 0 auto;
-      border-right: none;
-      border-bottom: 1px solid var(--page-border, #4a5568);
-      max-height: 25vh;
-      overflow-y: auto;
-      padding: 1rem;
-    }
-
-    .book-page-left h3 {
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .book-page-left ul {
-      font-size: 0.85rem;
-    }
-
-    .book-page-left li {
-      margin: 0.25rem 0;
-    }
-
-    .book-page-left .letters-preview h3 {
-      font-size: 0.9rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .book-page-left .tag-cloud {
-      font-size: 0.8rem;
-    }
-
-    .book-page-right {
-      flex: 1;
-    }
-
-    .book-spine {
-      display: none;
-    }
-
-    .book-container {
-      height: 95vh;
-      margin: 1rem auto;
-      /* Override the left margin on mobile */
     }
   }
 </style>
