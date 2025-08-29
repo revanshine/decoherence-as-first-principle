@@ -548,8 +548,11 @@ layout: default
         <script>
           (function () {
             function closeOverlay() {
+              console.log('Close button clicked!');
               try {
+                console.log('Sending close message to parent...');
                 parent.postMessage({ type: 'overlay:close' }, '*');
+                console.log('Message sent successfully');
               } catch (e) {
                 console.log('Could not send close message:', e);
               }
@@ -873,6 +876,7 @@ layout: default
 
     // Handle messages from iframe (for note loading and overlay close)
     window.addEventListener('message', function (event) {
+      console.log('Parent received message:', event.data);
       if (event.data.type === 'loadNote') {
         // Fetch the note HTML content and load it via srcdoc
         fetch(event.data.path)
