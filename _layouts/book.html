@@ -466,7 +466,7 @@ layout: default
       frame.removeAttribute('srcdoc');
       frame.src = originalManuscriptUrl;
       frame.style.display = 'block';
-      
+
       // Restore scroll position when manuscript loads
       frame.onload = function() {
         try {
@@ -679,11 +679,10 @@ layout: default
         }
 
         if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // Scroll within iframe only, don't affect parent
+          frame.contentWindow.scrollTo({ top: target.offsetTop, behavior: 'smooth' });
         } else {
           console.log('Could not find section:', section);
-          // Fallback: scroll to top
-          frame.contentWindow.scrollTo({ top: 0, behavior: 'smooth' });
         }
       } catch (error) {
         console.log('Could not scroll to section:', section, error);
@@ -800,7 +799,7 @@ layout: default
             notesHtml += `
           <div style="margin-bottom: 2rem; padding: 1.5rem; border: 1px solid #e5e7eb; border-radius: 8px; background: #f9fafb;">
             <h3 style="margin: 0; color: #1f2937;">
-              <a href="#" onclick="window.parent.postMessage({type: 'loadNote', path: '${note.path.replace('research/notes/', '/assets/notes/').replace('.md', '.html')}'}, '*')"
+              <a href="javascript:void(0)" onclick="console.log('Note clicked:', '${note.title}', 'Window pos:', window.parent.scrollX, window.parent.scrollY); window.parent.postMessage({type: 'loadNote', path: '${note.path.replace('research/notes/', '/assets/notes/').replace('.md', '.html')}'}, '*'); return false;"
                  style="color: #3b82f6; text-decoration: none; cursor: pointer;">
                 ${note.title}
               </a>
@@ -838,7 +837,13 @@ layout: default
             </div>
           `;
             frameView = 'overlay';
+
+            // Save window position to prevent jump
+            const savedX = window.scrollX;
+            const savedY = window.scrollY;
             frame.srcdoc = addOverlayControls(styledContent);
+            // Restore window position
+            window.scrollTo(savedX, savedY);
           })
           .catch(error => {
             console.error('Error loading note:', error);
