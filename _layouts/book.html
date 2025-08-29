@@ -687,6 +687,19 @@ layout: default
 
         const section = this.getAttribute('data-section');
 
+        // If we're in overlay mode, close it first and then navigate
+        if (frameView === 'overlay') {
+          restoreManuscript();
+          // Wait for manuscript to load, then scroll to section
+          frame.onload = function() {
+            setTimeout(() => {
+              scrollToSection(section);
+            }, 100);
+            frame.onload = null;
+          };
+          return;
+        }
+
         // Always ensure we're showing the manuscript first
         if (frame.src !== originalManuscriptUrl) {
           frameView = 'manuscript';
