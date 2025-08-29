@@ -441,7 +441,13 @@ layout: default
         <div class="research-notes">
           <h3>Research Notes</h3>
           <div class="tag-cloud">
-            <p><em>Tag cloud temporarily disabled for debugging</em></p>
+            {% if site.data['tag-cloud'] %}
+            {% for tag_data in site.data['tag-cloud'].tagCloud limit:20 %}
+            <span class="tag" data-weight="{{ tag_data.weight }}" data-tag-name="{{ tag_data.tag }}" style="font-size: {{ tag_data.weight | times: 0.2 | plus: 0.8 }}em; opacity: {{ tag_data.weight | times: 0.1 | plus: 0.6 }};">{{ tag_data.tag }}</span>
+            {% endfor %}
+            {% else %}
+            <p><em>Tag cloud will appear after build completes</em></p>
+            {% endif %}
           </div>
         </div>
 
