@@ -1,12 +1,12 @@
 {
-  "generated": "2025-08-29T05:56:03.684Z",
-  "totalNotes": 6,
-  "totalTags": 54,
+  "generated": "2025-09-05T03:49:18.498Z",
+  "totalNotes": 11,
+  "totalTags": 76,
   "tagCloud": [
     {
       "tag": "decoherence",
-      "weight": 8.6,
-      "count": 6,
+      "weight": 11.4,
+      "count": 10,
       "notes": [
         {
           "title": "Black Hole Host Galaxy Terminology",
@@ -14,9 +14,24 @@
           "path": "research/notes/Black Hole Host Galaxy Terminology.md"
         },
         {
+          "title": "Cosmological Decoherence and Super Hubble Modes",
+          "filename": "Cosmological Decoherence and Super-Hubble Modes.md",
+          "path": "research/notes/Cosmological Decoherence and Super-Hubble Modes.md"
+        },
+        {
           "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
           "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
           "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "Environmental Decoherence and Localization Length",
+          "filename": "Environmental Decoherence and Localization Length.md",
+          "path": "research/notes/Environmental Decoherence and Localization Length.md"
+        },
+        {
+          "title": "Gravity Linked Decoherence Models",
+          "filename": "Gravity-Linked Decoherence Models.md",
+          "path": "research/notes/Gravity-Linked Decoherence Models.md"
         },
         {
           "title": "Lindblad master equation",
@@ -37,44 +52,116 @@
           "title": "The Universe Learning Its Physical Laws",
           "filename": "The Universe Learning Its Physical Laws.md",
           "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "standard",
-      "weight": 4.9,
-      "count": 5,
-      "notes": [
-        {
-          "title": "Black Hole Host Galaxy Terminology",
-          "filename": "Black Hole Host Galaxy Terminology.md",
-          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
         },
         {
-          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
-        },
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        },
-        {
-          "title": "The M sigma Relation in Galaxy Formation",
-          "filename": "The M-sigma Relation in Galaxy Formation.md",
-          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
         }
       ]
     },
     {
       "tag": "coherence",
-      "weight": 3.9,
+      "weight": 7.8,
+      "count": 10,
+      "notes": [
+        {
+          "title": "Black Hole Host Galaxy Terminology",
+          "filename": "Black Hole Host Galaxy Terminology.md",
+          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
+        },
+        {
+          "title": "Cosmological Decoherence and Super Hubble Modes",
+          "filename": "Cosmological Decoherence and Super-Hubble Modes.md",
+          "path": "research/notes/Cosmological Decoherence and Super-Hubble Modes.md"
+        },
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "Environmental Decoherence and Localization Length",
+          "filename": "Environmental Decoherence and Localization Length.md",
+          "path": "research/notes/Environmental Decoherence and Localization Length.md"
+        },
+        {
+          "title": "Gravity Linked Decoherence Models",
+          "filename": "Gravity-Linked Decoherence Models.md",
+          "path": "research/notes/Gravity-Linked Decoherence Models.md"
+        },
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        },
+        {
+          "title": "Null Geodesics and Affine Parameters",
+          "filename": "Null Geodesics and Affine Parameters.md",
+          "path": "research/notes/Null Geodesics and Affine Parameters.md"
+        },
+        {
+          "title": "The M sigma Relation in Galaxy Formation",
+          "filename": "The M-sigma Relation in Galaxy Formation.md",
+          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "quantum",
+      "weight": 6.7,
+      "count": 7,
+      "notes": [
+        {
+          "title": "Cosmological Decoherence and Super Hubble Modes",
+          "filename": "Cosmological Decoherence and Super-Hubble Modes.md",
+          "path": "research/notes/Cosmological Decoherence and Super-Hubble Modes.md"
+        },
+        {
+          "title": "Environmental Decoherence and Localization Length",
+          "filename": "Environmental Decoherence and Localization Length.md",
+          "path": "research/notes/Environmental Decoherence and Localization Length.md"
+        },
+        {
+          "title": "Gravity Linked Decoherence Models",
+          "filename": "Gravity-Linked Decoherence Models.md",
+          "path": "research/notes/Gravity-Linked Decoherence Models.md"
+        },
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        },
+        {
+          "title": "Objective Collapse Models   GRW and CSL",
+          "filename": "Objective-Collapse Models - GRW and CSL.md",
+          "path": "research/notes/Objective-Collapse Models - GRW and CSL.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "observation",
+      "weight": 5.8,
       "count": 6,
       "notes": [
         {
@@ -83,105 +170,9 @@
           "path": "research/notes/Black Hole Host Galaxy Terminology.md"
         },
         {
-          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
-        },
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        },
-        {
-          "title": "Null Geodesics and Affine Parameters",
-          "filename": "Null Geodesics and Affine Parameters.md",
-          "path": "research/notes/Null Geodesics and Affine Parameters.md"
-        },
-        {
-          "title": "The M sigma Relation in Galaxy Formation",
-          "filename": "The M-sigma Relation in Galaxy Formation.md",
-          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "evolution",
-      "weight": 3.7,
-      "count": 5,
-      "notes": [
-        {
-          "title": "Black Hole Host Galaxy Terminology",
-          "filename": "Black Hole Host Galaxy Terminology.md",
-          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
-        },
-        {
-          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
-        },
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        },
-        {
-          "title": "The M sigma Relation in Galaxy Formation",
-          "filename": "The M-sigma Relation in Galaxy Formation.md",
-          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "fundamental",
-      "weight": 3.2,
-      "count": 5,
-      "notes": [
-        {
-          "title": "Black Hole Host Galaxy Terminology",
-          "filename": "Black Hole Host Galaxy Terminology.md",
-          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
-        },
-        {
-          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
-        },
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        },
-        {
-          "title": "The M sigma Relation in Galaxy Formation",
-          "filename": "The M-sigma Relation in Galaxy Formation.md",
-          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "black hole",
-      "weight": 3.1,
-      "count": 4,
-      "notes": [
-        {
-          "title": "Black Hole Host Galaxy Terminology",
-          "filename": "Black Hole Host Galaxy Terminology.md",
-          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
+          "title": "Cosmological Decoherence and Super Hubble Modes",
+          "filename": "Cosmological Decoherence and Super-Hubble Modes.md",
+          "path": "research/notes/Cosmological Decoherence and Super-Hubble Modes.md"
         },
         {
           "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
@@ -197,145 +188,18 @@
           "title": "The Universe Learning Its Physical Laws",
           "filename": "The Universe Learning Its Physical Laws.md",
           "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "mass",
-      "weight": 2.9,
-      "count": 4,
-      "notes": [
-        {
-          "title": "Black Hole Host Galaxy Terminology",
-          "filename": "Black Hole Host Galaxy Terminology.md",
-          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
         },
         {
-          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
-        },
-        {
-          "title": "Null Geodesics and Affine Parameters",
-          "filename": "Null Geodesics and Affine Parameters.md",
-          "path": "research/notes/Null Geodesics and Affine Parameters.md"
-        },
-        {
-          "title": "The M sigma Relation in Galaxy Formation",
-          "filename": "The M-sigma Relation in Galaxy Formation.md",
-          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
-        }
-      ]
-    },
-    {
-      "tag": "interaction",
-      "weight": 2.9,
-      "count": 3,
-      "notes": [
-        {
-          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
-        },
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "stellar",
-      "weight": 2.8,
-      "count": 3,
-      "notes": [
-        {
-          "title": "Black Hole Host Galaxy Terminology",
-          "filename": "Black Hole Host Galaxy Terminology.md",
-          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
-        },
-        {
-          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
-        },
-        {
-          "title": "The M sigma Relation in Galaxy Formation",
-          "filename": "The M-sigma Relation in Galaxy Formation.md",
-          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
-        }
-      ]
-    },
-    {
-      "tag": "cosmology",
-      "weight": 2.8,
-      "count": 3,
-      "notes": [
-        {
-          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
-        },
-        {
-          "title": "The M sigma Relation in Galaxy Formation",
-          "filename": "The M-sigma Relation in Galaxy Formation.md",
-          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "quantum",
-      "weight": 2.8,
-      "count": 2,
-      "notes": [
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "mathematics",
-      "weight": 2.8,
-      "count": 3,
-      "notes": [
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        },
-        {
-          "title": "Null Geodesics and Affine Parameters",
-          "filename": "Null Geodesics and Affine Parameters.md",
-          "path": "research/notes/Null Geodesics and Affine Parameters.md"
-        },
-        {
-          "title": "The M sigma Relation in Galaxy Formation",
-          "filename": "The M-sigma Relation in Galaxy Formation.md",
-          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
         }
       ]
     },
     {
       "tag": "model",
-      "weight": 2.6,
-      "count": 4,
+      "weight": 5.7,
+      "count": 8,
       "notes": [
         {
           "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
@@ -343,9 +207,93 @@
           "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
         },
         {
+          "title": "Environmental Decoherence and Localization Length",
+          "filename": "Environmental Decoherence and Localization Length.md",
+          "path": "research/notes/Environmental Decoherence and Localization Length.md"
+        },
+        {
+          "title": "Gravity Linked Decoherence Models",
+          "filename": "Gravity-Linked Decoherence Models.md",
+          "path": "research/notes/Gravity-Linked Decoherence Models.md"
+        },
+        {
           "title": "Lindblad master equation",
           "filename": "Lindblad master equation.md",
           "path": "research/notes/Lindblad master equation.md"
+        },
+        {
+          "title": "Objective Collapse Models   GRW and CSL",
+          "filename": "Objective-Collapse Models - GRW and CSL.md",
+          "path": "research/notes/Objective-Collapse Models - GRW and CSL.md"
+        },
+        {
+          "title": "The M sigma Relation in Galaxy Formation",
+          "filename": "The M-sigma Relation in Galaxy Formation.md",
+          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "collapse",
+      "weight": 4.9,
+      "count": 6,
+      "notes": [
+        {
+          "title": "Cosmological Decoherence and Super Hubble Modes",
+          "filename": "Cosmological Decoherence and Super-Hubble Modes.md",
+          "path": "research/notes/Cosmological Decoherence and Super-Hubble Modes.md"
+        },
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "Gravity Linked Decoherence Models",
+          "filename": "Gravity-Linked Decoherence Models.md",
+          "path": "research/notes/Gravity-Linked Decoherence Models.md"
+        },
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        },
+        {
+          "title": "Objective Collapse Models   GRW and CSL",
+          "filename": "Objective-Collapse Models - GRW and CSL.md",
+          "path": "research/notes/Objective-Collapse Models - GRW and CSL.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "black hole",
+      "weight": 4.8,
+      "count": 4,
+      "notes": [
+        {
+          "title": "Black Hole Host Galaxy Terminology",
+          "filename": "Black Hole Host Galaxy Terminology.md",
+          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
+        },
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
         },
         {
           "title": "The M sigma Relation in Galaxy Formation",
@@ -361,9 +309,24 @@
     },
     {
       "tag": "theory",
-      "weight": 2.5,
-      "count": 3,
+      "weight": 4.8,
+      "count": 7,
       "notes": [
+        {
+          "title": "Cosmological Decoherence and Super Hubble Modes",
+          "filename": "Cosmological Decoherence and Super-Hubble Modes.md",
+          "path": "research/notes/Cosmological Decoherence and Super-Hubble Modes.md"
+        },
+        {
+          "title": "Environmental Decoherence and Localization Length",
+          "filename": "Environmental Decoherence and Localization Length.md",
+          "path": "research/notes/Environmental Decoherence and Localization Length.md"
+        },
+        {
+          "title": "Gravity Linked Decoherence Models",
+          "filename": "Gravity-Linked Decoherence Models.md",
+          "path": "research/notes/Gravity-Linked Decoherence Models.md"
+        },
         {
           "title": "Null Geodesics and Affine Parameters",
           "filename": "Null Geodesics and Affine Parameters.md",
@@ -378,12 +341,772 @@
           "title": "The Universe Learning Its Physical Laws",
           "filename": "The Universe Learning Its Physical Laws.md",
           "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
         }
       ]
     },
     {
-      "tag": "observation",
+      "tag": "equation",
+      "weight": 4.5,
+      "count": 6,
+      "notes": [
+        {
+          "title": "Cosmological Decoherence and Super Hubble Modes",
+          "filename": "Cosmological Decoherence and Super-Hubble Modes.md",
+          "path": "research/notes/Cosmological Decoherence and Super-Hubble Modes.md"
+        },
+        {
+          "title": "Environmental Decoherence and Localization Length",
+          "filename": "Environmental Decoherence and Localization Length.md",
+          "path": "research/notes/Environmental Decoherence and Localization Length.md"
+        },
+        {
+          "title": "Gravity Linked Decoherence Models",
+          "filename": "Gravity-Linked Decoherence Models.md",
+          "path": "research/notes/Gravity-Linked Decoherence Models.md"
+        },
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        },
+        {
+          "title": "Null Geodesics and Affine Parameters",
+          "filename": "Null Geodesics and Affine Parameters.md",
+          "path": "research/notes/Null Geodesics and Affine Parameters.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "evolution",
+      "weight": 4.4,
+      "count": 7,
+      "notes": [
+        {
+          "title": "Black Hole Host Galaxy Terminology",
+          "filename": "Black Hole Host Galaxy Terminology.md",
+          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
+        },
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "Gravity Linked Decoherence Models",
+          "filename": "Gravity-Linked Decoherence Models.md",
+          "path": "research/notes/Gravity-Linked Decoherence Models.md"
+        },
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        },
+        {
+          "title": "The M sigma Relation in Galaxy Formation",
+          "filename": "The M-sigma Relation in Galaxy Formation.md",
+          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "standard",
+      "weight": 4.3,
+      "count": 7,
+      "notes": [
+        {
+          "title": "Black Hole Host Galaxy Terminology",
+          "filename": "Black Hole Host Galaxy Terminology.md",
+          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
+        },
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        },
+        {
+          "title": "Objective Collapse Models   GRW and CSL",
+          "filename": "Objective-Collapse Models - GRW and CSL.md",
+          "path": "research/notes/Objective-Collapse Models - GRW and CSL.md"
+        },
+        {
+          "title": "The M sigma Relation in Galaxy Formation",
+          "filename": "The M-sigma Relation in Galaxy Formation.md",
+          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "action",
+      "weight": 4.3,
+      "count": 5,
+      "notes": [
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "Environmental Decoherence and Localization Length",
+          "filename": "Environmental Decoherence and Localization Length.md",
+          "path": "research/notes/Environmental Decoherence and Localization Length.md"
+        },
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "cosmology",
+      "weight": 4.2,
+      "count": 4,
+      "notes": [
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "The M sigma Relation in Galaxy Formation",
+          "filename": "The M-sigma Relation in Galaxy Formation.md",
+          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "calculus",
+      "weight": 4.1,
+      "count": 6,
+      "notes": [
+        {
+          "title": "Cosmological Decoherence and Super Hubble Modes",
+          "filename": "Cosmological Decoherence and Super-Hubble Modes.md",
+          "path": "research/notes/Cosmological Decoherence and Super-Hubble Modes.md"
+        },
+        {
+          "title": "Environmental Decoherence and Localization Length",
+          "filename": "Environmental Decoherence and Localization Length.md",
+          "path": "research/notes/Environmental Decoherence and Localization Length.md"
+        },
+        {
+          "title": "Gravity Linked Decoherence Models",
+          "filename": "Gravity-Linked Decoherence Models.md",
+          "path": "research/notes/Gravity-Linked Decoherence Models.md"
+        },
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        },
+        {
+          "title": "Null Geodesics and Affine Parameters",
+          "filename": "Null Geodesics and Affine Parameters.md",
+          "path": "research/notes/Null Geodesics and Affine Parameters.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "wave",
+      "weight": 4,
+      "count": 7,
+      "notes": [
+        {
+          "title": "Black Hole Host Galaxy Terminology",
+          "filename": "Black Hole Host Galaxy Terminology.md",
+          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
+        },
+        {
+          "title": "Cosmological Decoherence and Super Hubble Modes",
+          "filename": "Cosmological Decoherence and Super-Hubble Modes.md",
+          "path": "research/notes/Cosmological Decoherence and Super-Hubble Modes.md"
+        },
+        {
+          "title": "Environmental Decoherence and Localization Length",
+          "filename": "Environmental Decoherence and Localization Length.md",
+          "path": "research/notes/Environmental Decoherence and Localization Length.md"
+        },
+        {
+          "title": "Gravity Linked Decoherence Models",
+          "filename": "Gravity-Linked Decoherence Models.md",
+          "path": "research/notes/Gravity-Linked Decoherence Models.md"
+        },
+        {
+          "title": "Objective Collapse Models   GRW and CSL",
+          "filename": "Objective-Collapse Models - GRW and CSL.md",
+          "path": "research/notes/Objective-Collapse Models - GRW and CSL.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "mathematics",
+      "weight": 3.7,
+      "count": 6,
+      "notes": [
+        {
+          "title": "Environmental Decoherence and Localization Length",
+          "filename": "Environmental Decoherence and Localization Length.md",
+          "path": "research/notes/Environmental Decoherence and Localization Length.md"
+        },
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        },
+        {
+          "title": "Null Geodesics and Affine Parameters",
+          "filename": "Null Geodesics and Affine Parameters.md",
+          "path": "research/notes/Null Geodesics and Affine Parameters.md"
+        },
+        {
+          "title": "Objective Collapse Models   GRW and CSL",
+          "filename": "Objective-Collapse Models - GRW and CSL.md",
+          "path": "research/notes/Objective-Collapse Models - GRW and CSL.md"
+        },
+        {
+          "title": "The M sigma Relation in Galaxy Formation",
+          "filename": "The M-sigma Relation in Galaxy Formation.md",
+          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "field",
+      "weight": 3.4,
+      "count": 4,
+      "notes": [
+        {
+          "title": "Cosmological Decoherence and Super Hubble Modes",
+          "filename": "Cosmological Decoherence and Super-Hubble Modes.md",
+          "path": "research/notes/Cosmological Decoherence and Super-Hubble Modes.md"
+        },
+        {
+          "title": "Environmental Decoherence and Localization Length",
+          "filename": "Environmental Decoherence and Localization Length.md",
+          "path": "research/notes/Environmental Decoherence and Localization Length.md"
+        },
+        {
+          "title": "Gravity Linked Decoherence Models",
+          "filename": "Gravity-Linked Decoherence Models.md",
+          "path": "research/notes/Gravity-Linked Decoherence Models.md"
+        },
+        {
+          "title": "Objective Collapse Models   GRW and CSL",
+          "filename": "Objective-Collapse Models - GRW and CSL.md",
+          "path": "research/notes/Objective-Collapse Models - GRW and CSL.md"
+        }
+      ]
+    },
+    {
+      "tag": "fundamental",
+      "weight": 3.2,
+      "count": 6,
+      "notes": [
+        {
+          "title": "Black Hole Host Galaxy Terminology",
+          "filename": "Black Hole Host Galaxy Terminology.md",
+          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
+        },
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        },
+        {
+          "title": "The M sigma Relation in Galaxy Formation",
+          "filename": "The M-sigma Relation in Galaxy Formation.md",
+          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "interference",
+      "weight": 3.2,
+      "count": 4,
+      "notes": [
+        {
+          "title": "Environmental Decoherence and Localization Length",
+          "filename": "Environmental Decoherence and Localization Length.md",
+          "path": "research/notes/Environmental Decoherence and Localization Length.md"
+        },
+        {
+          "title": "Gravity Linked Decoherence Models",
+          "filename": "Gravity-Linked Decoherence Models.md",
+          "path": "research/notes/Gravity-Linked Decoherence Models.md"
+        },
+        {
+          "title": "Objective Collapse Models   GRW and CSL",
+          "filename": "Objective-Collapse Models - GRW and CSL.md",
+          "path": "research/notes/Objective-Collapse Models - GRW and CSL.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "mass",
+      "weight": 3.1,
+      "count": 6,
+      "notes": [
+        {
+          "title": "Black Hole Host Galaxy Terminology",
+          "filename": "Black Hole Host Galaxy Terminology.md",
+          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
+        },
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "Gravity Linked Decoherence Models",
+          "filename": "Gravity-Linked Decoherence Models.md",
+          "path": "research/notes/Gravity-Linked Decoherence Models.md"
+        },
+        {
+          "title": "Null Geodesics and Affine Parameters",
+          "filename": "Null Geodesics and Affine Parameters.md",
+          "path": "research/notes/Null Geodesics and Affine Parameters.md"
+        },
+        {
+          "title": "The M sigma Relation in Galaxy Formation",
+          "filename": "The M-sigma Relation in Galaxy Formation.md",
+          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "superposition",
+      "weight": 3.1,
+      "count": 5,
+      "notes": [
+        {
+          "title": "Gravity Linked Decoherence Models",
+          "filename": "Gravity-Linked Decoherence Models.md",
+          "path": "research/notes/Gravity-Linked Decoherence Models.md"
+        },
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        },
+        {
+          "title": "Objective Collapse Models   GRW and CSL",
+          "filename": "Objective-Collapse Models - GRW and CSL.md",
+          "path": "research/notes/Objective-Collapse Models - GRW and CSL.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "prediction",
+      "weight": 2.9,
+      "count": 3,
+      "notes": [
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "Gravity Linked Decoherence Models",
+          "filename": "Gravity-Linked Decoherence Models.md",
+          "path": "research/notes/Gravity-Linked Decoherence Models.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "dynamics",
+      "weight": 2.7,
+      "count": 4,
+      "notes": [
+        {
+          "title": "Cosmological Decoherence and Super Hubble Modes",
+          "filename": "Cosmological Decoherence and Super-Hubble Modes.md",
+          "path": "research/notes/Cosmological Decoherence and Super-Hubble Modes.md"
+        },
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "constraint",
+      "weight": 2.7,
+      "count": 5,
+      "notes": [
+        {
+          "title": "Gravity Linked Decoherence Models",
+          "filename": "Gravity-Linked Decoherence Models.md",
+          "path": "research/notes/Gravity-Linked Decoherence Models.md"
+        },
+        {
+          "title": "Objective Collapse Models   GRW and CSL",
+          "filename": "Objective-Collapse Models - GRW and CSL.md",
+          "path": "research/notes/Objective-Collapse Models - GRW and CSL.md"
+        },
+        {
+          "title": "The M sigma Relation in Galaxy Formation",
+          "filename": "The M-sigma Relation in Galaxy Formation.md",
+          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "density",
+      "weight": 2.6,
+      "count": 5,
+      "notes": [
+        {
+          "title": "Cosmological Decoherence and Super Hubble Modes",
+          "filename": "Cosmological Decoherence and Super-Hubble Modes.md",
+          "path": "research/notes/Cosmological Decoherence and Super-Hubble Modes.md"
+        },
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "Environmental Decoherence and Localization Length",
+          "filename": "Environmental Decoherence and Localization Length.md",
+          "path": "research/notes/Environmental Decoherence and Localization Length.md"
+        },
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "interaction",
+      "weight": 2.6,
+      "count": 5,
+      "notes": [
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "Environmental Decoherence and Localization Length",
+          "filename": "Environmental Decoherence and Localization Length.md",
+          "path": "research/notes/Environmental Decoherence and Localization Length.md"
+        },
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "experiment",
+      "weight": 2.6,
+      "count": 3,
+      "notes": [
+        {
+          "title": "Gravity Linked Decoherence Models",
+          "filename": "Gravity-Linked Decoherence Models.md",
+          "path": "research/notes/Gravity-Linked Decoherence Models.md"
+        },
+        {
+          "title": "Objective Collapse Models   GRW and CSL",
+          "filename": "Objective-Collapse Models - GRW and CSL.md",
+          "path": "research/notes/Objective-Collapse Models - GRW and CSL.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "beyond",
+      "weight": 2.6,
+      "count": 3,
+      "notes": [
+        {
+          "title": "Gravity Linked Decoherence Models",
+          "filename": "Gravity-Linked Decoherence Models.md",
+          "path": "research/notes/Gravity-Linked Decoherence Models.md"
+        },
+        {
+          "title": "Objective Collapse Models   GRW and CSL",
+          "filename": "Objective-Collapse Models - GRW and CSL.md",
+          "path": "research/notes/Objective-Collapse Models - GRW and CSL.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "information",
+      "weight": 2.6,
+      "count": 3,
+      "notes": [
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        },
+        {
+          "title": "Null Geodesics and Affine Parameters",
+          "filename": "Null Geodesics and Affine Parameters.md",
+          "path": "research/notes/Null Geodesics and Affine Parameters.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        }
+      ]
+    },
+    {
+      "tag": "gravity",
+      "weight": 2.4,
+      "count": 3,
+      "notes": [
+        {
+          "title": "Cosmological Decoherence and Super Hubble Modes",
+          "filename": "Cosmological Decoherence and Super-Hubble Modes.md",
+          "path": "research/notes/Cosmological Decoherence and Super-Hubble Modes.md"
+        },
+        {
+          "title": "Gravity Linked Decoherence Models",
+          "filename": "Gravity-Linked Decoherence Models.md",
+          "path": "research/notes/Gravity-Linked Decoherence Models.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "particle",
+      "weight": 2.4,
+      "count": 3,
+      "notes": [
+        {
+          "title": "Null Geodesics and Affine Parameters",
+          "filename": "Null Geodesics and Affine Parameters.md",
+          "path": "research/notes/Null Geodesics and Affine Parameters.md"
+        },
+        {
+          "title": "Objective Collapse Models   GRW and CSL",
+          "filename": "Objective-Collapse Models - GRW and CSL.md",
+          "path": "research/notes/Objective-Collapse Models - GRW and CSL.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "universe",
+      "weight": 2.3,
+      "count": 3,
+      "notes": [
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "measurement",
       "weight": 2.2,
+      "count": 3,
+      "notes": [
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        },
+        {
+          "title": "Objective Collapse Models   GRW and CSL",
+          "filename": "Objective-Collapse Models - GRW and CSL.md",
+          "path": "research/notes/Objective-Collapse Models - GRW and CSL.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "matter",
+      "weight": 2.1,
       "count": 4,
       "notes": [
         {
@@ -397,290 +1120,76 @@
           "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
         },
         {
-          "title": "The M sigma Relation in Galaxy Formation",
-          "filename": "The M-sigma Relation in Galaxy Formation.md",
-          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
+          "title": "Objective Collapse Models   GRW and CSL",
+          "filename": "Objective-Collapse Models - GRW and CSL.md",
+          "path": "research/notes/Objective-Collapse Models - GRW and CSL.md"
         },
         {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
         }
       ]
     },
     {
-      "tag": "galaxy",
-      "weight": 2.1,
+      "tag": "effective",
+      "weight": 1.9,
       "count": 3,
       "notes": [
         {
-          "title": "Black Hole Host Galaxy Terminology",
-          "filename": "Black Hole Host Galaxy Terminology.md",
-          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
+          "title": "Cosmological Decoherence and Super Hubble Modes",
+          "filename": "Cosmological Decoherence and Super-Hubble Modes.md",
+          "path": "research/notes/Cosmological Decoherence and Super-Hubble Modes.md"
         },
         {
-          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+          "title": "Gravity Linked Decoherence Models",
+          "filename": "Gravity-Linked Decoherence Models.md",
+          "path": "research/notes/Gravity-Linked Decoherence Models.md"
         },
         {
-          "title": "The M sigma Relation in Galaxy Formation",
-          "filename": "The M-sigma Relation in Galaxy Formation.md",
-          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
         }
       ]
     },
     {
-      "tag": "information",
-      "weight": 2.1,
-      "count": 3,
-      "notes": [
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        },
-        {
-          "title": "Null Geodesics and Affine Parameters",
-          "filename": "Null Geodesics and Affine Parameters.md",
-          "path": "research/notes/Null Geodesics and Affine Parameters.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "action",
-      "weight": 2,
-      "count": 3,
-      "notes": [
-        {
-          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
-        },
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "constraint",
-      "weight": 2,
-      "count": 2,
-      "notes": [
-        {
-          "title": "The M sigma Relation in Galaxy Formation",
-          "filename": "The M-sigma Relation in Galaxy Formation.md",
-          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "dynamics",
+      "tag": "entropy",
       "weight": 1.9,
       "count": 2,
       "notes": [
         {
-          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+          "title": "Cosmological Decoherence and Super Hubble Modes",
+          "filename": "Cosmological Decoherence and Super-Hubble Modes.md",
+          "path": "research/notes/Cosmological Decoherence and Super-Hubble Modes.md"
         },
         {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
         }
       ]
     },
     {
-      "tag": "density",
-      "weight": 1.8,
+      "tag": "spectrum",
+      "weight": 1.9,
       "count": 2,
       "notes": [
         {
-          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+          "title": "Cosmological Decoherence and Super Hubble Modes",
+          "filename": "Cosmological Decoherence and Super-Hubble Modes.md",
+          "path": "research/notes/Cosmological Decoherence and Super-Hubble Modes.md"
         },
         {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        }
-      ]
-    },
-    {
-      "tag": "superposition",
-      "weight": 1.7,
-      "count": 2,
-      "notes": [
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "dark",
-      "weight": 1.5,
-      "count": 2,
-      "notes": [
-        {
-          "title": "Black Hole Host Galaxy Terminology",
-          "filename": "Black Hole Host Galaxy Terminology.md",
-          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
-        },
-        {
-          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
-        }
-      ]
-    },
-    {
-      "tag": "spacetime",
-      "weight": 1.5,
-      "count": 2,
-      "notes": [
-        {
-          "title": "Null Geodesics and Affine Parameters",
-          "filename": "Null Geodesics and Affine Parameters.md",
-          "path": "research/notes/Null Geodesics and Affine Parameters.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "matter",
-      "weight": 1.3,
-      "count": 2,
-      "notes": [
-        {
-          "title": "Black Hole Host Galaxy Terminology",
-          "filename": "Black Hole Host Galaxy Terminology.md",
-          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
-        },
-        {
-          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
-        }
-      ]
-    },
-    {
-      "tag": "universe",
-      "weight": 1.3,
-      "count": 2,
-      "notes": [
-        {
-          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "cosmic",
-      "weight": 1.3,
-      "count": 2,
-      "notes": [
-        {
-          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "equation",
-      "weight": 1.3,
-      "count": 2,
-      "notes": [
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        },
-        {
-          "title": "Null Geodesics and Affine Parameters",
-          "filename": "Null Geodesics and Affine Parameters.md",
-          "path": "research/notes/Null Geodesics and Affine Parameters.md"
-        }
-      ]
-    },
-    {
-      "tag": "wave",
-      "weight": 1.2,
-      "count": 2,
-      "notes": [
-        {
-          "title": "Black Hole Host Galaxy Terminology",
-          "filename": "Black Hole Host Galaxy Terminology.md",
-          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
-        },
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
-        }
-      ]
-    },
-    {
-      "tag": "calculus",
-      "weight": 1.1,
-      "count": 2,
-      "notes": [
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
-        },
-        {
-          "title": "Null Geodesics and Affine Parameters",
-          "filename": "Null Geodesics and Affine Parameters.md",
-          "path": "research/notes/Null Geodesics and Affine Parameters.md"
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
         }
       ]
     },
     {
       "tag": "velocity",
-      "weight": 1,
+      "weight": 1.8,
       "count": 2,
       "notes": [
         {
@@ -696,14 +1205,31 @@
       ]
     },
     {
-      "tag": "collapse",
-      "weight": 1,
+      "tag": "luminosity",
+      "weight": 1.8,
       "count": 2,
       "notes": [
         {
-          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+          "title": "Black Hole Host Galaxy Terminology",
+          "filename": "Black Hole Host Galaxy Terminology.md",
+          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
+        },
+        {
+          "title": "Objective Collapse Models   GRW and CSL",
+          "filename": "Objective-Collapse Models - GRW and CSL.md",
+          "path": "research/notes/Objective-Collapse Models - GRW and CSL.md"
+        }
+      ]
+    },
+    {
+      "tag": "entanglement",
+      "weight": 1.8,
+      "count": 2,
+      "notes": [
+        {
+          "title": "Environmental Decoherence and Localization Length",
+          "filename": "Environmental Decoherence and Localization Length.md",
+          "path": "research/notes/Environmental Decoherence and Localization Length.md"
         },
         {
           "title": "Lindblad master equation",
@@ -713,14 +1239,294 @@
       ]
     },
     {
+      "tag": "spacetime",
+      "weight": 1.8,
+      "count": 2,
+      "notes": [
+        {
+          "title": "Null Geodesics and Affine Parameters",
+          "filename": "Null Geodesics and Affine Parameters.md",
+          "path": "research/notes/Null Geodesics and Affine Parameters.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        }
+      ]
+    },
+    {
+      "tag": "stellar",
+      "weight": 1.7,
+      "count": 3,
+      "notes": [
+        {
+          "title": "Black Hole Host Galaxy Terminology",
+          "filename": "Black Hole Host Galaxy Terminology.md",
+          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
+        },
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "The M sigma Relation in Galaxy Formation",
+          "filename": "The M-sigma Relation in Galaxy Formation.md",
+          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
+        }
+      ]
+    },
+    {
+      "tag": "strong",
+      "weight": 1.7,
+      "count": 2,
+      "notes": [
+        {
+          "title": "Environmental Decoherence and Localization Length",
+          "filename": "Environmental Decoherence and Localization Length.md",
+          "path": "research/notes/Environmental Decoherence and Localization Length.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "mechanics",
+      "weight": 1.7,
+      "count": 2,
+      "notes": [
+        {
+          "title": "Objective Collapse Models   GRW and CSL",
+          "filename": "Objective-Collapse Models - GRW and CSL.md",
+          "path": "research/notes/Objective-Collapse Models - GRW and CSL.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "galaxy",
+      "weight": 1.6,
+      "count": 3,
+      "notes": [
+        {
+          "title": "Black Hole Host Galaxy Terminology",
+          "filename": "Black Hole Host Galaxy Terminology.md",
+          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
+        },
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "The M sigma Relation in Galaxy Formation",
+          "filename": "The M-sigma Relation in Galaxy Formation.md",
+          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
+        }
+      ]
+    },
+    {
       "tag": "inflation",
-      "weight": 0.9,
-      "count": 1,
+      "weight": 1.6,
+      "count": 3,
+      "notes": [
+        {
+          "title": "Cosmological Decoherence and Super Hubble Modes",
+          "filename": "Cosmological Decoherence and Super-Hubble Modes.md",
+          "path": "research/notes/Cosmological Decoherence and Super-Hubble Modes.md"
+        },
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "cosmic",
+      "weight": 1.6,
+      "count": 2,
       "notes": [
         {
           "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
           "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
           "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        },
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        }
+      ]
+    },
+    {
+      "tag": "energy",
+      "weight": 1.6,
+      "count": 2,
+      "notes": [
+        {
+          "title": "Gravity Linked Decoherence Models",
+          "filename": "Gravity-Linked Decoherence Models.md",
+          "path": "research/notes/Gravity-Linked Decoherence Models.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "wavelength",
+      "weight": 1.5,
+      "count": 3,
+      "notes": [
+        {
+          "title": "Black Hole Host Galaxy Terminology",
+          "filename": "Black Hole Host Galaxy Terminology.md",
+          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
+        },
+        {
+          "title": "Cosmological Decoherence and Super Hubble Modes",
+          "filename": "Cosmological Decoherence and Super-Hubble Modes.md",
+          "path": "research/notes/Cosmological Decoherence and Super-Hubble Modes.md"
+        },
+        {
+          "title": "Gravity Linked Decoherence Models",
+          "filename": "Gravity-Linked Decoherence Models.md",
+          "path": "research/notes/Gravity-Linked Decoherence Models.md"
+        }
+      ]
+    },
+    {
+      "tag": "horizon",
+      "weight": 1.4,
+      "count": 2,
+      "notes": [
+        {
+          "title": "Cosmological Decoherence and Super Hubble Modes",
+          "filename": "Cosmological Decoherence and Super-Hubble Modes.md",
+          "path": "research/notes/Cosmological Decoherence and Super-Hubble Modes.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "bound",
+      "weight": 1.4,
+      "count": 2,
+      "notes": [
+        {
+          "title": "Objective Collapse Models   GRW and CSL",
+          "filename": "Objective-Collapse Models - GRW and CSL.md",
+          "path": "research/notes/Objective-Collapse Models - GRW and CSL.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "dark",
+      "weight": 1.3,
+      "count": 2,
+      "notes": [
+        {
+          "title": "Black Hole Host Galaxy Terminology",
+          "filename": "Black Hole Host Galaxy Terminology.md",
+          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
+        },
+        {
+          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
+          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
+          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+        }
+      ]
+    },
+    {
+      "tag": "phenomenology",
+      "weight": 1.3,
+      "count": 2,
+      "notes": [
+        {
+          "title": "Gravity Linked Decoherence Models",
+          "filename": "Gravity-Linked Decoherence Models.md",
+          "path": "research/notes/Gravity-Linked Decoherence Models.md"
+        },
+        {
+          "title": "Objective Collapse Models   GRW and CSL",
+          "filename": "Objective-Collapse Models - GRW and CSL.md",
+          "path": "research/notes/Objective-Collapse Models - GRW and CSL.md"
+        }
+      ]
+    },
+    {
+      "tag": "pressure",
+      "weight": 1.3,
+      "count": 2,
+      "notes": [
+        {
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "weak",
+      "weight": 1,
+      "count": 2,
+      "notes": [
+        {
+          "title": "Cosmological Decoherence and Super Hubble Modes",
+          "filename": "Cosmological Decoherence and Super-Hubble Modes.md",
+          "path": "research/notes/Cosmological Decoherence and Super-Hubble Modes.md"
+        },
+        {
+          "title": "Gravity Linked Decoherence Models",
+          "filename": "Gravity-Linked Decoherence Models.md",
+          "path": "research/notes/Gravity-Linked Decoherence Models.md"
+        }
+      ]
+    },
+    {
+      "tag": "temperature",
+      "weight": 1,
+      "count": 2,
+      "notes": [
+        {
+          "title": "Environmental Decoherence and Localization Length",
+          "filename": "Environmental Decoherence and Localization Length.md",
+          "path": "research/notes/Environmental Decoherence and Localization Length.md"
+        },
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
         }
       ]
     },
@@ -737,20 +1543,8 @@
       ]
     },
     {
-      "tag": "particle",
+      "tag": "algebra",
       "weight": 0.9,
-      "count": 1,
-      "notes": [
-        {
-          "title": "Null Geodesics and Affine Parameters",
-          "filename": "Null Geodesics and Affine Parameters.md",
-          "path": "research/notes/Null Geodesics and Affine Parameters.md"
-        }
-      ]
-    },
-    {
-      "tag": "thermodynamics",
-      "weight": 0.8,
       "count": 1,
       "notes": [
         {
@@ -761,20 +1555,20 @@
       ]
     },
     {
-      "tag": "geodesic",
-      "weight": 0.8,
+      "tag": "force",
+      "weight": 0.9,
       "count": 1,
       "notes": [
         {
-          "title": "Null Geodesics and Affine Parameters",
-          "filename": "Null Geodesics and Affine Parameters.md",
-          "path": "research/notes/Null Geodesics and Affine Parameters.md"
+          "title": "The Universe Learning Its Physical Laws",
+          "filename": "The Universe Learning Its Physical Laws.md",
+          "path": "research/notes/The Universe Learning Its Physical Laws.md"
         }
       ]
     },
     {
       "tag": "symmetry",
-      "weight": 0.8,
+      "weight": 0.9,
       "count": 1,
       "notes": [
         {
@@ -785,43 +1579,91 @@
       ]
     },
     {
-      "tag": "pressure",
+      "tag": "radiation",
       "weight": 0.8,
       "count": 1,
       "notes": [
         {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
+          "title": "Environmental Decoherence and Localization Length",
+          "filename": "Environmental Decoherence and Localization Length.md",
+          "path": "research/notes/Environmental Decoherence and Localization Length.md"
         }
       ]
     },
     {
-      "tag": "hamiltonian",
-      "weight": 0.7,
+      "tag": "redshift",
+      "weight": 0.8,
       "count": 1,
       "notes": [
         {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
+          "title": "Gravity Linked Decoherence Models",
+          "filename": "Gravity-Linked Decoherence Models.md",
+          "path": "research/notes/Gravity-Linked Decoherence Models.md"
         }
       ]
     },
     {
-      "tag": "algebra",
-      "weight": 0.7,
+      "tag": "momentum",
+      "weight": 0.8,
       "count": 1,
       "notes": [
         {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
+          "title": "Null Geodesics and Affine Parameters",
+          "filename": "Null Geodesics and Affine Parameters.md",
+          "path": "research/notes/Null Geodesics and Affine Parameters.md"
         }
       ]
     },
     {
       "tag": "statistical",
+      "weight": 0.8,
+      "count": 1,
+      "notes": [
+        {
+          "title": "The M sigma Relation in Galaxy Formation",
+          "filename": "The M-sigma Relation in Galaxy Formation.md",
+          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
+        }
+      ]
+    },
+    {
+      "tag": "limit",
+      "weight": 0.8,
+      "count": 1,
+      "notes": [
+        {
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
+        }
+      ]
+    },
+    {
+      "tag": "curvature",
+      "weight": 0.7,
+      "count": 1,
+      "notes": [
+        {
+          "title": "Null Geodesics and Affine Parameters",
+          "filename": "Null Geodesics and Affine Parameters.md",
+          "path": "research/notes/Null Geodesics and Affine Parameters.md"
+        }
+      ]
+    },
+    {
+      "tag": "photon",
+      "weight": 0.7,
+      "count": 1,
+      "notes": [
+        {
+          "title": "Null Geodesics and Affine Parameters",
+          "filename": "Null Geodesics and Affine Parameters.md",
+          "path": "research/notes/Null Geodesics and Affine Parameters.md"
+        }
+      ]
+    },
+    {
+      "tag": "alternative",
       "weight": 0.7,
       "count": 1,
       "notes": [
@@ -833,43 +1675,31 @@
       ]
     },
     {
-      "tag": "luminosity",
-      "weight": 0.6,
+      "tag": "metric",
+      "weight": 0.7,
       "count": 1,
       "notes": [
         {
-          "title": "Black Hole Host Galaxy Terminology",
-          "filename": "Black Hole Host Galaxy Terminology.md",
-          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
         }
       ]
     },
     {
-      "tag": "wavelength",
-      "weight": 0.6,
+      "tag": "modification",
+      "weight": 0.7,
       "count": 1,
       "notes": [
         {
-          "title": "Black Hole Host Galaxy Terminology",
-          "filename": "Black Hole Host Galaxy Terminology.md",
-          "path": "research/notes/Black Hole Host Galaxy Terminology.md"
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
         }
       ]
     },
     {
-      "tag": "prediction",
-      "weight": 0.6,
-      "count": 1,
-      "notes": [
-        {
-          "title": "Early Supermassive Black Holes   The Dark Epoch Perspective",
-          "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
-          "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
-        }
-      ]
-    },
-    {
-      "tag": "measurement",
+      "tag": "thermodynamics",
       "weight": 0.6,
       "count": 1,
       "notes": [
@@ -893,7 +1723,19 @@
       ]
     },
     {
-      "tag": "momentum",
+      "tag": "hamiltonian",
+      "weight": 0.6,
+      "count": 1,
+      "notes": [
+        {
+          "title": "Lindblad master equation",
+          "filename": "Lindblad master equation.md",
+          "path": "research/notes/Lindblad master equation.md"
+        }
+      ]
+    },
+    {
+      "tag": "geodesic",
       "weight": 0.6,
       "count": 1,
       "notes": [
@@ -905,26 +1747,14 @@
       ]
     },
     {
-      "tag": "alternative",
+      "tag": "magnitude",
       "weight": 0.6,
       "count": 1,
       "notes": [
         {
-          "title": "The M sigma Relation in Galaxy Formation",
-          "filename": "The M-sigma Relation in Galaxy Formation.md",
-          "path": "research/notes/The M-sigma Relation in Galaxy Formation.md"
-        }
-      ]
-    },
-    {
-      "tag": "entanglement",
-      "weight": 0.5,
-      "count": 1,
-      "notes": [
-        {
-          "title": "Lindblad master equation",
-          "filename": "Lindblad master equation.md",
-          "path": "research/notes/Lindblad master equation.md"
+          "title": "Unified Decoherence Length Definition",
+          "filename": "Unified Decoherence Length Definition.md",
+          "path": "research/notes/Unified Decoherence Length Definition.md"
         }
       ]
     },
@@ -937,42 +1767,6 @@
           "title": "Null Geodesics and Affine Parameters",
           "filename": "Null Geodesics and Affine Parameters.md",
           "path": "research/notes/Null Geodesics and Affine Parameters.md"
-        }
-      ]
-    },
-    {
-      "tag": "curvature",
-      "weight": 0.5,
-      "count": 1,
-      "notes": [
-        {
-          "title": "Null Geodesics and Affine Parameters",
-          "filename": "Null Geodesics and Affine Parameters.md",
-          "path": "research/notes/Null Geodesics and Affine Parameters.md"
-        }
-      ]
-    },
-    {
-      "tag": "photon",
-      "weight": 0.5,
-      "count": 1,
-      "notes": [
-        {
-          "title": "Null Geodesics and Affine Parameters",
-          "filename": "Null Geodesics and Affine Parameters.md",
-          "path": "research/notes/Null Geodesics and Affine Parameters.md"
-        }
-      ]
-    },
-    {
-      "tag": "force",
-      "weight": 0.5,
-      "count": 1,
-      "notes": [
-        {
-          "title": "The Universe Learning Its Physical Laws",
-          "filename": "The Universe Learning Its Physical Laws.md",
-          "path": "research/notes/The Universe Learning Its Physical Laws.md"
         }
       ]
     }
@@ -1000,6 +1794,33 @@
         "wavelength"
       ],
       "path": "research/notes/Black Hole Host Galaxy Terminology.md"
+    },
+    {
+      "filename": "Cosmological Decoherence and Super-Hubble Modes.md",
+      "title": "Cosmological Decoherence and Super Hubble Modes",
+      "tags": [
+        "decoherence",
+        "effective",
+        "coherence",
+        "entropy",
+        "quantum",
+        "gravity",
+        "dynamics",
+        "field",
+        "wave",
+        "equation",
+        "theory",
+        "observation",
+        "collapse",
+        "horizon",
+        "density",
+        "weak",
+        "inflation",
+        "spectrum",
+        "wavelength",
+        "calculus"
+      ],
+      "path": "research/notes/Cosmological Decoherence and Super-Hubble Modes.md"
     },
     {
       "filename": "Early Supermassive Black Holes - The Dark Epoch Perspective.md",
@@ -1030,6 +1851,63 @@
         "inflation"
       ],
       "path": "research/notes/Early Supermassive Black Holes - The Dark Epoch Perspective.md"
+    },
+    {
+      "filename": "Environmental Decoherence and Localization Length.md",
+      "title": "Environmental Decoherence and Localization Length",
+      "tags": [
+        "decoherence",
+        "model",
+        "quantum",
+        "field",
+        "wave",
+        "interaction",
+        "equation",
+        "theory",
+        "entanglement",
+        "coherence",
+        "interference",
+        "action",
+        "radiation",
+        "temperature",
+        "density",
+        "strong",
+        "mathematics",
+        "calculus"
+      ],
+      "path": "research/notes/Environmental Decoherence and Localization Length.md"
+    },
+    {
+      "filename": "Gravity-Linked Decoherence Models.md",
+      "title": "Gravity Linked Decoherence Models",
+      "tags": [
+        "gravity",
+        "decoherence",
+        "model",
+        "quantum",
+        "evolution",
+        "field",
+        "wave",
+        "energy",
+        "mass",
+        "equation",
+        "theory",
+        "experiment",
+        "superposition",
+        "coherence",
+        "interference",
+        "collapse",
+        "weak",
+        "beyond",
+        "phenomenology",
+        "prediction",
+        "constraint",
+        "redshift",
+        "wavelength",
+        "effective",
+        "calculus"
+      ],
+      "path": "research/notes/Gravity-Linked Decoherence Models.md"
     },
     {
       "filename": "Lindblad master equation.md",
@@ -1085,6 +1963,32 @@
       "path": "research/notes/Null Geodesics and Affine Parameters.md"
     },
     {
+      "filename": "Objective-Collapse Models - GRW and CSL.md",
+      "title": "Objective Collapse Models   GRW and CSL",
+      "tags": [
+        "collapse",
+        "model",
+        "quantum",
+        "field",
+        "particle",
+        "wave",
+        "mechanics",
+        "experiment",
+        "measurement",
+        "superposition",
+        "interference",
+        "standard",
+        "beyond",
+        "phenomenology",
+        "constraint",
+        "bound",
+        "matter",
+        "luminosity",
+        "mathematics"
+      ],
+      "path": "research/notes/Objective-Collapse Models - GRW and CSL.md"
+    },
+    {
       "filename": "The M-sigma Relation in Galaxy Formation.md",
       "title": "The M sigma Relation in Galaxy Formation",
       "tags": [
@@ -1138,6 +2042,59 @@
         "cosmic"
       ],
       "path": "research/notes/The Universe Learning Its Physical Laws.md"
+    },
+    {
+      "filename": "Unified Decoherence Length Definition.md",
+      "title": "Unified Decoherence Length Definition",
+      "tags": [
+        "decoherence",
+        "beyond",
+        "gravity",
+        "model",
+        "dynamics",
+        "pressure",
+        "mass",
+        "quantum",
+        "cosmology",
+        "universe",
+        "entropy",
+        "evolution",
+        "particle",
+        "wave",
+        "energy",
+        "interaction",
+        "mechanics",
+        "equation",
+        "theory",
+        "observation",
+        "experiment",
+        "measurement",
+        "superposition",
+        "coherence",
+        "interference",
+        "collapse",
+        "action",
+        "metric",
+        "horizon",
+        "temperature",
+        "density",
+        "strong",
+        "fundamental",
+        "standard",
+        "modification",
+        "prediction",
+        "constraint",
+        "bound",
+        "limit",
+        "matter",
+        "inflation",
+        "magnitude",
+        "spectrum",
+        "effective",
+        "mathematics",
+        "calculus"
+      ],
+      "path": "research/notes/Unified Decoherence Length Definition.md"
     }
   ]
 }
