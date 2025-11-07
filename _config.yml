@@ -24,6 +24,16 @@ author:
   linkedin: revanshine
   orcid: "0009-0005-3173-3148"
   affiliation: "Independent Researcher"
+  bio: >-
+    Independent researcher in theoretical cosmology and quantum foundations. BS in Applied Physics 
+    from UC Santa Cruz (2004-2006), AA in English and Engineering from Santa Barbara City College 
+    (2000-2004). Software developer with expertise in enterprise systems and database architecture, 
+    bringing computational rigor to theoretical physics investigations.
+  education:
+    - "BS in Applied Physics, University of California, Santa Cruz (2004-2006)"
+    - "AA in English and Engineering, Santa Barbara City College (2000-2004)"
+  location: "Los Angeles, California"
+  license: "CC-BY-4.0"
 
 # Social media and Open Graph
 social:
