@@ -2,6 +2,9 @@
 layout: page
 title: About
 permalink: /about/
+description: >-
+  Biography of Robert J. Evanshine, independent researcher in theoretical cosmology 
+  and quantum foundations, exploring decoherence as a fundamental principle in physics.
 ---
 
 ## About the Author
